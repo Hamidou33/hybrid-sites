@@ -11,7 +11,7 @@ export class AuthenticationService {
 
   constructor(private http: HttpClient) {
     this.currentUserSubject = new BehaviorSubject<User>(
-      JSON.parse(localStorage.getItem("currentUser"))
+      JSON.parse(localStorage.getItem("currentUser") || '{}')
     );
     this.currentUser = this.currentUserSubject.asObservable();
   }
@@ -22,7 +22,7 @@ export class AuthenticationService {
 
   login(username: string, password: string) {
     // post to fake back end, this url will be handled there...
-
+    console.log('info', {username, password});
     return this.http
       .post<any>(`/users/authenticate`, {username, password})
       .pipe(
@@ -39,6 +39,6 @@ export class AuthenticationService {
   logout() {
     // remove user from local storage to log user out
     localStorage.removeItem("currentUser");
-    this.currentUserSubject.next(null);
+    this.currentUserSubject.unsubscribe();
   }
 }
