@@ -8,14 +8,14 @@ import { NestService } from './shared/services/nest/nest.service';
 })
 export class AppComponent {
   constructor(private nestService: NestService) {
-    this.nestService.getNestService().subscribe(
-      (value) => {
-        console.log(value)
-      }
-    );
+    // this.nestService.getNestService().subscribe(
+    //   (value) => {
+    //     console.log(value)
+    //   }
+    // );
   }
 
-  toto() {
-
-  }
+  // toto() {
+  //
+  // }
 }

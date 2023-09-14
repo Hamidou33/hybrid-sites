@@ -12,10 +12,17 @@ import { LocationComponent } from './location/location.component';
 import { JavaComponent } from './java/java.component';
 import { NodeComponent } from './node/node.component';
 import {AngularComponent} from "./angular/angular.component";
+import { HeaderDeskopComponent } from './header/header-deskop/header-deskop.component';
+import { HeaderMobileComponent } from './header/header-mobile/header-mobile.component';
+import { CvDeskopComponent } from './curiculum/cv-deskop/cv-deskop.component';
+import { CvMobileComponent } from './curiculum/cv-mobile/cv-mobile.component';
 @NgModule({
   imports: [CommonModule, HomeRoutingModule],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    HeaderDeskopComponent,
+    CvDeskopComponent,
+    CvMobileComponent
   ],
   declarations: [
     HomeComponent,
@@ -26,7 +33,11 @@ import {AngularComponent} from "./angular/angular.component";
     LocationComponent,
     JavaComponent,
     NodeComponent,
-    AngularComponent
+    AngularComponent,
+    HeaderDeskopComponent,
+    HeaderMobileComponent,
+    CvDeskopComponent,
+    CvMobileComponent
   ]
 })
 export class HomeModule { }
