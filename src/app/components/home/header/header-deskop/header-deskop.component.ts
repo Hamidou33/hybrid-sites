@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header-deskop',
@@ -8,10 +7,7 @@ import {Router} from "@angular/router";
 })
 export class HeaderDeskopComponent {
 
-  constructor(private route: Router) {
+  constructor() {
   }
 
-  openMenu(): void {
-    this.route.navigate(['/']);
-  }
 }

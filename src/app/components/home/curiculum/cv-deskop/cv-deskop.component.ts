@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {CuriculumService} from "../service/curiculum.service";
 
 @Component({
   selector: 'app-cv-deskop',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class CvDeskopComponent {
 
+  constructor(private curiculumService:  CuriculumService) {
+  }
+  downloadPdfDeskop(): void {
+    this.curiculumService.downloadPdf();
+  }
 }
