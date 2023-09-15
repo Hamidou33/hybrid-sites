@@ -1,32 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import {CvBase64Service} from "./cv-base64.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CuriculumService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,
+              private cv: CvBase64Service) {}
 
   downloadPdf(): void {
-    // Spécifiez le chemin vers le fichier PDF dans le dossier "assets"
-    const pdfUrl = '/assets/cv.pdf';
-
-    // Effectuez une requête HTTP GET pour obtenir le fichier PDF
-    this.http
-      .get(pdfUrl, { responseType: 'blob' })
-      .subscribe((blob: Blob) => {
-        const url = window.URL.createObjectURL(blob);
-
-        // Créez un élément d'ancrage invisible pour déclencher le téléchargement
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'cv.pdf';
-        document.body.appendChild(a);
-        a.click();
-
-        // Libérez les ressources
-        window.URL.revokeObjectURL(url);
-        document.body.removeChild(a);
-      });
+    const source = `data:application/pdf;base64,${this.cv.CV_FRONT}`;
+    const link = document.createElement('a');
+    link.href = source;
+    link.download = `cv.pdf`;
+    link.click();
   }
 }
