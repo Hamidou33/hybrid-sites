@@ -52,19 +52,21 @@ export class LoginComponent implements OnInit {
 
     this.loading = true;
     this.router.navigate(['/home']).then();
-    // this.authenticationService.login(this.f['username'].value, this.f['password'].value)
-    //   .pipe(first())
-    //   .subscribe(
-    //     data => {
-    //       this.router.navigate([this.returnUrl]).then(r => console.log(
-    //         r
-    //       ));
-    //     },
-    //     error => {
-    //       this.error = error;
-    //       console.log(this.error);
-    //       this.router.navigate(['/home']).then();
-    //       this.loading = false;
-    //     });
+
   }
+
+  // this.authenticationService.login(this.f['username'].value, this.f['password'].value)
+  //   .pipe(first())
+  //   .subscribe(
+  //     data => {
+  //       this.router.navigate([this.returnUrl]).then(r => console.log(
+  //         r
+  //       ));
+  //     },
+  //     error => {
+  //       this.error = error;
+  //       console.log(this.error);
+  //       this.router.navigate(['/home']).then();
+  //       this.loading = false;
+  //     });
 }

@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { AngularComponent } from './angular.component';
+import { AngularComponent } from "./angular.component";
 
 describe('AngularComponent', () => {
   let component: AngularComponent;
@@ -9,13 +8,14 @@ describe('AngularComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [AngularComponent]
-    });
+    }).compileComponents();
+
     fixture = TestBed.createComponent(AngularComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
+
