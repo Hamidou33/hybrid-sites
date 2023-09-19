@@ -1,0 +1,14 @@
+header {
+  height: 160px;
+  padding-top: 10px;
+  color: white;
+  background-color: #E92038;
+}
+
+h4 {
+  margin-left: 10%;
+  color: #E92038;
+  letter-spacing: .1rem;
+  font-size: 18px;
+  margin-top: 3%;
+}

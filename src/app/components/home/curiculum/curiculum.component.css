@@ -1,5 +1,5 @@
 main {
-  box-shadow: 30px 0px 40px rgb(196, 196, 196), -30px 0px 40px rgb(196, 196, 196);
+  box-shadow: 30px 0 40px rgb(196, 196, 196), -30px 0 40px rgb(196, 196, 196);
   max-width: 900px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 10% auto auto;
@@ -11,12 +11,6 @@ main {
   margin-top: 25px;
   background-color: white;
   width: 100%;
-}
-header {
-  height: 160px;
-  padding-top: 10px;
-  color: white;
-  background-color: #E92038;
 }
 
 .photo {
@@ -45,20 +39,7 @@ h3{
 
 .right {
   padding: 0;
-  margin: 5px;
-  margin-top: -10%;
-}
-
-.right-mobile {
-  padding: 0;
-  margin-left: -9%;
-  margin-top: 0%;
-}
-
-.right-mobile p {
-  margin-left: 178px;
-  letter-spacing: .1rem;
-  font-size: 10px;
+  margin: -10% 5px 5px;
 }
 
 .img-mobile {
@@ -91,13 +72,7 @@ h3{
   float: right;
   width: 400px;
 }
-h4 {
-  margin-left: 10%;
-  color: #E92038;
-  letter-spacing: .1rem;
-  font-size: 18px;
-  margin-top: 3%;
-}
+
 hr.light {
   border-top: 2px solid #E92038;
   width: 90%;
@@ -109,12 +84,27 @@ hr.light {
   grid-template-columns: repeat(2, 1fr);
   margin-left: 10%;
 }
+
+.atouts-mobile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 2%;
+  width: 90%;
+}
+
 .div {
   margin-left: 10%;
 }
 
+.div-mobile {
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 70%;
+  text-align: center;
+}
+
 .skls {
-  padding: 0px;
+  padding: 0;
   width: 40%;
   margin-left: 10%
 }
@@ -141,15 +131,4 @@ strong {
 }
 span {
   margin-left: 10px;
-}
-
-/* css-mobile */
-
-.des-mobile {
-  margin-left: 40%;
-  margin-top: -32%;
-}
-
-.telecharger {
-  margin-left: 30%;
 }

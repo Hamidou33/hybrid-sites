@@ -1,1 +1,37 @@
+header {
+  height: 160px;
+  padding-top: 10px;
+  color: white;
+  background-color: #E92038;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.des-mobile {
+  margin-left: 40%;
+  margin-top: -38%;
+}
+
+.telecharger {
+  margin-left: 30%;
+}
+
+.right-mobile {
+  margin-left: -10%;
+  margin-top: 2%;
+}
+
+.right-mobile p {
+  margin-left: 45%;
+  letter-spacing: 0.04rem;
+  font-size: 10px;
+}
+
+h4 {
+  color: #E92038;
+  letter-spacing: .1rem;
+  font-size: 18px;
+  margin-top: 3%;
+  text-align: center;
+}
 
