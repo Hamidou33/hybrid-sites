@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-curiculum',
   templateUrl: './curiculum.component.html',
-  styleUrls: ['./curiculum.component.css']
+  styleUrls: ['./curiculum.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 
 
