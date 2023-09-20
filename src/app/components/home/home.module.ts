@@ -16,6 +16,7 @@ import { HeaderDeskopComponent } from './header/header-deskop/header-deskop.comp
 import { HeaderMobileComponent } from './header/header-mobile/header-mobile.component';
 import { CvDeskopComponent } from './curiculum/cv-deskop/cv-deskop.component';
 import { CvMobileComponent } from './curiculum/cv-mobile/cv-mobile.component';
+import { HeaderCvMobileComponent } from './curiculum/cv-mobile/header-cv-mobile/header-cv-mobile.component';
 @NgModule({
   imports: [CommonModule, HomeRoutingModule],
   exports: [
@@ -37,7 +38,8 @@ import { CvMobileComponent } from './curiculum/cv-mobile/cv-mobile.component';
     HeaderDeskopComponent,
     HeaderMobileComponent,
     CvDeskopComponent,
-    CvMobileComponent
+    CvMobileComponent,
+    HeaderCvMobileComponent
   ]
 })
 export class HomeModule { }

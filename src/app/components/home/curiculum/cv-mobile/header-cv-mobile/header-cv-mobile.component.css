@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+.rond {
+  border-radius: 40%;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  max-height: 198px;
+}
+
+.wrapper {
+  /*border: 2px solid #f76707;*/
+  /*border-radius: 5px;*/
+  background-color: #E92038;
+}
+
+.wrapper > div.photo {
+  /*border: 2px solid #ffa94d;*/
+  /*background-color: #ffd8a8;*/
+  padding: 1em;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  /*color: #d9480f;*/
+}
+
+.wrapper > div.item1 {
+  height:100%;
+  margin: 10%;
+}
+
+.wrapper > div.item2 {
+  background:  #E92038 ;
+  height:100%;
+}
+
+.wrapper > div.item3 {
+  background:  #E92038 ;
+  height:100%;
+}
+
+.wrapper > div.item4 {
+  background: #E92038 ;
+  height:100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: 33px;
+  grid-template-areas:
+    "a a a b b b b b"
+    "a a a b b b b b"
+    "a a a b b b b b"
+    "a a a d d d d d"
+    "a a a d d d d d"
+    "a a a d d d d d";
+  align-items: start;
+}
+.item1 {
+  grid-area: a;
+  max-height: 198px;
+}
+.item2 {
+  grid-area: b;
+}
+.item3 {
+  grid-area: c;
+}
+.item4 {
+  grid-area: d;
+}

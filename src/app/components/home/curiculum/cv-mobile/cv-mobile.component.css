@@ -8,8 +8,9 @@ header {
 }
 
 .des-mobile {
-  margin-left: 40%;
-  margin-top: -38%;
+  margin-top: 5%;
+  /*margin-left: 40%;*/
+  /*margin-top: -38%;*/
 }
 
 .telecharger {
@@ -17,14 +18,16 @@ header {
 }
 
 .right-mobile {
-  margin-left: -10%;
-  margin-top: 2%;
+  /*margin-left: -10%;*/
+  /*margin-top: 2%;*/
+  font-size: 13px;
+  color: white;
 }
 
 .right-mobile p {
-  margin-left: 45%;
-  letter-spacing: 0.04rem;
-  font-size: 10px;
+  /*margin-left: 45%;*/
+  /*letter-spacing: 0.04rem;*/
+  /*font-size: 10px;*/
 }
 
 h4 {
@@ -32,6 +35,17 @@ h4 {
   letter-spacing: .1rem;
   font-size: 18px;
   margin-top: 3%;
+  text-align: center;
+}
+
+.skls-mobile {
+  width: 40%;
+  text-align: center;
+  margin-left: 15%;
+}
+
+.interet-mobile {
+  margin-left: 15%;
   text-align: center;
 }
 
