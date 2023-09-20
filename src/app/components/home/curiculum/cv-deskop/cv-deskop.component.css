@@ -3,6 +3,8 @@ header {
   padding-top: 10px;
   color: white;
   background-color: #E92038;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 h4 {
@@ -11,4 +13,24 @@ h4 {
   letter-spacing: .1rem;
   font-size: 18px;
   margin-top: 3%;
+}
+
+.right {
+  padding: 0;
+  margin: -11% -13% 0%;
+  width: 100%;
+}
+
+.des {
+  margin-left: 20%;
+  margin-top: -13%;
+  width: 25%;
+}
+
+.photo {
+  margin-left: 2%;
+  border-radius: 90%;
+  width: 12%;
+  height: 139px;
+  overflow: hidden;
 }

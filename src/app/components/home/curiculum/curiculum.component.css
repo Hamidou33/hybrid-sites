@@ -15,9 +15,9 @@ main {
 
 .photo {
   margin-left: 2%;
-  border-radius: 50%;
-  width: 130px;
-  height: 130px;
+  border-radius: 90%;
+  width: 107px;
+  height: 139px;
   overflow: hidden;
 }
 .des{
