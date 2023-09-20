@@ -75,7 +75,7 @@ h3{
 
 hr.light {
   border-top: 2px solid #E92038;
-  width: 90%;
+  width: 100%;
   margin-top: .8rem;
   margin-bottom: 1rem;
 }
@@ -132,3 +132,38 @@ strong {
 span {
   margin-left: 10px;
 }
+
+.container {
+  text-align: center;
+}
+
+.container p {
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container p span {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.container p img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

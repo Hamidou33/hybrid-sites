@@ -39,13 +39,20 @@ h4 {
 }
 
 .skls-mobile {
-  width: 40%;
+  width: 80%;
   text-align: center;
-  margin-left: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .interet-mobile {
-  margin-left: 15%;
   text-align: center;
+}
+
+hr.light-mobile {
+  border-top: 2px solid #E92038;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
 }
 
