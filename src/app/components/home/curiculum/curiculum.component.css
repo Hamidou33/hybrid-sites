@@ -88,7 +88,8 @@ hr.light {
 .atouts-mobile {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-left: 2%;
+  margin-left: 3%;
+  margin-right: 7%;
   width: 90%;
 }
 
