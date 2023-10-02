@@ -1,7 +1,7 @@
 <div style="margin-left: 40%; margin-right: 40%" class="hidden lg:flex w-1/5">
   <button  (click)="downloadPdfDeskop()" class="text-center w-190 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
     <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
-    <span>Télécharger le CV</span>
+    <span>{{ ('CURRICULUM.BUTTON' | translate) }}</span>
   </button>
 </div>
 <div class="hidden lg:flex lg:gap-x-12">
@@ -23,38 +23,37 @@
 
 
     <section class="section-left">
-      <h4>Atouts</h4>
+      <h4>{{ ('CURRICULUM.ASSET.TITLE' | translate) }}</h4>
       <hr class="light-mobile">
       <div class="atouts">
-        <div>Travail d'équipe</div>
-        <div>Je sais manager les équipes avec bienveillance et sympathie<br></div>
+        <div>{{ ('CURRICULUM.ASSET.A1.LABEL' | translate) }}</div>
+        <div>{{ ('CURRICULUM.ASSET.A1.DESCRIPTION' | translate) }}<br></div>
         <div>
-          Capitalisation <br> d'experience
+          {{ ('CURRICULUM.ASSET.A2.LABEL1' | translate)}}<br> {{ ('CURRICULUM.ASSET.A2.LABEL2' | translate)}}
         </div>
         <div>
-          Alimentation de documentation technique lié au problématique du projet
-          afin de faciliter l'integration d'un prochain développeur
+          {{ ('CURRICULUM.ASSET.A2.DESCRIPTION' | translate) }}
         </div>
       </div>
 
-      <h4>Diplômes et Formations</h4>
+      <h4>{{ ('CURRICULUM.DEGREE.TITLE' | translate) }}</h4>
       <hr class="light-mobile">
       <div class="div">
-        <div *ngFor="let education of educations" class="mb-4">
-          <b>{{ education.diplome }}</b>
-          <br><strong>{{ education.universite }}</strong>
-          <br>{{ education.lieu }}
-          <br>{{ education.periode }}
+        <div *ngFor="let degree of ('CURRICULUM.DEGREE.D' | translate); let i = index" class="mb-4">
+          <b>{{ degree.title }}</b>
+          <br><strong>{{ degree.school }}</strong>
+          <br>{{ degree.city }}
+          <br>{{ degree.year }}
         </div>
       </div>
 
-      <h4>Expériences professionnelles</h4>
+      <h4>{{ ('CURRICULUM.EXPERIENCE.TITLE' | translate) }}</h4>
       <hr class="light-mobile">
       <div class="div">
-        <ng-container *ngFor="let experience of experiences">
-          <p><b>{{ experience.titre }} chez</b>
+        <ng-container *ngFor="let experience of ('CURRICULUM.EXPERIENCE.E' | translate);">
+          <p><b>{{ experience.title }} chez</b>
             <strong> {{ experience.entreprise }}<br></strong>
-            {{ experience.periode }}<br>
+            {{ experience.date }}<br>
             {{ experience.description }} <br>
             <strong>{{ experience.client }}</strong>.
           </p>
@@ -64,7 +63,7 @@
     </section>
 
     <section class="section-right">
-      <h4>Competences</h4>
+      <h4>{{ ('CURRICULUM.SKILLS.TITLE' | translate) }}</h4>
       <hr class="light-mobile">
       <div class="skls">
 
@@ -98,39 +97,36 @@
       </div>
 
 
-      <h4>Langues</h4>
+      <h4>{{ ('CURRICULUM.LANGUAGE.TITLE' | translate) }}</h4>
       <hr class="light-mobile">
       <div class="skls">
-        <div class="po">
-          <p>Français</p>
-          <div class="cool">
-            <div style="width:100%" class="inner"> </div>
+        <ng-container *ngFor="let lang of ('CURRICULUM.LANGUAGE.L' | translate); let i = index">
+          <div class="po">
+            <p>{{ lang.LABEL }}</p>
+            <div class="cool">
+              <div [style.width]="lang.WIDTH +'%'" class="inner"> </div>
+            </div>
           </div>
-        </div>
-        <div class="po">
-          <p>Anglais</p>
-          <div class="cool">
-            <div style="width:80%" class="inner"> </div>
-          </div>
-        </div>
+        </ng-container>
       </div>
-      <h4>Réseaux sociaux</h4>
+      <h4>{{ ('CURRICULUM.NETWORK.TITLE' | translate) }}</h4>
       <hr class="light-mobile">
       <div class="container">
         <p>
           <img src="assets/img/l.png" class="info">
-          <span>https://www.linkedin.com/hamidBenallel</span>
+          <a class="linkedin-button" href="https://www.linkedin.com/in/hamid-benallel-a18187127">
+            {{ ('CURRICULUM.NETWORK.BUTTON' | translate) }}
+          </a>
         </p>
       </div>
 
 
-      <h4>Centres d'intérêt</h4>
+      <h4>{{ ('CURRICULUM.INTEREST.TITLE' | translate) }}</h4>
       <hr class="light-mobile">
       <div class="interet">
-        <div><b>Sport</b></div>
-        <div><b>Naviguer sur Internet</b></div>
-        <div><b>Lecture</b></div>
-        <div><b>Voyage</b></div>
+        <div *ngFor="let interest of ('CURRICULUM.INTEREST.I' | translate);">
+          <b>{{interest}}</b>
+        </div>
       </div>
     </section>
     <div class="srkl">

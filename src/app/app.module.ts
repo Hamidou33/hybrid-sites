@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NestService } from "./shared/services/nest/nest.service";
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { LoginComponent } from "./components/home/login/login.component";
 import { CuriculumComponent } from "./components/home/curiculum/curiculum.component";
@@ -11,8 +11,15 @@ import { NgOptimizedImage} from "@angular/common";
 import { HomeModule} from "./components/home/home.module";
 import { ReactiveFormsModule} from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {SharedModule} from "./shared/shared.module";
-import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import { SharedModule } from "./shared/shared.module";
+import { MatSlideToggleModule } from "@angular/material/slide-toggle";
+import { TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+
+
+export function CreateTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -30,7 +37,15 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     ReactiveFormsModule,
     BrowserAnimationsModule,
     SharedModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: CreateTranslateLoader,
+        deps: [HttpClient]
+      },
+      defaultLanguage: localStorage.getItem('locale') || 'fr'
+    })
   ],
   providers: [NestService],
   bootstrap: [AppComponent]

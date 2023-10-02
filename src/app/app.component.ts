@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NestService } from './shared/services/nest/nest.service';
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,11 @@ import { NestService } from './shared/services/nest/nest.service';
 export class AppComponent {
   constructor(
     // private nestService: NestService
+    translate: TranslateService
   ) {
+
+    translate.setDefaultLang(localStorage.getItem('locale') || 'fr');
+    translate.use(localStorage.getItem('locale') || 'fr');
     // this.nestService.getNestService().subscribe(
     //   (value) => {
     //     console.log(value)

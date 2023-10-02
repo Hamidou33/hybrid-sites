@@ -9,6 +9,7 @@ import {VenteComponent} from "./vente/vente.component";
 import {AngularComponent} from "./angular/angular.component";
 import {JavaComponent} from "./java/java.component";
 import {NodeComponent} from "./node/node.component";
+import {FreelanceComponent} from "./freelance/freelance.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,20 +18,11 @@ const routes: Routes = [
   { path: 'formation', component: FormationComponent},
   { path: 'location', component: LocationComponent},
   { path: 'vente', component: VenteComponent},
-
+  { path: 'freelance', component: FreelanceComponent},
   { path: 'angular', component: AngularComponent},
   { path: 'java', component: JavaComponent},
   { path: 'node', component: NodeComponent}
-
-//   // { path:'error',
-//   //   loadChildren: () => import('./../../shared/shared.module').then(m => m.SharedModule)
-//   // },
-//   // {path:'users', component:UsersComponent,children:[{path:':id/:name',component:UserComponent}]},
-//   // {path:'servers', canActivateChild:[AuthGuard],component:ServersComponent,children:[{path:':id/edit',canDeactivate:[CanDeactivateGuard],component:EditServerComponent},
-//   //     {path:':id',component:ServerComponent}]},
-//   { path:'**',redirectTo:'/home',pathMatch:'full' }
 ]
-//
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]

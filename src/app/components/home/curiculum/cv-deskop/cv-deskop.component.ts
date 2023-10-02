@@ -1,7 +1,6 @@
-import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CuriculumService } from "../service/curiculum.service";
-import {Experience} from "../../../../shared/models/experience.model";
-import {Education} from "../../../../shared/models/education.model";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-cv-deskop',
@@ -10,10 +9,7 @@ import {Education} from "../../../../shared/models/education.model";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CvDeskopComponent {
-  @Input() experiences: Experience[];
-  @Input() educations: Education[];
-
-  constructor(private curiculumService:  CuriculumService) {
+  constructor(private curiculumService:  CuriculumService, public translateService: TranslateService) {
   }
   downloadPdfDeskop(): void {
     this.curiculumService.downloadPdf();

@@ -6,8 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./header-deskop.component.css']
 })
 export class HeaderDeskopComponent {
-
-  constructor() {
-  }
-
 }
