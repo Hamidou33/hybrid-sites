@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { LocationComponent } from "./location.component";
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {LocationComponent} from "./location.component";
 
 describe('LocationComponent', () => {
   let component: LocationComponent;

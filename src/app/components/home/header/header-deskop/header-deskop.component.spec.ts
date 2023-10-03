@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { HeaderDeskopComponent } from './header-deskop.component';
+import {HeaderDeskopComponent} from './header-deskop.component';
 
 describe('HeaderDeskopComponent', () => {
   let component: HeaderDeskopComponent;

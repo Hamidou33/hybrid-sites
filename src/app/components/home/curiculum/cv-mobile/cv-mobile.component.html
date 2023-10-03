@@ -1,6 +1,9 @@
 <div class="lg:hidden" role="dialog" aria-modal="true">
-  <button (click)="downloadPdfMobile()" class="telecharger bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-    <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+  <button (click)="downloadPdfMobile()"
+          class="telecharger bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+    <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+      <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/>
+    </svg>
     <span>{{ ('CURRICULUM.BUTTON' | translate) }}</span>
   </button>
   <main>
@@ -32,7 +35,7 @@
       <h4>{{ ('CURRICULUM.EXPERIENCE.TITLE' | translate) }}</h4>
       <hr class="light">
       <div class="div-mobile">
-        <ng-container *ngFor="let experience of ('CURRICULUM.EXPERIENCE.E' | translate);" >
+        <ng-container *ngFor="let experience of ('CURRICULUM.EXPERIENCE.E' | translate);">
           <p class="text-left"><b>{{ experience.title }} chez</b>
             <strong> {{ experience.entreprise }}<br></strong>
             {{ experience.date }}<br>
@@ -58,21 +61,21 @@
         <div class="po">
           <p>Angular, Node.js</p>
           <div class="cool">
-            <div style="width:75%" class="inner"> </div>
+            <div style="width:75%" class="inner"></div>
           </div>
         </div>
 
         <div class="po">
           <p>MongoDB, PostGre, PgAdmin</p>
           <div class="cool">
-            <div style="width:60%" class="inner"> </div>
+            <div style="width:60%" class="inner"></div>
           </div>
         </div>
 
         <div class="po">
           <p>Git, Gitlab, GitHub</p>
           <div class="cool">
-            <div style="width:60%" class="inner"> </div>
+            <div style="width:60%" class="inner"></div>
           </div>
         </div>
       </div>
@@ -84,7 +87,7 @@
           <div class="po">
             <p>{{ lang.LABEL }}</p>
             <div class="cool">
-              <div [style.width]="lang.WIDTH +'%'" class="inner"> </div>
+              <div [style.width]="lang.WIDTH +'%'" class="inner"></div>
             </div>
           </div>
         </ng-container>

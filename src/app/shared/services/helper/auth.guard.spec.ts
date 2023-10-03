@@ -1,7 +1,7 @@
-import { TestBed } from '@angular/core/testing';
-import { Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { AuthGuard } from './auth.guard';
-import { AuthenticationService } from '../authentification/authentification.service';
+import {TestBed} from '@angular/core/testing';
+import {ActivatedRouteSnapshot, Router, RouterStateSnapshot} from '@angular/router';
+import {AuthGuard} from './auth.guard';
+import {AuthenticationService} from '../authentification/authentification.service';
 import {User} from "../model/user";
 
 describe('AuthGuard', () => {
@@ -51,9 +51,9 @@ describe('AuthGuard', () => {
 
     const navigateSpy = jest.spyOn(router, 'navigate').mockReturnValue(Promise.resolve(true));
 
-    const canActivate = guard.canActivate(new ActivatedRouteSnapshot(), { url: '/protected' } as RouterStateSnapshot);
+    const canActivate = guard.canActivate(new ActivatedRouteSnapshot(), {url: '/protected'} as RouterStateSnapshot);
 
     expect(canActivate).toBe(false);
-    expect(navigateSpy).toHaveBeenCalledWith(['home/login'], { queryParams: { returnUrl: '/protected' } });
+    expect(navigateSpy).toHaveBeenCalledWith(['home/login'], {queryParams: {returnUrl: '/protected'}});
   });
 });

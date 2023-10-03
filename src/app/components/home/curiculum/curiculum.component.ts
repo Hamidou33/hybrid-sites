@@ -9,7 +9,6 @@ import {TranslateService} from "@ngx-translate/core";
 })
 
 export class CuriculumComponent {
-  cv: any = {};
   constructor(private translate: TranslateService) {
     translate.setDefaultLang(localStorage.getItem('locale') || 'fr');
   }

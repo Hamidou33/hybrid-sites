@@ -1,7 +1,7 @@
-import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { User } from '../model/user';
-import { AuthenticationService } from "./authentification.service";
+import {TestBed} from '@angular/core/testing';
+import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
+import {User} from '../model/user';
+import {AuthenticationService} from "./authentification.service";
 
 describe('AuthenticationService', () => {
   let service: AuthenticationService;
@@ -40,7 +40,7 @@ describe('AuthenticationService', () => {
 
     const req = httpTestingController.expectOne('/users/authenticate');
     expect(req.request.method).toBe('POST');
-    expect(req.request.body).toEqual({ username, password });
+    expect(req.request.body).toEqual({username, password});
 
     req.flush(dummyUser);
 

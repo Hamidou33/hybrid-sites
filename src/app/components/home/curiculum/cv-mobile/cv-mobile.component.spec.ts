@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CvMobileComponent } from './cv-mobile.component';
-import { CuriculumService } from '../service/curiculum.service';
-import {HttpClient, provideHttpClient} from "@angular/common/http";
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {CvMobileComponent} from './cv-mobile.component';
+import {CuriculumService} from '../service/curiculum.service';
+import {HttpClient} from "@angular/common/http";
 
 describe('CvMobileComponent', () => {
   let component: CvMobileComponent;

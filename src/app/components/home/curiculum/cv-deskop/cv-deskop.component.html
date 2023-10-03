@@ -1,23 +1,26 @@
-<div style="margin-left: 40%; margin-right: 40%" class="hidden lg:flex w-1/5">
-  <button  (click)="downloadPdfDeskop()" class="text-center w-190 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-    <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+<div style="margin-left: 45%; margin-right: 45%" class="hidden lg:flex w-1/5">
+  <button (click)="downloadPdfDeskop()"
+          class="text-center w-190 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+    <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+      <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/>
+    </svg>
     <span>{{ ('CURRICULUM.BUTTON' | translate) }}</span>
   </button>
 </div>
 <div class="hidden lg:flex lg:gap-x-12">
-  <main>
+  <main class="main-deskop">
     <header>
       <div class="photo">
         <img src="assets/img/photo.jpg" width="194" height="259" alt="">
       </div>
       <div class="des">
         <h3>BENALLEL Hamid</h3>
-        <p class="post">Développeur Front-end Angular</p>
+        <p class="post">{{ ('CURRICULUM.DESCRIPTION' | translate) }}</p>
       </div>
       <div class="right">
-        <p><img src="assets/img/mail.png" class="info" height="235" width="235">hamid.benallel.scicog@gmail.com</p>
-        <p><img src="assets/img/maps.png" class="info" height="600" width="600">Bordeaux-France</p>
-        <p><img src="assets/img/tele.png" class="info" height="600" width="400">0611284112</p>
+        <p><img alt="" src="assets/img/mail.png" class="info" height="235" width="235">hamid.benallel.scicog@gmail.com
+        </p>
+        <p><img alt="" src="assets/img/tele.png" class="info" height="600" width="400">0611284112</p>
       </div>
     </header>
 
@@ -77,21 +80,21 @@
         <div class="po">
           <p>Angular, Node.js</p>
           <div class="cool">
-            <div style="width:75%" class="inner"> </div>
+            <div style="width:75%" class="inner"></div>
           </div>
         </div>
 
         <div class="po">
           <p>MongoDB, PostGre, PpgAdmin</p>
           <div class="cool">
-            <div style="width:60%" class="inner"> </div>
+            <div style="width:60%" class="inner"></div>
           </div>
         </div>
 
         <div class="po">
           <p>Git, Gitlab, GitHub</p>
           <div class="cool">
-            <div style="width:90%" class="inner"> </div>
+            <div style="width:90%" class="inner"></div>
           </div>
         </div>
       </div>
@@ -104,7 +107,7 @@
           <div class="po">
             <p>{{ lang.LABEL }}</p>
             <div class="cool">
-              <div [style.width]="lang.WIDTH +'%'" class="inner"> </div>
+              <div [style.width]="lang.WIDTH +'%'" class="inner"></div>
             </div>
           </div>
         </ng-container>
@@ -113,7 +116,7 @@
       <hr class="light-mobile">
       <div class="container">
         <p>
-          <img src="assets/img/l.png" class="info">
+          <img alt="" src="assets/img/l.png" class="info">
           <a class="linkedin-button" href="https://www.linkedin.com/in/hamid-benallel-a18187127">
             {{ ('CURRICULUM.NETWORK.BUTTON' | translate) }}
           </a>

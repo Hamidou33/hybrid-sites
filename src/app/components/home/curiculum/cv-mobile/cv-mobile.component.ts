@@ -9,8 +9,9 @@ import {CuriculumService} from "../service/curiculum.service";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CvMobileComponent {
-  constructor(private curiculumService:  CuriculumService) {
+  constructor(private curiculumService: CuriculumService) {
   }
+
   downloadPdfMobile(): void {
     this.curiculumService.downloadPdf();
   }

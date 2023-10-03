@@ -1,8 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { AuthenticationService } from '../../../shared/services/authentification/authentification.service';
-import { LoginComponent } from './login.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {FormBuilder, ReactiveFormsModule} from '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
+import {AuthenticationService} from '../../../shared/services/authentification/authentification.service';
+import {LoginComponent} from './login.component';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -39,7 +39,8 @@ describe('LoginComponent', () => {
             login: jest.fn(() => {
               return {
                 pipe: () => ({
-                  subscribe: () => {}
+                  subscribe: () => {
+                  }
                 })
               };
             })

@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormationComponent } from './formation.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {FormationComponent} from './formation.component';
 
 describe('FormationComponent', () => {
   let component: FormationComponent;

@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import {Injectable} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 import {CvBase64Service} from "./cv-base64.service";
 
 @Injectable({
@@ -7,7 +7,8 @@ import {CvBase64Service} from "./cv-base64.service";
 })
 export class CuriculumService {
   constructor(private http: HttpClient,
-              private cv: CvBase64Service) {}
+              private cv: CvBase64Service) {
+  }
 
   downloadPdf(): void {
     const source = `data:application/pdf;base64,${this.cv.CV_FRONT}`;

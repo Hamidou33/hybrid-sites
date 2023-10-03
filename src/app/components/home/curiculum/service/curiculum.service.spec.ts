@@ -1,7 +1,7 @@
-import { TestBed } from '@angular/core/testing';
-import { CuriculumService } from './curiculum.service';
-import { CvBase64Service } from './cv-base64.service';
-import { HttpClient } from "@angular/common/http";
+import {TestBed} from '@angular/core/testing';
+import {CuriculumService} from './curiculum.service';
+import {CvBase64Service} from './cv-base64.service';
+import {HttpClient} from "@angular/common/http";
 
 describe('CuriculumService', () => {
   let service: CuriculumService;

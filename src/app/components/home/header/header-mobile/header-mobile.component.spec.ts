@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { HeaderMobileComponent } from './header-mobile.component';
+import {HeaderMobileComponent} from './header-mobile.component';
 
 describe('HeaderMobileComponent', () => {
   let component: HeaderMobileComponent;
