@@ -29,7 +29,6 @@ export class AppController {
 
   @Get(':id')
   findOne(@Param() params: any): string {
-    console.log(params.id);
     return `This action returns a #${params.id} cat`;
   }
 

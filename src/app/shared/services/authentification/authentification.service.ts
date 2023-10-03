@@ -22,7 +22,6 @@ export class AuthenticationService {
 
   login(username: string, password: string) {
     // post to fake back end, this url will be handled there...
-    console.log('info', {username, password});
     return this.http
       .post<any>(`/users/authenticate`, {username, password})
       .pipe(

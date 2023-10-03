@@ -50,7 +50,6 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.invalid) {
       return;
     }
-    console.log(this.loginForm)
 
     this.loading = true;
     this.router.navigate(['/home']).then();
@@ -67,7 +66,6 @@ export class LoginComponent implements OnInit {
   //     },
   //     error => {
   //       this.error = error;
-  //       console.log(this.error);
   //       this.router.navigate(['/home']).then();
   //       this.loading = false;
   //     });

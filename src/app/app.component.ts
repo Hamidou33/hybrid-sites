@@ -16,7 +16,6 @@ export class AppComponent {
     translate.use(localStorage.getItem('locale') || 'fr');
     // this.nestService.getNestService().subscribe(
     //   (value) => {
-    //     console.log(value)
     //   }
     // );
   }

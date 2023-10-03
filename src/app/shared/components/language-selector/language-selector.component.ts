@@ -8,11 +8,7 @@ import {TranslateService} from "@ngx-translate/core";
 })
 export class LanguageSelectorComponent {
   constructor(public translate: TranslateService) {
-    // translate.use('fr');
     translate.addLangs(['en', 'fr']);
-    //
-    console.log('lang', translate);
-    console.log(localStorage.getItem('locale'));
   }
 
   changeLanguage(lang: string) {
