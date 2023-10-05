@@ -20,6 +20,7 @@ import {TranslateLoader, TranslateModule,} from "@ngx-translate/core";
 import {HttpClient} from "@angular/common/http";
 import {CreateTranslateLoader} from "../../app.module";
 import {FreelanceModule} from "./freelance/freelance.module";
+import { IdeeComponent } from './idee/idee.component';
 
 @NgModule({
   imports: [CommonModule,
@@ -50,7 +51,8 @@ import {FreelanceModule} from "./freelance/freelance.module";
     NodeComponent,
     AngularComponent,
     CvDeskopComponent,
-    CvMobileComponent
+    CvMobileComponent,
+    IdeeComponent
   ]
 })
 export class HomeModule {

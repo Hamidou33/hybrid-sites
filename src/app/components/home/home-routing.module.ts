@@ -10,6 +10,7 @@ import {AngularComponent} from "./angular/angular.component";
 import {JavaComponent} from "./java/java.component";
 import {NodeComponent} from "./node/node.component";
 import {FreelanceComponent} from "./freelance/freelance.component";
+import {IdeeComponent} from "./idee/idee.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path: 'freelance', component: FreelanceComponent},
   {path: 'angular', component: AngularComponent},
   {path: 'java', component: JavaComponent},
-  {path: 'node', component: NodeComponent}
+  {path: 'node', component: NodeComponent},
+  {path: 'idee', component: IdeeComponent}
 ]
 
 @NgModule({
