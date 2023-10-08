@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body } from '@nestjs/common';
-import {IdeasService} from "../services/ideas.service";
-import {Idea} from "../interfaces/ideas.interface";
+import {IdeasService} from "./ideas.service";
+import {Idea} from "./ideas.interface";
 
 @Controller('ideas')
 export class IdeasController {

@@ -1,4 +1,6 @@
 export const environment = {
   production: false,
-  apiNest: 'http://localhost:3000/'
+  apiUrlNest: 'http://localhost:3000/',
+  // apiUrlJava: '',
+  // apiUrlNet: ''
 };

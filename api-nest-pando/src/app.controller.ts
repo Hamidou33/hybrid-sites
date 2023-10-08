@@ -31,8 +31,4 @@ export class AppController {
   findOne(@Param() params: any): string {
     return `This action returns a #${params.id} cat`;
   }
-
-
-
-
 }
