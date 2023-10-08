@@ -1,0 +1,154 @@
+{
+  "HOME": {
+    "TITLE": "Welcome to my portofolio",
+    "SELECT": "Change language",
+    "LIBELLE": "made by Hamid Benallel"
+  },
+  "HEADER-ROUTING": {
+    "CV": "My resume",
+    "FREELANCE": "Freelance information",
+    "LOGGER": "login",
+    "IDEA": "Suggestion box"
+  },
+  "IDEA": {
+    "LABEL": "Share your remarks here :"
+  },
+  "CURRICULUM": {
+    "DESCRIPTION": "Angular Software developer",
+    "BUTTON": "Download CV",
+    "SKILLS": {
+      "TITLE": "Skills",
+      "S": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "LANGUAGE": {
+      "TITLE": "Languages",
+      "L": [
+        {
+          "LABEL": "French",
+          "WIDTH": 100
+        },
+        {
+          "LABEL": "English",
+          "WIDTH": 80
+        },
+        {
+          "LABEL": "Spanish",
+          "WIDTH": 60
+        }
+      ]
+    },
+    "ASSET": {
+      "TITLE": "Assets",
+      "A1": {
+        "LABEL": "Teamwork",
+        "DESCRIPTION": "I know how to manage teams with kindness and sympathy."
+      },
+      "A2": {
+        "LABEL1": "Experience",
+        "LABEL2": "Capitalization",
+        "DESCRIPTION": "Technical documentation related to project issues to facilitate the integration of a future developer."
+      }
+    },
+    "DEGREE": {
+      "TITLE": "Degrees and Education",
+      "D": [
+        {
+          "title": "Special Year Computer Science Technology Diploma",
+          "school": "University of Bordeaux 1",
+          "city": "Bordeaux",
+          "year": "2015"
+        },
+        {
+          "title": "Master's in Cognitive Sciences and Ergonomics",
+          "school": "University of Bordeaux 2",
+          "city": "Bordeaux",
+          "year": "2012-2014"
+        },
+        {
+          "title": "Bachelor's in Biology",
+          "school": "University of Bordeaux 2",
+          "city": "Bordeaux",
+          "year": "2009-2012"
+        },
+        {
+          "title": "High School Diploma in Science",
+          "school": "Graves High School",
+          "city": "Gradignan",
+          "year": "2006"
+        }
+      ]
+    },
+    "EXPERIENCE": {
+      "TITLE": "Professional Experience",
+      "E": [
+        {
+          "title": "Lead Angular Tech",
+          "entreprise": "Cat-amania",
+          "date": "August 2022 to June 2023",
+          "description": "Development of a web application (download the CV for details).",
+          "client": "Ociane"
+        },
+        {
+          "title": "Fullstack JS Designer Developer (Angular/NodeJS)",
+          "entreprise": "Cat-amania",
+          "date": "July 2021 to August 2022",
+          "description": "Development of a web application (download the CV for details).",
+          "client": "Groupama"
+        },
+        {
+          "title": "Front-end Angular Designer Developer",
+          "entreprise": "Cat-amania",
+          "date": "November 2020 to July 2021",
+          "description": "Development of a web application (download the CV for details).",
+          "client": "Bordeaux Métropole Énergie"
+        },
+        {
+          "title": "Full-Stack JAVA - Angular Designer Developer",
+          "entreprise": "Cat-amania",
+          "date": "September 2019 to November 2020",
+          "description": "Development of a web application (download the CV for details).",
+          "client": "Pôle Emploi"
+        },
+        {
+          "title": "Front-End Designer Developer",
+          "entreprise": "Cat-amania",
+          "date": "February 2019 to August 2019",
+          "description": "Development of a web application (download the CV for details).",
+          "client": "CGI"
+        },
+        {
+          "title": "Front-End Designer Developer",
+          "entreprise": "Accenture",
+          "date": "November 2016 to December 2018",
+          "description": "Development of a web application (download the CV for details).",
+          "client": "La Banque Postale"
+        }
+      ]
+    },
+    "NETWORK": {
+      "TITLE": "Social Networks",
+      "BUTTON": "Visit my LinkedIn profile"
+    },
+    "INTEREST": {
+      "TITLE": "Interests",
+      "I": [
+        "Sports",
+        "Surfing the Internet",
+        "Reading",
+        "Travel"
+      ]
+    },
+    "FREELANCE": {
+      "TITLE": "Interest in Missions",
+      "M1": "Front-end Angular",
+      "M2": "Fullstack Angular/Node.js",
+      "TJM": "450",
+      "DATE": "Availability: starting from October 16, 2023"
+    }
+  }
+}
+

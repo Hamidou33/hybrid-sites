@@ -1,0 +1,159 @@
+{
+  "HOME": {
+    "TITLE": "Bienvenue sur mon Portfolio",
+    "SELECT": "Changer la langue",
+    "LIBELLE": "Réalisé par Hamid Benallel"
+  },
+  "HEADER-ROUTING": {
+    "CV": "Consulter mon CV",
+    "FREELANCE": "Information freelance",
+    "LOGGER": "Se connecter",
+    "IDEA": "Boite à idée"
+  },
+  "IDEA": {
+    "LABEL": "Indiquez moi ici vos remarques :"
+  },
+  "CURRICULUM": {
+    "DESCRIPTION": "Développeur Angular",
+    "BUTTON": "Télécharger le CV",
+    "SKILLS": {
+      "TITLE": "Compétences",
+      "S": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "LANGUAGE": {
+      "TITLE": "Langues",
+      "L": [
+        {
+          "LABEL": "Français",
+          "WIDTH": 100
+        },
+        {
+          "LABEL": "Anglais",
+          "WIDTH": 80
+        },
+        {
+          "LABEL": "Espagnol",
+          "WIDTH": 60
+        }
+      ]
+    },
+    "ASSET": {
+      "TITLE": "Atout",
+      "A1": {
+        "LABEL": "Travail d'équipe",
+        "DESCRIPTION": "Je sais manager les équipes avec bienveillance et sympathie"
+      },
+      "A2": {
+        "LABEL1": "Capitalisation",
+        "LABEL2": "d'experience",
+        "DESCRIPTION": "documentation technique lié au problématique du projet afin de faciliter l'integration d'un prochain développeur"
+      }
+    },
+    "DEGREE": {
+      "TITLE": "Diplômes et Formations",
+      "D": [
+        {
+          "title": "DUT informatique année spéciale",
+          "school": "Université Bordeaux 1",
+          "city": "Bordeaux",
+          "year": "2015"
+        },
+        {
+          "title": "Master en sciences Cognitives et Ergonomie",
+          "school": "Université Bordeaux 2",
+          "city": "Bordeaux",
+          "year": "2012-2014"
+        },
+        {
+          "title": "Licence de Biologie",
+          "school": "Université Bordeaux 2",
+          "city": "Bordeaux",
+          "year": "2009-2012"
+        },
+        {
+          "title": "Baccalauréat S",
+          "school": "Lycée des Graves",
+          "city": "Gradignan",
+          "year": "2006"
+        }
+      ]
+    },
+    "EXPERIENCE": {
+      "TITLE": "Expériences professionelles",
+      "E": [
+        {
+          "title": "Lead tech Angular",
+          "entreprise": "Cat-amania",
+          "date": "Août 2022 à Juin 2023",
+          "description": "Développement d'une application web ( télécharger le cv pour le détail )",
+          "client": "Ociane"
+        },
+        {
+          "title": "Concepteur Développeur Fullstack JS ( Angular/ NodeJS )",
+          "entreprise": "Cat-amania",
+          "date": "Juillet 2021 à Août 2022",
+          "description": "Développement d'une application web ( télécharger le cv pour le détail ).",
+          "client": "Groupama"
+        },
+        {
+          "title": "Concepteur Développeur Front-end Angular",
+          "entreprise": "Cat-amania",
+          "date": "Novembre 2020 à Juillet 2021",
+          "description": "Développement d'une application web ( télécharger le cv pour le détail )",
+          "client": "Bordeaux Métropole Énergie"
+        },
+        {
+          "title": "Concepteur Développeur Full-Stack JAVA - Angular",
+          "entreprise": "Cat-amania",
+          "date": "Septembre 2019 à Novembre 2020",
+          "description": "Développement d'une application web ( télécharger le cv pour le détail ).",
+          "client": "Pôle Emploi"
+        },
+        {
+          "title": "Concepteur Développeur Front-End",
+          "entreprise": "Cat-amania",
+          "date": "Février 2019 à Août 2019",
+          "description": "Développement d'une application web ( télécharger le cv pour le détail ).",
+          "client": "CGI"
+        },
+        {
+          "title": "Concepteur Développeur Front-End",
+          "entreprise": "Accenture",
+          "date": "Novembre 2016 à Décembre 2018",
+          "description": "Développement d'une application web ( télécharger le cv pour le détail )",
+          "client": "La Banque Postale"
+        }
+      ]
+    },
+    "NETWORK": {
+      "TITLE": "Réseaux sociaux",
+      "BUTTON": "Visitez mon profil LinkedIn"
+    },
+    "INTEREST": {
+      "TITLE": "Centres d'intêret",
+      "I": [
+        "Sport",
+        "Naviguer sur Internet",
+        "Lecture",
+        "Voyage"
+      ]
+    },
+    "FREELANCE": {
+      "TITLE": "Interet pour des missions",
+      "M1": "Front-end Angular",
+      "M2": "Fullstack Angular/Node.js",
+      "TJM": "450",
+      "DATE": "Disponibilité: à partir du 16 octobre 2023"
+    }
+  }
+}
+
+
+
+
+
+
