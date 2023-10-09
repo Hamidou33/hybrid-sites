@@ -20,6 +20,11 @@ export class AppComponent {
         console.log('value from nest', value);
       }
     );
+    this.nestService.getNestCats().subscribe(
+      (value) => {
+        console.log('value from nest cats', value);
+      }
+    );
   }
 
   // toto() {
