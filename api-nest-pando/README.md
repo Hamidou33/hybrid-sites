@@ -71,3 +71,8 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+## HINT: Create a controller with cli
+
+To create a controller using the CLI, simply execute the $ nest g controller [name] command.
