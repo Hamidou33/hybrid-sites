@@ -1,5 +1,5 @@
-import { Injectable } from '@nestjs/common';
-import { Cat } from "./cat.interface";
+import {Injectable} from '@nestjs/common';
+import {Cat} from "./cat.interface";
 
 
 @Injectable()
