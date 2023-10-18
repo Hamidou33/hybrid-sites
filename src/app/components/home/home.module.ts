@@ -21,21 +21,22 @@ import {HttpClient} from "@angular/common/http";
 import {CreateTranslateLoader} from "../../app.module";
 import {FreelanceModule} from "./freelance/freelance.module";
 import { IdeeComponent } from './idee/idee.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
-  imports: [CommonModule,
-    HomeRoutingModule,
-    SharedModule,
-    TranslateModule.forChild({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: CreateTranslateLoader,
-        deps: [HttpClient]
-      },
-      isolate: true
-    }),
-    FreelanceModule
-  ],
+    imports: [CommonModule,
+        HomeRoutingModule,
+        SharedModule,
+        TranslateModule.forChild({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: CreateTranslateLoader,
+                deps: [HttpClient]
+            },
+            isolate: true
+        }),
+        FreelanceModule, ReactiveFormsModule
+    ],
   exports: [
     CvDeskopComponent,
     CvMobileComponent,

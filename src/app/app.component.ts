@@ -15,16 +15,16 @@ export class AppComponent {
     translate.setDefaultLang(localStorage.getItem('locale') || 'fr');
     translate.use(localStorage.getItem('locale') || 'fr');
 
-    this.nestService.getNestService().subscribe(
-      (value) => {
-        console.log('value from nest', value);
-      }
-    );
-    this.nestService.getNestCats().subscribe(
-      (value) => {
-        console.log('value from nest cats', value);
-      }
-    );
+    // this.nestService.getNestService().subscribe(
+    //   (value) => {
+    //     console.log('value from nest', value);
+    //   }
+    // );
+    // this.nestService.getNestCats().subscribe(
+    //   (value) => {
+    //     console.log('value from nest cats', value);
+    //   }
+    // );
   }
 
   // toto() {

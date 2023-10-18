@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import {TranslateService} from "@ngx-translate/core";
+import { TranslateService } from "@ngx-translate/core";
+import { FormControl } from "@angular/forms";
+import { NestService } from "../../../shared/services/nest/nest.service";
 
 @Component({
   selector: 'app-idee',
@@ -7,7 +9,17 @@ import {TranslateService} from "@ngx-translate/core";
   styleUrls: ['./idee.component.css']
 })
 export class IdeeComponent {
-  constructor(translate: TranslateService) {
+  idee = new FormControl('');
+  constructor(translate: TranslateService, private nest: NestService) {
     translate.setDefaultLang(localStorage.getItem('locale') || 'fr');
+  }
+
+  sendMessage() {
+    console.log('idee.component.ts', this.idee.value);
+    this.nest.addNestIdeas(this.idee.value || '').subscribe(
+        (value) => {
+          console.log('ideas',value )
+        }
+    )
   }
 }

@@ -46,4 +46,13 @@ export class NestService {
   updateNestItem(itemId: number, updatedItem: any): Observable<any> {
     return this.http.put(`${this.env}/items/${itemId}`, updatedItem);
   }
+
+  // POST Request
+  addNestIdeas(ideas: string): Observable<any> {
+    let newAdea: any = {
+      description: ideas || ''
+    }
+    return this.http.post(`${this.env}/ideas`, newAdea);
+  }
+
 }
