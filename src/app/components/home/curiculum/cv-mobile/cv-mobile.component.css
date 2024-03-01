@@ -1,7 +1,5 @@
 .des-mobile {
   margin-top: 5%;
-  /*margin-left: 40%;*/
-  /*margin-top: -38%;*/
 }
 
 .telecharger {
@@ -9,16 +7,8 @@
 }
 
 .right-mobile {
-  /*margin-left: -10%;*/
-  /*margin-top: 2%;*/
   font-size: 13px;
   color: white;
-}
-
-.right-mobile p {
-  /*margin-left: 45%;*/
-  /*letter-spacing: 0.04rem;*/
-  /*font-size: 10px;*/
 }
 
 h4 {

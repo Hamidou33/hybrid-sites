@@ -6,8 +6,6 @@ import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {LanguageSelectorComponent} from './components/language-selector/language-selector.component';
 import {HeaderDeskopComponent} from "../components/home/header/header-deskop/header-deskop.component";
 import {HeaderMobileComponent} from "../components/home/header/header-mobile/header-mobile.component";
-import {CvDeskopComponent} from "../components/home/curiculum/cv-deskop/cv-deskop.component";
-import {CvMobileComponent} from "../components/home/curiculum/cv-mobile/cv-mobile.component";
 import {
   HeaderCvMobileComponent
 } from "../components/home/curiculum/cv-mobile/header-cv-mobile/header-cv-mobile.component";

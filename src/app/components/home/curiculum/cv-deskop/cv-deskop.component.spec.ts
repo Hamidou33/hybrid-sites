@@ -1,5 +1,5 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {CuriculumService} from "../service/curiculum.service";
+import {CuriculumService} from "../service/curiculum/curiculum.service";
 import {CvDeskopComponent} from "./cv-deskop.component";
 import {HttpClient} from "@angular/common/http";
 

@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {CvBase64Service} from "./cv-base64.service";
+import {CvBase64Service} from "../cv-base64/cv-base64.service";
 
 @Injectable({
   providedIn: 'root'

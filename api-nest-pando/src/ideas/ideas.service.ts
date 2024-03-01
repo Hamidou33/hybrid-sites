@@ -1,15 +1,16 @@
-import { Injectable, PreconditionFailedException } from "@nestjs/common";
+import { Injectable, PreconditionFailedException } from '@nestjs/common';
 import { Idea } from './ideas/ideas.entity/ideas.entity';
 import { Repository } from 'typeorm';
-import { InjectRepository } from "@nestjs/typeorm";
-import { from, Observable } from "rxjs";
+import { InjectRepository } from '@nestjs/typeorm';
+import { from, Observable } from 'rxjs';
 
 @Injectable()
 export class IdeasService {
   private readonly ideas: Idea[] = [];
 
-  constructor(@InjectRepository(Idea) private ideasRepository: Repository<Idea>) {
-  }
+  constructor(
+    @InjectRepository(Idea) private ideasRepository: Repository<Idea>,
+  ) {}
 
   getIdeas(): Idea[] {
     return this.ideas;
@@ -36,9 +37,8 @@ export class IdeasService {
     return from(this.ideasRepository.save(idea));
   }
 
-
   async updateIdea(idea: Idea) {
-    await this.ideasRepository.save(idea)
+    await this.ideasRepository.save(idea);
   }
 
   async deleteIdea(idea: Idea) {

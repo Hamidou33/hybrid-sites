@@ -19,17 +19,9 @@ export class NestService {
   constructor(private http: HttpClient) {
   }
 
-  getNestService() {
-    return this.http.get(`${this.env}/titre`, {responseType: 'text'});
-  }
-
   // GET Request
   getNestItems(): Observable<any> {
     return this.http.get(`${this.env}/items`);
-  }
-
-  getNestCats(): Observable<any> {
-    return this.http.get(`${this.env}/cats`);
   }
 
   // POST Request

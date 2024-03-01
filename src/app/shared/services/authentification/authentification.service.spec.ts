@@ -1,6 +1,6 @@
 import {TestBed} from '@angular/core/testing';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
-import {User} from '../model/user';
+import {User} from '../models/user';
 import {AuthenticationService} from "./authentification.service";
 
 describe('AuthenticationService', () => {

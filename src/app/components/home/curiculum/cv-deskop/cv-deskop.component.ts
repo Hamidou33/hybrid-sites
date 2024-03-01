@@ -1,7 +1,5 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {CuriculumService} from "../service/curiculum.service";
-import {TranslateService} from "@ngx-translate/core";
-
+import {CuriculumService} from "../service/curiculum/curiculum.service";
 @Component({
   selector: 'app-cv-deskop',
   templateUrl: './cv-deskop.component.html',
@@ -9,7 +7,7 @@ import {TranslateService} from "@ngx-translate/core";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CvDeskopComponent {
-  constructor(private curiculumService: CuriculumService, public translateService: TranslateService) {
+  constructor(private curiculumService: CuriculumService) {
   }
 
   downloadPdfDeskop(): void {

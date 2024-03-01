@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/core';
-import {CuriculumService} from "../service/curiculum.service";
+import {CuriculumService} from "../service/curiculum/curiculum.service";
 
 @Component({
   selector: 'app-cv-mobile',

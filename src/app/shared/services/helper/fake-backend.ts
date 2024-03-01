@@ -10,7 +10,7 @@ import {
 import {Observable, of, throwError} from 'rxjs';
 import {delay, dematerialize, materialize, mergeMap} from 'rxjs/operators';
 
-import {User} from '../model/user';
+import {User} from '../models/user';
 
 const users: User[] = [{id: 1, username: 'test', password: 'test', firstName: 'Test', lastName: 'User'}];
 

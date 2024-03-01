@@ -1,7 +1,15 @@
-import {Body, Controller, Delete, Get, Param, Post, Put} from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+} from '@nestjs/common';
 import { IdeasService } from './ideas.service';
 import { Idea } from './ideas/ideas.entity/ideas.entity';
-import {Observable} from "rxjs";
+import { Observable } from 'rxjs';
 
 @Controller('ideas')
 export class IdeasController {

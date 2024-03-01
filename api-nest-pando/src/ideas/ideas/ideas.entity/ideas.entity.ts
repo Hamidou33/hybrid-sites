@@ -10,6 +10,6 @@ export class Idea {
   @Column({ length: 25 })
   description: string;
 
-  @Column({nullable: false, type: 'datetime' })
+  @Column({ nullable: false, type: 'datetime' })
   dateEnvoi: Date;
 }

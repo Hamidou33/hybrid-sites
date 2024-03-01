@@ -11,7 +11,9 @@
                 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="votre message...">
       </textarea>
-      <button type="button" (click)="sendMessage()">envoyer</button>
+      <ng-container *ngIf="idee.value">
+        <button type="button" (click)="sendMessage()">envoyer</button>
+      </ng-container>
     </div>
   </main>
 </div>
