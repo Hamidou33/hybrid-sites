@@ -1,13 +1,21 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
-import { TranslateService } from "@ngx-translate/core";
-import { FormControl } from "@angular/forms";
-import { NestService } from "../../../shared/services/nest/nest.service";
+import { TranslateModule, TranslateService } from "@ngx-translate/core";
+import { FormControl, ReactiveFormsModule } from "@angular/forms";
+import { CommonModule } from "@angular/common";
+import { HeaderDeskopComponent } from "../home/header/header-deskop/header-deskop.component";
+import { NestService } from "../../shared/services/nest/nest.service";
 
 @Component({
   selector: "app-idee",
   templateUrl: "./idee.component.html",
   standalone: true,
   styleUrls: ["./idee.component.css"],
+  imports: [
+    CommonModule,
+    HeaderDeskopComponent,
+    ReactiveFormsModule,
+    TranslateModule
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class IdeeComponent {

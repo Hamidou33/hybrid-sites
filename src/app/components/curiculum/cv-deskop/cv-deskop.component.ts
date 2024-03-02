@@ -1,7 +1,8 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {CuriculumService} from "../service/curiculum/curiculum.service";
+import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { CuriculumService } from "../service/curiculum/curiculum.service";
 import { TranslateModule } from "@ngx-translate/core";
 import { CommonModule } from "@angular/common";
+
 @Component({
   selector: "app-cv-deskop",
   templateUrl: "./cv-deskop.component.html",

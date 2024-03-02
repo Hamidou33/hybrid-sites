@@ -8,7 +8,8 @@
     "CV": "Consulter mon CV",
     "FREELANCE": "Information freelance",
     "LOGGER": "Se connecter",
-    "IDEA": "Boite à idée"
+    "IDEA": "Boite à idée",
+    "PORTOFOLIO": "Projets IT"
   },
   "IDEA": {
     "LABEL": "Indiquez moi ici vos remarques :"
@@ -147,7 +148,7 @@
       "M1": "Front-end Angular",
       "M2": "Fullstack Angular/Node.js",
       "TJM": "450",
-      "DATE": "Disponibilité: à partir du 16 octobre 2023"
+      "DATE": "Disponibilité: à partir du 1 er avril 2024"
     }
   }
 }

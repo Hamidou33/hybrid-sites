@@ -1,5 +1,5 @@
-import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/core';
-import {CuriculumService} from "../service/curiculum/curiculum.service";
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from "@angular/core";
+import { CuriculumService } from "../service/curiculum/curiculum.service";
 import { TranslateModule } from "@ngx-translate/core";
 import { HeaderCvMobileComponent } from "./header-cv-mobile/header-cv-mobile.component";
 import { CommonModule } from "@angular/common";

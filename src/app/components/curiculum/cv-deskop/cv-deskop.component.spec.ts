@@ -1,7 +1,7 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {CuriculumService} from "../service/curiculum/curiculum.service";
-import {CvDeskopComponent} from "./cv-deskop.component";
-import {HttpClientModule} from "@angular/common/http";
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { CuriculumService } from "../service/curiculum/curiculum.service";
+import { CvDeskopComponent } from "./cv-deskop.component";
+import { HttpClientModule } from "@angular/common/http";
 
 describe('CvDeskopComponent', () => {
   let component: CvDeskopComponent;

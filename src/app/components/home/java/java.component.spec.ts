@@ -1,5 +1,5 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {JavaComponent} from "./java.component";
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { JavaComponent } from "./java.component";
 
 describe('JavaComponent', () => {
   let component: JavaComponent;

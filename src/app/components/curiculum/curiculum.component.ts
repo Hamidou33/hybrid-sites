@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
-import { HeaderDeskopComponent } from "../header/header-deskop/header-deskop.component";
 import { CvDeskopComponent } from "./cv-deskop/cv-deskop.component";
 import { CvMobileComponent } from "./cv-mobile/cv-mobile.component";
+import { HeaderDeskopComponent } from "../home/header/header-deskop/header-deskop.component";
 
 @Component({
   selector: "app-curiculum",
@@ -19,7 +19,7 @@ import { CvMobileComponent } from "./cv-mobile/cv-mobile.component";
 })
 
 export class CuriculumComponent {
-  constructor(private translate: TranslateService) {
+  constructor(public translate: TranslateService) {
     translate.setDefaultLang(localStorage.getItem('locale') || 'fr');
   }
 }
