@@ -1,9 +1,11 @@
-import {Component} from '@angular/core';
+import { ChangeDetectionStrategy, Component } from "@angular/core";
 
 @Component({
-  selector: 'app-java',
-  templateUrl: './java.component.html',
-  styleUrls: ['./java.component.css']
+  selector: "app-java",
+  templateUrl: "./java.component.html",
+  standalone: true,
+  styleUrls: ["./java.component.css"],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class JavaComponent {
 

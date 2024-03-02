@@ -1,8 +1,11 @@
 import {Component} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
+import { CommonModule } from "@angular/common";
 
 @Component({
+  standalone: true,
   selector: 'app-language-selector',
+  imports: [CommonModule],
   templateUrl: './language-selector.component.html'
 })
 export class LanguageSelectorComponent {

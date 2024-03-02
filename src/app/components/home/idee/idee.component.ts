@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
 import { FormControl } from "@angular/forms";
 import { NestService } from "../../../shared/services/nest/nest.service";
 
 @Component({
-  selector: 'app-idee',
-  templateUrl: './idee.component.html',
-  styleUrls: ['./idee.component.css']
+  selector: "app-idee",
+  templateUrl: "./idee.component.html",
+  standalone: true,
+  styleUrls: ["./idee.component.css"],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class IdeeComponent {
   idee: FormControl<string | null> = new FormControl('');

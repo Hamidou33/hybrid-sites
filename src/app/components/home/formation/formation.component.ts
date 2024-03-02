@@ -1,8 +1,10 @@
-import {Component} from '@angular/core';
+import { ChangeDetectionStrategy, Component } from "@angular/core";
 
 @Component({
-  selector: 'app-formation',
-  templateUrl: './formation.component.html'
+  selector: "app-formation",
+  standalone: true,
+  templateUrl: "./formation.component.html",
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FormationComponent {
 

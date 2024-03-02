@@ -1,7 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {CuriculumService} from "../service/curiculum/curiculum.service";
 import {CvDeskopComponent} from "./cv-deskop.component";
-import {HttpClient} from "@angular/common/http";
+import {HttpClientModule} from "@angular/common/http";
 
 describe('CvDeskopComponent', () => {
   let component: CvDeskopComponent;
@@ -11,7 +11,7 @@ describe('CvDeskopComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [CvDeskopComponent],
-      providers: [CuriculumService, HttpClient]
+      providers: [CuriculumService, HttpClientModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(CvDeskopComponent);
