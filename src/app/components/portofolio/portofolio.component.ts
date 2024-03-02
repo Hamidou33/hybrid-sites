@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { TranslateModule, TranslateService } from "@ngx-translate/core";
 import { HeaderDeskopComponent } from "../home/header/header-deskop/header-deskop.component";
 
@@ -10,7 +10,8 @@ import { HeaderDeskopComponent } from "../home/header/header-deskop/header-desko
     HeaderDeskopComponent
   ],
   templateUrl: './portofolio.component.html',
-  styleUrl: './portofolio.component.css'
+  styleUrl: './portofolio.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PortofolioComponent {
   constructor(translate: TranslateService) {
