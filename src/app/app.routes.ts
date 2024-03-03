@@ -7,9 +7,10 @@ import { VenteComponent } from "./components/home/vente/vente.component";
 import { AngularComponent } from "./components/home/angular/angular.component";
 import { JavaComponent } from "./components/home/java/java.component";
 import { NodeComponent } from "./components/home/node/node.component";
+import { ErrorComponent } from "./shared/errors/error.component";
 
 export const routes: Routes = [
-  {path: '', component: HomeComponent, pathMatch: 'full'},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {
     path: 'home', children : [
         {path: '', component: HomeComponent},
@@ -43,9 +44,5 @@ export const routes: Routes = [
     children : [],
     loadComponent: () => import('./components/idee/idee.component').then(m => m.IdeeComponent)
   },
-  {
-    path: 'error',
-    loadComponent: () => import('./shared/errors/error.component').then(m => m.ErrorComponent)
-  },
-  {path: '**', redirectTo: ''},
+  {path: '**', component: ErrorComponent},
 ];
