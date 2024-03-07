@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
 import { CommonModule, NgOptimizedImage } from "@angular/common";
 import { RouterLink, RouterLinkActive, RouterOutlet } from "@angular/router";
@@ -8,6 +8,7 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { HighchartsChartModule } from "highcharts-angular";
 import { HeaderComponent } from "./components/home/header/header.component";
 import { FreelanceComponent } from "./components/freelance/freelance.component";
+import { initFlowbite } from "flowbite";
 
 @Component({
   imports: [
@@ -29,9 +30,13 @@ import { FreelanceComponent } from "./components/freelance/freelance.component";
   providers: [HttpClient],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   constructor(translate: TranslateService) {
     translate.setDefaultLang(localStorage.getItem('locale') || 'fr');
     translate.use(localStorage.getItem('locale') || 'fr');
+  }
+
+  ngOnInit(): void {
+    initFlowbite();
   }
 }

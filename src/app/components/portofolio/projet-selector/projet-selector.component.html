@@ -1,0 +1,8 @@
+<div class="p-4">
+  <select class="border rounded px-4 py-2" (change)="selectProjet($event)">
+    <option disabled selected>Choisissez un projet</option>
+    <option *ngFor="let projet of projets" [value]="projet.id">{{ projet.nom }}</option>
+  </select>
+</div>
+
+

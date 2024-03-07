@@ -1,6 +1,17 @@
 <div class="bg-white">
   <app-header-deskop></app-header-deskop>
-  <main class="mx-5">
-    <p class="text-center">travaux en cours ...</p>
-  </main>
+  <div class="bg-white h-screen flex flex-col items-center">
+    <main class="mx-5">
+      <div class="container mx-auto my-8">
+        <h1 class="text-2xl font-bold mb-4 text-center">Sélection d'un projet</h1>
+        <div class="flex justify-center items-center">
+          <app-projet-selector (projetSelectionne)="onProjetSelectionne($event)"></app-projet-selector>
+        </div>
+        <div class="flex justify-center items-center">
+          <app-carousel-style [projetId]="selectedProjet"></app-carousel-style>
+        </div>
+      </div>
+    </main>
+  </div>
 </div>
+

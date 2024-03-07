@@ -1,5 +1,5 @@
 <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-  <div class="flex lg:flex-1">
+  <div class="flex items-center">
     <a [routerLink]="['/']" class="-m-1.5 p-1.5">
       <span class="sr-only">Pandoramid</span>
       <img class="h-12 w-auto" alt="" src="/assets/img/pandalogo.png">
@@ -16,10 +16,12 @@
        class="text-lg font-semibold leading-6 text-gray-900">{{'HEADER-ROUTING.IDEA' | translate }}</a>
 
   </div>
-  <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-    <span class="text-lg font-semibold leading-6 text-gray-900">Langue :</span>
+  <div class="hidden lg:flex items-center ml-8">
+    <span class="text-lg font-semibold leading-6 text-gray-900 mr-2">Langue :</span>
     <app-language-selector></app-language-selector>
     <a href="/" class="text-sm font-semibold leading-6 text-gray-900 hidden">{{'HEADER-ROUTING.LOGGER' | translate }} <span
       aria-hidden="true">&rarr;</span></a>
   </div>
 </nav>
+
+
