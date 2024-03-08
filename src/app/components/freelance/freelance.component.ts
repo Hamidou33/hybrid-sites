@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { TranslateModule, TranslateService } from "@ngx-translate/core";
 import { HeaderDeskopComponent } from "../home/header/header-deskop/header-deskop.component";
+import { NgOptimizedImage } from "@angular/common";
 
 @Component({
   selector: "app-freelance",
@@ -8,7 +9,8 @@ import { HeaderDeskopComponent } from "../home/header/header-deskop/header-desko
   standalone: true,
   imports: [
     TranslateModule,
-    HeaderDeskopComponent
+    HeaderDeskopComponent,
+    NgOptimizedImage
   ],
   styleUrls: ["./freelance.component.css"]
 })

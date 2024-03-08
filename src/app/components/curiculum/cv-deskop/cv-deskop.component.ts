@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { CuriculumService } from "../service/curiculum/curiculum.service";
 import { TranslateModule } from "@ngx-translate/core";
-import { CommonModule } from "@angular/common";
+import { CommonModule, NgOptimizedImage } from "@angular/common";
 
 @Component({
   selector: "app-cv-deskop",
@@ -10,7 +10,8 @@ import { CommonModule } from "@angular/common";
   standalone: true,
   imports: [
     CommonModule,
-    TranslateModule
+    TranslateModule,
+    NgOptimizedImage
   ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

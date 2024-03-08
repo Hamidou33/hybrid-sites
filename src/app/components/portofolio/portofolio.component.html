@@ -1,17 +1,20 @@
-<div class="bg-white">
+<div class="">
   <app-header-deskop></app-header-deskop>
-  <div class="bg-white h-screen flex flex-col items-center">
-    <main class="mx-5">
-      <div class="container mx-auto my-8">
-        <h1 class="text-2xl font-bold mb-4 text-center">Sélection d'un projet</h1>
-        <div class="flex justify-center items-center">
-          <app-projet-selector (projetSelectionne)="onProjetSelectionne($event)"></app-projet-selector>
-        </div>
-        <div class="flex justify-center items-center">
-          <app-carousel-style [projetId]="selectedProjet"></app-carousel-style>
+  <main class="flex-grow">
+    <div class="relative px-6 py-16 lg:px-8 bg-gradient-to-r from-pink-500 to-purple-500 text-white">
+      <div class="absolute inset-0 -z-10 filter blur-3xl bg-gradient-to-r from-pink-500 to-purple-500"></div>
+      <div class="max-w-2xl mx-auto py-12 px-8 bg-white bg-opacity-80 shadow-lg rounded-lg">
+        <div class="container mx-auto my-8">
+          <h1 class="text-2xl font-bold mb-4 text-center text-black">Sélection d'un projet</h1>
+          <div class="flex justify-center items-center">
+            <app-projet-selector (projetSelectionne)="onProjetSelectionne($event)"></app-projet-selector>
+          </div>
+          <div class="flex justify-center items-center">
+            <app-carousel-style [projetId]="selectedProjet"></app-carousel-style>
+          </div>
         </div>
       </div>
-    </main>
-  </div>
+    </div>
+  </main>
 </div>
 

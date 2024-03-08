@@ -10,3 +10,15 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.dark-mode {
+  @apply bg-gray-900 text-white;
+}
+
+.dark-mode .btn {
+  @apply bg-gray-800 text-white;
+}
+
+.dark-mode .input {
+  @apply bg-white text-black;
+}
