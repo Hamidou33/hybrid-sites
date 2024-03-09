@@ -44,5 +44,10 @@ export const routes: Routes = [
     children : [],
     loadComponent: () => import('./components/idee/idee.component').then(m => m.IdeeComponent)
   },
+  {
+    path: 'params',
+    children : [],
+    loadComponent: () => import('./components/parametres/parametres.component').then(m => m.ParametresComponent)
+  },
   {path: '**', component: ErrorComponent},
 ];

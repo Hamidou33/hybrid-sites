@@ -9,10 +9,25 @@
     "FREELANCE": "Freelance information",
     "LOGGER": "login",
     "PORTOFOLIO": "IT Project",
-    "IDEA": "Suggestion box"
+    "IDEA": "Suggestion box",
+    "PARAMS": "Settings"
   },
   "IDEA": {
     "LABEL": "Share your remarks here :"
+  },
+  "PARAMETRE": {
+    "TITLE": "Choose your settings"
+  },
+  "FREELANCE": {
+    "TITLE": "Interest in Missions",
+    "M1": "Front-end Angular",
+    "M2": "Fullstack Angular/Node.js",
+    "TJM": "450",
+    "DATE": "Availability: starting from October 16, 2023"
+  },
+  "PORTOFOLIO": {
+    "TITLE": "My portofolio",
+    "SELECTOR": "Select a project"
   },
   "CURRICULUM": {
     "DESCRIPTION": "Angular Software developer",
@@ -142,13 +157,6 @@
         "Reading",
         "Travel"
       ]
-    },
-    "FREELANCE": {
-      "TITLE": "Interest in Missions",
-      "M1": "Front-end Angular",
-      "M2": "Fullstack Angular/Node.js",
-      "TJM": "450",
-      "DATE": "Availability: starting from October 16, 2023"
     }
   }
 }

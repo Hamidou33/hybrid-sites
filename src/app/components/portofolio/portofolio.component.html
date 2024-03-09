@@ -5,7 +5,7 @@
       <div class="absolute inset-0 -z-10 filter blur-3xl bg-gradient-to-r from-pink-500 to-purple-500"></div>
       <div class="max-w-2xl mx-auto py-12 px-8 bg-white bg-opacity-80 shadow-lg rounded-lg">
         <div class="container mx-auto my-8">
-          <h1 class="text-2xl font-bold mb-4 text-center text-black">Sélection d'un projet</h1>
+          <h1 class="text-2xl font-bold mb-4 text-center text-black">{{ 'PORTOFOLIO.TITLE' | translate }}</h1>
           <div class="flex justify-center items-center">
             <app-projet-selector (projetSelectionne)="onProjetSelectionne($event)"></app-projet-selector>
           </div>

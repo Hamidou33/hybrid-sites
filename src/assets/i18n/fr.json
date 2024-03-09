@@ -9,10 +9,25 @@
     "FREELANCE": "Information freelance",
     "LOGGER": "Se connecter",
     "IDEA": "Boite à idée",
-    "PORTOFOLIO": "Projets IT"
+    "PORTOFOLIO": "Projets IT",
+    "PARAMS": "Paramètres"
   },
   "IDEA": {
     "LABEL": "Indiquez moi ici vos remarques :"
+  },
+  "PARAMETRE": {
+    "TITLE": "Choisissez vos paramètres"
+  },
+  "FREELANCE": {
+    "TITLE": "Intérêt pour des missions",
+    "M1": "Front-end Angular",
+    "M2": "Fullstack Angular/Node.js",
+    "TJM": "450",
+    "DATE": "Disponibilité: à partir du 1 er avril 2024"
+  },
+  "PORTOFOLIO": {
+    "TITLE": "Mon portofolio",
+    "SELECTOR": "Sélectionner un projet"
   },
   "CURRICULUM": {
     "DESCRIPTION": "Développeur Angular",
@@ -142,13 +157,6 @@
         "Lecture",
         "Voyage"
       ]
-    },
-    "FREELANCE": {
-      "TITLE": "Interet pour des missions",
-      "M1": "Front-end Angular",
-      "M2": "Fullstack Angular/Node.js",
-      "TJM": "450",
-      "DATE": "Disponibilité: à partir du 1 er avril 2024"
     }
   }
 }

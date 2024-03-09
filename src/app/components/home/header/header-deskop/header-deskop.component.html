@@ -13,17 +13,6 @@
     <a routerLink="/freelance" class="nav-link">{{'HEADER-ROUTING.FREELANCE' | translate }}</a>
     <a routerLink="/portofolio" class="nav-link">{{'HEADER-ROUTING.PORTOFOLIO' | translate }}</a>
     <a routerLink="/idea" class="nav-link">{{'HEADER-ROUTING.IDEA' | translate }}</a>
-  </div>
-
-  <!-- Sélecteurs de langue et de thème -->
-  <div class="flex flex-col items-center space-y-4 md:space-y-0 md:space-x-4">
-    <div class="flex items-center mb-2">
-      <span class="text-lg font-semibold leading-6 dark:text-white mr-2">Langue :</span>
-      <app-language-selector></app-language-selector>
-    </div>
-    <div class="flex items-center">
-      <span class="text-lg font-semibold leading-6 dark:text-white mr-2">Thème :</span>
-      <app-theme-selector [themeOptions]="themeOptions"></app-theme-selector>
-    </div>
+    <a routerLink="/params" class="nav-link">{{'HEADER-ROUTING.PARAMS' | translate }}</a>
   </div>
 </nav>
