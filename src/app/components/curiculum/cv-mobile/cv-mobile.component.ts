@@ -2,7 +2,8 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from "@angular/
 import { CuriculumService } from "../service/curiculum/curiculum.service";
 import { TranslateModule } from "@ngx-translate/core";
 import { HeaderCvMobileComponent } from "./header-cv-mobile/header-cv-mobile.component";
-import { CommonModule } from "@angular/common";
+import { CommonModule, NgOptimizedImage } from "@angular/common";
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: "app-cv-mobile",
@@ -13,7 +14,9 @@ import { CommonModule } from "@angular/common";
   imports: [
     CommonModule,
     TranslateModule,
-    HeaderCvMobileComponent
+    HeaderCvMobileComponent,
+    RouterLink,
+    NgOptimizedImage
   ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

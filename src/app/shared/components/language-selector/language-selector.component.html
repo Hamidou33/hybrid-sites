@@ -1,4 +1,5 @@
-<select class="text-black" #langSelect (change)="changeLanguage(langSelect.value)">
+<select class="text-black w-full" #langSelect (change)="changeLanguage(langSelect.value)">
+  <option class="w-4" disabled selected>{{ label }}</option>
   <option *ngFor="let lang of translate.getLangs()" [value]="lang"
           [selected]="lang === translate.currentLang">
     {{ lang === 'en' ? 'English' : 'Français'}}

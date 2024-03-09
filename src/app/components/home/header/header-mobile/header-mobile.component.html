@@ -39,8 +39,12 @@
         <div class="py-6">
           <a routerLink="/"
              class="-mx-3 rounded-lg px-3 py-2.5 text-base font-semibold leading-7 dark:text-white hover:bg-gray-50 hidden">{{'HEADER-ROUTING.LOGGER' | translate }}</a>
-          <label class="text-base font-semibold dark:text-white">Langue :</label>
+          <label class="text-base font-semibold dark:text-white mr-2">Langue :</label>
           <app-language-selector></app-language-selector>
+          <br>
+          <br>
+          <label class="text-base font-semibold dark:text-white mt-2 mr-3">Thème :</label>
+          <app-theme-selector class="text-end" [themeOptions]="themeOptions"></app-theme-selector>
         </div>
       </div>
     </div>

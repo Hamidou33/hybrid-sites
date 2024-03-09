@@ -6,6 +6,7 @@ import { ThemeSelectorComponent } from "../../../../shared/components/theme-sele
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { ThemeService } from "../../../../shared/services/theme/theme.service";
 import { THEMES } from "../../../../shared/constantes/theme.constants";
+import { NgOptimizedImage } from "@angular/common";
 
 @Component({
   selector: "app-header-deskop",
@@ -16,7 +17,8 @@ import { THEMES } from "../../../../shared/constantes/theme.constants";
     RouterLink,
     LanguageSelectorComponent,
     TranslateModule,
-    ThemeSelectorComponent
+    ThemeSelectorComponent,
+    NgOptimizedImage
   ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
