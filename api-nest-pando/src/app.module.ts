@@ -4,10 +4,10 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ItemsModule } from './items/items.module';
-import { IdeasModule } from './ideas/ideas.module';
 import { User } from './users/user.entity/user.entity';
-import { Idea } from './ideas/ideas/ideas.entity/ideas.entity';
 import { Item } from './items/items/items.entity/item.entity';
+import { CommentsModule } from "./comments/comments.module";
+import { Comments } from "./comments/comments.entity/comments";
 
 @Module({
   imports: [
@@ -21,13 +21,13 @@ import { Item } from './items/items/items.entity/item.entity';
           password: process.env['DATABASE_PASSWORD'],
           database: process.env['DATABASE_NAME'],
           synchronize: process.env['DATABASE_SYNCHRONISATION'] === 'true',
-          entities: [User, Idea, Item],
+          entities: [User, Item, Comments],
         }
       }
     }),
     UsersModule,
     ItemsModule,
-    IdeasModule,
+    CommentsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

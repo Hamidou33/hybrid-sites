@@ -12,8 +12,9 @@ import { CommonModule, NgOptimizedImage } from "@angular/common";
 })
 export class CarouselStyleComponent implements OnInit, OnChanges, OnDestroy {
   images: { src: string, alt: string, width: number, height: number }[] = [
-    { src: '/assets/img/caroussel/imageA.svg', alt: 'Image A', width: 400, height: 225 },
-    { src: '/assets/img/caroussel/imageB.svg', alt: 'Image B', width: 400, height: 225 }
+    { src: '/assets/img/caroussel/myCV1.jpg', alt: 'myCV1', width: 400, height: 225 },
+    { src: '/assets/img/caroussel/myCV2.jpg', alt: 'myCV2', width: 400, height: 225 },
+    { src: '/assets/img/caroussel/myCV3.jpg', alt: 'myCV3', width: 400, height: 225 },
   ];
   slideIndex: number = 0;
   autoSlideInterval: any;
@@ -21,30 +22,27 @@ export class CarouselStyleComponent implements OnInit, OnChanges, OnDestroy {
 
   constructor() { }
 
-  ngOnChanges(changes: SimpleChanges) {
-    console.log(this.projetId);
+  ngOnChanges() {
     if(this.projetId) {
       switch (this.projetId.toString()) {
         case '1':
-          console.log('Projet 1');
           this.images = [
-            { src: '/assets/img/caroussel/myCV1.jpg', alt: 'Image A', width: 400, height: 225 },
-            { src: '/assets/img/caroussel/myCV2.jpg', alt: 'Image A', width: 400, height: 225 },
-            { src: '/assets/img/caroussel/myCV3.jpg', alt: 'Image A', width: 400, height: 225 },
+            { src: '/assets/img/caroussel/myCV1.jpg', alt: 'myCV1', width: 400, height: 225 },
+            { src: '/assets/img/caroussel/myCV2.jpg', alt: 'myCV2', width: 400, height: 225 },
+            { src: '/assets/img/caroussel/myCV3.jpg', alt: 'myCV3', width: 400, height: 225 },
           ]
           break;
         case '2':
-          console.log('Projet 2');
           this.images = [
-            { src: '/assets/img/caroussel/image1.jpg', alt: 'Image 1', width: 400, height: 225 },
-            { src: '/assets/img/caroussel/image2.jpg', alt: 'Image 2', width: 400, height: 225 }
+            { src: '/assets/img/caroussel/reservation.jpg', alt: 'reservation', width: 400, height: 225 },
+            { src: '/assets/img/caroussel/reservation2.jpeg', alt: 'reservation2', width: 400, height: 225 }
           ]
           break;
         case '3':
-          console.log('Projet 3');
           this.images = [
-            { src: '/assets/img/caroussel/imageA.svg', alt: 'Image A', width: 400, height: 225 },
-            { src: '/assets/img/caroussel/imageB.svg', alt: 'Image B', width: 400, height: 225 }
+            { src: '/assets/img/caroussel/e-commerce.jpeg', alt: 'e-commerce 1', width: 400, height: 225 },
+            { src: '/assets/img/caroussel/e-commerce2.jpeg', alt: 'e-commerce 2', width: 400, height: 225 },
+            { src: '/assets/img/caroussel/e-commerce3.jpeg', alt: 'e-commerce 3', width: 400, height: 225 }
           ]
           break;
         default:
@@ -88,10 +86,6 @@ export class CarouselStyleComponent implements OnInit, OnChanges, OnDestroy {
 
   stopAutoSlide() {
     clearInterval(this.autoSlideInterval);
-  }
-
-  getImagesForProjet(): { src: string, alt: string, width: number, height: number } {
-    return this.images[this.projetId - 1] || [];
   }
 }
 

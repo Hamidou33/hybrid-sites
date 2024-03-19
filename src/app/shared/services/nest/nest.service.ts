@@ -1,50 +1,54 @@
 import {Injectable} from '@angular/core';
 import {environment} from '../../../../environments/environment.development';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {Observable} from "rxjs";
+import { Observable, Subject } from "rxjs";
+import { Comments } from "../../interfaces/comments";
+import { tap } from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
 })
 export class NestService {
-  optionRequete = {
-    headers: new HttpHeaders({
-      'Content-Type': '*',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
-    })
-  };
+  private commentsSubject: Subject<Comments[]> = new Subject<Comments[]>();
   env: string = environment.apiUrlNest;
 
   constructor(private http: HttpClient) {
   }
 
-  // GET Request
-  getNestItems(): Observable<any> {
-    return this.http.get(`${this.env}/items`);
+  get commentsUpdated(): Observable<Comments[]> {
+    return this.commentsSubject.asObservable();
   }
 
-  // POST Request
-  addNestItem(item: any): Observable<any> {
-    return this.http.post(`${this.env}/items`, item);
+  addComment(comment: Comments): Observable<any> {
+    return this.http.post<any>(`${this.env}/comments`, comment).pipe(
+      tap(() => this.fetchComments())
+    );
   }
 
-  // DELETE Request
-  deleteNestItem(itemId: number): Observable<any> {
-    return this.http.delete(`${this.env}/items/${itemId}`);
+  deleteComment(commentId: number): Observable<any> {
+    const url = `${this.env}/comments/${commentId}`;
+    return this.http.delete<any>(url).pipe(
+      tap(() => this.fetchComments())
+    );
   }
 
-  // PUT Request
-  updateNestItem(itemId: number, updatedItem: any): Observable<any> {
-    return this.http.put(`${this.env}/items/${itemId}`, updatedItem);
-  }
+  // fetchComments(): void {
+  //   this.http.get<Comments[]>(this.apiUrl).subscribe(
+  //     comments => this.commentsSubject.next(comments),
+  //     error => console.error('Error fetching comments:', error)
+  //   );
+  // }
 
-  // POST Request
-  addNestIdeas(ideas: string): Observable<any> {
-    let newAdea: any = {
-      description: ideas || ''
+  fetchComments(): void {
+    console.log('Fetching comments...');
+    this.http.get<Comments[]>(`${this.env}/comments`).subscribe({
+      next: (comments: Comments[]) => {
+        this.commentsSubject.next(comments);
+      }, error: (err: any) => {
+        this.commentsSubject.error(err);
+      }
     }
-    return this.http.post(`${this.env}/ideas`, newAdea);
+    );
   }
 
 }
