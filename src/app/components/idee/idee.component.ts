@@ -28,15 +28,19 @@ export class IdeeComponent implements OnInit {
 
   constructor(translate: TranslateService, private formBuilder: FormBuilder, private nestService: NestService) {
     translate.setDefaultLang(localStorage.getItem("locale") || "fr");
-    this.commentForm = this.formBuilder.group({
-      name: ["", Validators.required],
-      comment: ["", Validators.required]
-    });
+    this.commentForm = this.initForm();
   }
 
   ngOnInit() {
     this.comments$ = this.nestService.commentsUpdated;
     this.nestService.fetchComments();
+  }
+
+  initForm(): FormGroup {
+    return this.formBuilder.group({
+      name: ["", Validators.required],
+      comment: ["", Validators.required]
+    });
   }
 
   sendMessage() {

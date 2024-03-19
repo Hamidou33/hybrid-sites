@@ -2,11 +2,6 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from "./components/home/home.component";
 import { LoginComponent } from "./components/home/login/login.component";
 import { FormationComponent } from "./components/home/formation/formation.component";
-import { LocationComponent } from "./components/home/location/location.component";
-import { VenteComponent } from "./components/home/vente/vente.component";
-import { AngularComponent } from "./components/home/angular/angular.component";
-import { JavaComponent } from "./components/home/java/java.component";
-import { NodeComponent } from "./components/home/node/node.component";
 import { ErrorComponent } from "./shared/errors/error.component";
 
 export const routes: Routes = [
@@ -15,12 +10,7 @@ export const routes: Routes = [
     path: 'home', children : [
         {path: '', component: HomeComponent},
         {path: 'login', title: 'home | login', component: LoginComponent},
-        {path: 'formation', title: 'home | formation', component: FormationComponent},
-        {path: 'location', title: 'home | location', component: LocationComponent},
-        {path: 'vente', title: 'home | vente', component: VenteComponent},
-        {path: 'angular', title: 'home | angular', component: AngularComponent},
-        {path: 'java', title: 'home | java', component: JavaComponent},
-        {path: 'node', title: 'home | node', component: NodeComponent},
+        {path: 'formation', title: 'home | formation', component: FormationComponent}
     ],
     loadComponent: () => import('./components/home/home.component').then(m => m.HomeComponent)
   },
