@@ -6,6 +6,7 @@ import { ThemeSelectorComponent } from "../../../../shared/components/theme-sele
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { THEMES } from "../../../../shared/constantes/theme.constants";
 import { ThemeService } from "../../../../shared/services/theme/theme.service";
+import { NgOptimizedImage } from "@angular/common";
 
 @Component({
   selector: "app-header-mobile",
@@ -16,7 +17,8 @@ import { ThemeService } from "../../../../shared/services/theme/theme.service";
     LanguageSelectorComponent,
     TranslateModule,
     RouterLink,
-    ThemeSelectorComponent
+    ThemeSelectorComponent,
+    NgOptimizedImage
   ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
