@@ -1,52 +1,37 @@
-#FROM node:current-alpine
-#
-#LABEL authors="hamid"
-#
-#WORKDIR /app
-#
-#COPY ./node_modules /app/node_modules
-#
-#COPY package.json /app/package.json
-#
-#COPY ./nest-cli.json /app/nest-cli.json
-#
-#COPY ./tsconfig.json /app/tsconfig.json
-#
-#COPY ./tsconfig.build.json /app/tsconfig.build.json
-#COPY package-lock.json /app/package-lock.json
-#RUN npm ci
-#RUN npm run build
-#EXPOSE 3000
-#CMD ["node", "dist/main"]
+# Étape de build
+FROM node:20 AS build
 
+# Définir le répertoire de travail
+WORKDIR /usr/src/app
 
-FROM node:current-alpine AS development
-
-WORKDIR /src/app
-
-COPY package*.json ./
-
-RUN npm install glob rimraf
-
-RUN npm install --only=development
-
+# Copier les fichiers de dépendances
 COPY . .
 
+# Installer les dépendances
+RUN npm install
+
+# Compiler l'application
 RUN npm run build
 
-FROM node:current-alpine as production
+# Étape d'exécution
+FROM node:20-alpine AS run
 
-ARG NODE_ENV=production
-ENV NODE_ENV=${NODE_ENV}
+WORKDIR /usr/src/app
 
-WORKDIR /src/app/
+# Copier les dépendances nécessaires depuis l'étape de build
+COPY --from=build /usr/src/app/node_modules ./node_modules
+COPY --from=build /usr/src/app/dist ./dist
 
-COPY package*.json ./
+ENV DATABASE_TYPE=mysql
+ENV DATABASE_HOST=192.168.1.13
+ENV DATABASE_PORT=3109
+ENV DATABASE_USER=root
+ENV DATABASE_PASSWORD=Aburame13$
+ENV DATABASE_NAME=pandoramid
+ENV DATABASE_SYNCHRONISATION=true
 
-RUN npm install --only=production
+# Exposer le port sur lequel l'application va tourner
+EXPOSE 3000
 
-COPY . .
-
-COPY --from=development /dist ./dist
-
+# Lancer l'application
 CMD ["node", "dist/main"]

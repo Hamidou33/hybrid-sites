@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ConfigModule, ConfigService } from '@nestjs/config';
+import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
@@ -14,18 +14,18 @@ import { Comments } from './comments/comments.entity/comments';
   imports: [
     ConfigModule.forRoot(),
     TypeOrmModule.forRootAsync({
-      imports: [ConfigModule],
-      useFactory: async (configService: ConfigService) => ({
-        type: 'mysql',
-        host: configService.get('DATABASE_HOST'),
-        port: +configService.get('DATABASE_PORT'),
-        username: configService.get('DATABASE_USER'),
-        password: configService.get('DATABASE_PASSWORD'),
-        database: configService.get('DATABASE_NAME'),
-        synchronize: configService.get('DATABASE_SYNCHRONISATION') === 'true',
-        entities: [User, Item, Comments],
-      }),
-      inject: [ConfigService],
+      useFactory: () => {
+        return {
+          type: process.env['DATABASE_TYPE'] as any,
+          host: process.env['DATABASE_HOST'],
+          port: +process.env['DATABASE_PORT'],
+          username: process.env['DATABASE_USER'],
+          password: process.env['DATABASE_PASSWORD'],
+          database: process.env['DATABASE_NAME'],
+          synchronize: process.env['DATABASE_SYNCHRONISATION'] === 'true',
+          entities: [User, Item, Comments],
+        }
+      }
     }),
     UsersModule,
     ItemsModule,

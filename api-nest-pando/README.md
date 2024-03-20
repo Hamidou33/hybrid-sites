@@ -76,3 +76,26 @@ Nest is [MIT licensed](LICENSE).
 ## HINT: Create a controller with cli
 
 To create a controller using the CLI, simply execute the $ nest g controller [name] command.
+
+## Push image docker 
+
+docker push nomDossier(hamid33130)/nom-image-docker
+
+## How to build dockerimage
+docker build -f Dockerfile -t hamid33130/api-nest-pando .
+
+## Push dockerimage
+
+docker push hamid33130/api-nest-pando
+
+## Run everywhere with docker installed 
+
+docker run --rm -d -p 3000:3000 hamid33130/api-nest-pando
+
+## voir tous les docker qui tourne 
+
+docker ps
+
+## killer un docker qui tourne
+
+docker kill [id]

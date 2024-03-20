@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrlNest: 'https://pandoramid.com/api',
+  apiUrlNest: 'https://api.pandoramid.com'
 };
