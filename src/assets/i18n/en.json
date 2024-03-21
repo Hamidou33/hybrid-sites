@@ -29,7 +29,9 @@
     "TITLE": "Choose your settings"
   },
   "FORMATION": {
-    "TITLE": "Choose a training"
+    "TITLE": "Choose a training",
+    "CONTENT1": "Request a quote for an introductory course in",
+    "CONTENT2": "via my email hamid.benallel.scicog@gmail.com"
   },
   "FREELANCE": {
     "TITLE": "Interest in Missions",

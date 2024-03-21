@@ -29,7 +29,9 @@
     "TITLE": "Choisissez vos paramètres"
   },
   "FORMATION": {
-    "TITLE": "Choisissez une formation"
+    "TITLE": "Choisissez une formation",
+    "CONTENT1": "Demandez un devis pour un cours d'initiation en",
+    "CONTENT2": "via mon email hamid.benallel.scicog@gmail.com"
   },
   "FREELANCE": {
     "TITLE": "Intérêt pour des missions",
