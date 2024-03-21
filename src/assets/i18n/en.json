@@ -10,13 +10,26 @@
     "LOGGER": "login",
     "PORTOFOLIO": "IT Project",
     "IDEA": "Suggestion box",
-    "PARAMS": "Settings"
+    "PARAMS": "Settings",
+    "FORMATIONS": "Trainings"
   },
   "IDEA": {
-    "LABEL": "Share your remarks here :"
+    "LABEL": "Share your remarks here :",
+    "NAME": "Your name",
+    "NAME_PLACEHOLDER": "Your name",
+    "MESSAGE_PLACEHOLDER": "Your message",
+    "DATE": "",
+    "BY": "by",
+    "LISTE_LABEL": "List of comments",
+    "BUTTON_ADD": "Send",
+    "BUTTON_DELETE": "Delete",
+    "NO_VALUE": "No idea has been submitted"
   },
   "PARAMETRE": {
     "TITLE": "Choose your settings"
+  },
+  "FORMATION": {
+    "TITLE": "Choose a training"
   },
   "FREELANCE": {
     "TITLE": "Interest in Missions",

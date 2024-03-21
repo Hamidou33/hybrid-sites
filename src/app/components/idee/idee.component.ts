@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
 import { NestService } from "../../shared/services/nest/nest.service";
 import { Comments } from "../../shared/interfaces/comments";
-import { Observable } from "rxjs";
+import { BehaviorSubject, Observable, Subject, switchMap } from "rxjs";
 import { TranslateModule, TranslateService } from "@ngx-translate/core";
 import { CommonModule } from "@angular/common";
 import { HeaderDeskopComponent } from "../home/header/header-deskop/header-deskop.component";
@@ -25,6 +25,8 @@ import { DateFormatDirective } from "../../shared/directives/date-format.directi
 export class IdeeComponent implements OnInit {
   comments$: Observable<Comments[]>;
   commentForm: FormGroup;
+  loading$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  private commentsSubject: Subject<Comments[]> = new Subject<Comments[]>();
 
   constructor(translate: TranslateService, private formBuilder: FormBuilder, private nestService: NestService) {
     translate.setDefaultLang(localStorage.getItem("locale") || "fr");
@@ -32,8 +34,22 @@ export class IdeeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.comments$ = this.nestService.commentsUpdated;
-    this.nestService.fetchComments();
+    this.loading$.next(true);
+    this.comments$ = this.commentsUpdated;
+    this.nestService.fetchComments().subscribe({
+        next: (comments: Comments[]) => {
+          this.commentsSubject.next(comments);
+          this.loading$.next(false);
+        }, error: (err: any) => {
+          this.commentsSubject.error(err);
+          this.loading$.next(false);
+        }
+      }
+    );
+  }
+
+  get commentsUpdated(): Observable<Comments[]> {
+    return this.commentsSubject.asObservable();
   }
 
   initForm(): FormGroup {
@@ -44,6 +60,7 @@ export class IdeeComponent implements OnInit {
   }
 
   sendMessage() {
+    this.loading$.next(true);
     if (this.commentForm.valid) {
       const newComment: Comments = {
         name: this.commentForm.value.name,
@@ -51,26 +68,36 @@ export class IdeeComponent implements OnInit {
         date: new Date().toString()
       };
 
-      this.nestService.addComment(newComment).subscribe({
-          next: (v) => {
-            console.log("New comment added successfully", v);
-          }, error: (err: any) => {
-            console.error("Error adding new comment:", err);
-          }
+      this.nestService.addComment(newComment).pipe(
+        switchMap(() => this.nestService.fetchComments())
+      ).subscribe({
+        next: (comments: Comments[]) => {
+          this.commentsSubject.next(comments);
+          this.loading$.next(false);
+          console.log("New comment added successfully");
+        },
+        error: (err: any) => {
+          console.error("Error adding new comment:", err);
+          this.loading$.next(false);
         }
-      );
+      });
     }
   }
 
   deleteComment(commentId: number) {
-    this.nestService.deleteComment(commentId).subscribe({
-        next: (v) => {
-          console.log("Comment deleted successfully", v);
-        },
-        error: error => {
-          console.error("Error deleting comment:", error);
-        }
+    this.loading$.next(true);
+    this.nestService.deleteComment(commentId).pipe(
+      switchMap(() => this.nestService.fetchComments())
+    ).subscribe({
+      next: (comments: Comments[]) => {
+        this.commentsSubject.next(comments);
+        this.loading$.next(false);
+        console.log("Comment deleted successfully");
+      },
+      error: (err: any) => {
+        console.error("Error deleting comment:", err);
+        this.loading$.next(false);
       }
-    );
+    });
   }
 }

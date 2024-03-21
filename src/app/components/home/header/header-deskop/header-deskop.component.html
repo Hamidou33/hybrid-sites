@@ -21,6 +21,10 @@
     <a routerLink="/params" class="nav-link dark:text-white"
        [class.active-link]="isActive('/params')"
        (click)="setActiveLink('/params')">{{'HEADER-ROUTING.PARAMS' | translate }}</a>
+
+    <a routerLink="/formations" class="nav-link dark:text-white"
+       [class.active-link]="isActive('/formations')"
+       (click)="setActiveLink('/formations')">{{'HEADER-ROUTING.FORMATIONS' | translate }}</a>
   </div>
 </nav>
 

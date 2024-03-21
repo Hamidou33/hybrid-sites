@@ -10,13 +10,26 @@
     "LOGGER": "Se connecter",
     "IDEA": "Boite à idée",
     "PORTOFOLIO": "Projets IT",
-    "PARAMS": "Paramètres"
+    "PARAMS": "Paramètres",
+    "FORMATIONS": "Formations"
   },
   "IDEA": {
-    "LABEL": "Indiquez moi ici vos remarques :"
+    "LABEL": "Indiquez moi ici vos remarques :",
+    "NAME": "Votre nom",
+    "NAME_PLACEHOLDER": "Votre nom",
+    "MESSAGE_PLACEHOLDER": "Votre message",
+    "DATE": "Le",
+    "BY": "par",
+    "LISTE_LABEL": "Liste des commentaires",
+    "BUTTON_ADD": "Envoyer",
+    "BUTTON_DELETE": "Supprimer",
+    "NO_VALUE": "Aucune idée n'a été soumise"
   },
   "PARAMETRE": {
     "TITLE": "Choisissez vos paramètres"
+  },
+  "FORMATION": {
+    "TITLE": "Choisissez une formation"
   },
   "FREELANCE": {
     "TITLE": "Intérêt pour des missions",

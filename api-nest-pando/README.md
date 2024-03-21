@@ -99,3 +99,7 @@ docker ps
 ## killer un docker qui tourne
 
 docker kill [id]
+
+## lancer le docker compose
+
+docker compose up

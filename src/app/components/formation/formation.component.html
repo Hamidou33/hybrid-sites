@@ -1,0 +1,45 @@
+<!--<app-header></app-header>-->
+<!--<section class="text-center mt-14">-->
+<!--  <h1 class="text-lg">Les formations disponibles</h1>-->
+<!--  <p>-->
+<!--    Voici une liste de formation utile pour vous permettre de vous lancer dans le développement web-->
+<!--  </p>-->
+<!--  <div>-->
+<!--    <ul>-->
+<!--      @for (formation of formations; track formation) {-->
+<!--        <label>{{ formation }}</label>-->
+<!--      }-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--</section>-->
+
+<div class="min-h-screen flex flex-col">
+  <app-header-deskop></app-header-deskop>
+  <main class="flex-grow">
+    <div class="relative px-6 py-16 lg:px-8 bg-gradient-to-r from-pink-500 to-purple-500 text-white">
+      <div class="absolute inset-0 -z-10 filter blur-3xl bg-gradient-to-r from-pink-500 to-purple-500"></div>
+      <div class="max-w-2xl mx-auto py-12 px-8 bg-white bg-opacity-80 shadow-lg rounded-lg">
+        <h2 class="text-3xl font-semibold text-left mb-6 text-black">{{ 'FORMATION.TITLE' | translate }}</h2>
+
+<!--        <ul class="list-disc pl-6 mb-6 text-black">-->
+<!--          @for (formation of formations; track formation) {-->
+<!--            <li>{{ formation }}</li>-->
+<!--          }-->
+<!--        </ul>-->
+        <div [formGroup]="formationForm" class="mt-4">
+          <select formControlName="formation" class="text-black block w-full bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+            <option value="" disabled selected>Choisissez une formation</option>
+            <option *ngFor="let formation of formations" [value]="formation">{{ formation }}</option>
+          </select>
+        </div>
+        <div *ngIf="formationControl.value" class="mt-4 text-black">
+          <p>Demandez un devis pour un cours d'initiation en  {{ formationControl.value }} via mon email hamid.benallel.scicog&#64;gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+

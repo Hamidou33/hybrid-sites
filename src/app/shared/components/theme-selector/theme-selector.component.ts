@@ -25,45 +25,6 @@ export class ThemeSelectorComponent {
   changeTheme() {
     if(this.themeControl && this.themeControl.value) {
       this.themeService.setTheme(this.themeControl.value);
-      // if (this.themeControl.value === 'dark-mode') {
-      //   this.replaceWhiteBackgroundsWithDark()
-      //   this.replaceTextColorsWithWhite();
-      // } else {
-      //   this.restoreWhiteBackgrounds()
-      //   this.restoreTextColors();
-      // }
     }
-  }
-  replaceWhiteBackgroundsWithDark() {
-    const elements = document.querySelectorAll<HTMLElement>('.bg-white');
-    elements.forEach((element: HTMLElement) => {
-      element.classList.remove('bg-white');
-      element.classList.add('bg-dark');
-    });
-  }
-
-  replaceTextColorsWithWhite() {
-    const elements = document.querySelectorAll<HTMLElement>('.text-black');
-    elements.forEach((element: HTMLElement) => {
-      element.classList.remove('text-black');
-      element.classList.add('text-white');
-
-    });
-  }
-
-  restoreWhiteBackgrounds() {
-    const elements = document.querySelectorAll<HTMLElement>('.bg-dark');
-    elements.forEach((element: HTMLElement) => {
-      element.classList.remove('bg-dark');
-      element.classList.add('bg-white');
-    });
-  }
-
-  restoreTextColors() {
-    const elements = document.querySelectorAll<HTMLElement>('.text-white');
-    elements.forEach((element: HTMLElement) => {
-      element.classList.remove('text-white');
-      element.classList.add('text-black');
-    });
   }
 }

@@ -1,4 +1,4 @@
 <select id="theme" name="theme" [formControl]="themeControl" (change)="changeTheme()" class="w-[200px] text-black block appearance-none bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
     <option disabled selected>{{ label }}</option>
-    <option *ngFor="let option of themeOptions" [value]="option.value">{{ option.label === 'Lumière' ? 'light' : 'dark' }}</option>
+    <option *ngFor="let option of themeOptions" [value]="option.value">{{ option.label === 'Lumière' ? 'Light' : 'Dark' }}</option>
 </select>
