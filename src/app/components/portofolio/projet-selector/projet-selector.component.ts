@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnChanges, OnDestroy, Output, SimpleChanges } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { TranslateModule } from "@ngx-translate/core";
 
@@ -18,8 +18,9 @@ export class ProjetSelectorComponent {
     { id: 3, nom: 'Site e-commerce' }
   ];
 
-  selectProjet(event: any) {
-    const selectedProjetId = parseInt(event.target.value, 10);
+  selectProjet(event: Event) {
+    const target = event.target as HTMLInputElement;
+    const selectedProjetId = parseInt(target.value, 10);
     this.projetSelectionne.emit(selectedProjetId);
   }
 }

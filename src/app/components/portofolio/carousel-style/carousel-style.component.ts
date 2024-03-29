@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from "@angular/core";
+import { Component, Input, OnChanges, OnDestroy, OnInit } from "@angular/core";
 import { CommonModule, NgOptimizedImage } from "@angular/common";
 
 @Component({
@@ -17,7 +17,7 @@ export class CarouselStyleComponent implements OnInit, OnChanges, OnDestroy {
     { src: '/assets/img/caroussel/myCV3.jpg', alt: 'myCV3', width: 400, height: 225 },
   ];
   slideIndex: number = 0;
-  autoSlideInterval: any;
+  autoSlideInterval: string | number | NodeJS.Timeout | undefined;
   @Input() projetId: number;
 
   constructor() { }

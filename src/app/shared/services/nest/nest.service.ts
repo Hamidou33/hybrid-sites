@@ -14,15 +14,15 @@ export class NestService {
   constructor(private http: HttpClient) {
   }
 
-  addComment(comment: Comments): Observable<any> {
-    return this.http.post<any>(`${this.env}/comments`, comment).pipe(
+  addComment(comment: Comments): Observable<Comments> {
+    return this.http.post<Comments>(`${this.env}/comments`, comment).pipe(
       tap(() => this.fetchComments())
     );
   }
 
-  deleteComment(commentId: number): Observable<any> {
+  deleteComment(commentId: number): Observable<number> {
     const url = `${this.env}/comments/${commentId}`;
-    return this.http.delete<any>(url).pipe(
+    return this.http.delete<number>(url).pipe(
       tap(() => this.fetchComments())
     );
   }

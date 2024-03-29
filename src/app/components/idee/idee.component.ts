@@ -40,7 +40,7 @@ export class IdeeComponent implements OnInit {
         next: (comments: Comments[]) => {
           this.commentsSubject.next(comments);
           this.loading$.next(false);
-        }, error: (err: any) => {
+        }, error: (err: string) => {
           this.commentsSubject.error(err);
           this.loading$.next(false);
         }
@@ -76,7 +76,7 @@ export class IdeeComponent implements OnInit {
           this.loading$.next(false);
           console.log("New comment added successfully");
         },
-        error: (err: any) => {
+        error: (err: string) => {
           console.error("Error adding new comment:", err);
           this.loading$.next(false);
         }
@@ -94,7 +94,7 @@ export class IdeeComponent implements OnInit {
         this.loading$.next(false);
         console.log("Comment deleted successfully");
       },
-      error: (err: any) => {
+      error: (err: string) => {
         console.error("Error deleting comment:", err);
         this.loading$.next(false);
       }

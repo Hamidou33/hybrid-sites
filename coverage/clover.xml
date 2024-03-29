@@ -1,311 +1,529 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1694903172289" clover="3.2.0">
-  <project timestamp="1694903172289" name="All files">
-    <metrics statements="167" coveredstatements="126" conditionals="10" coveredconditionals="4" methods="36" coveredmethods="16" elements="213" coveredelements="146" complexity="0" loc="167" ncloc="167" packages="26" files="47" classes="47"/>
-    <package name="api-nest-pando.src">
-      <metrics statements="19" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="3"/>
-      <file name="app.controller.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\api-nest-pando\src\app.controller.ts">
-        <metrics statements="14" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-      </file>
-      <file name="app.service.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\api-nest-pando\src\app.service.ts">
-        <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="api-nest-pando.src.admin">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="admin.controller.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\api-nest-pando\src\admin\admin.controller.ts">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.app">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="app.component.html" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\app.component.html">
+<coverage generated="1711748998740" clover="3.2.0">
+  <project timestamp="1711748998740" name="All files">
+    <metrics statements="360" coveredstatements="204" conditionals="47" coveredconditionals="4" methods="84" coveredmethods="16" elements="491" coveredelements="224" complexity="0" loc="360" ncloc="360" packages="32" files="55" classes="55"/>
+    <package name="app">
+      <metrics statements="16" coveredstatements="13" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="app.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\app.component.html">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="app.component.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\app.component.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.app.components.home">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="home.component.html" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\home.component.html">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-      </file>
-      <file name="home.component.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\home.component.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.app.components.home.angular">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="angular.component.html" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\angular\angular.component.html">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-      </file>
-      <file name="angular.component.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\angular\angular.component.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.app.components.home.content">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="content.component.html" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\content\content.component.html">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-      </file>
-      <file name="content.component.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\content\content.component.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.app.components.home.curiculum">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="curiculum.component.html" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\curiculum\curiculum.component.html">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-      </file>
-      <file name="curiculum.component.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\curiculum\curiculum.component.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.app.components.home.curiculum.cv-deskop">
-      <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="cv-deskop.component.html" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\curiculum\cv-deskop\cv-deskop.component.html">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-      </file>
-      <file name="cv-deskop.component.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\curiculum\cv-deskop\cv-deskop.component.ts">
-        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.app.components.home.curiculum.cv-mobile">
-      <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="cv-mobile.component.html" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\curiculum\cv-mobile\cv-mobile.component.html">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-      </file>
-      <file name="cv-mobile.component.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\curiculum\cv-mobile\cv-mobile.component.ts">
-        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.app.components.home.curiculum.service">
-      <metrics statements="15" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
-      <file name="curiculum.service.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\curiculum\service\curiculum.service.ts">
-        <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-      </file>
-      <file name="cv-base64.service.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\curiculum\service\cv-base64.service.ts">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="4" type="stmt"/>
-        <line num="6" count="4" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.app.components.home.formation">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="formation.component.html" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\formation\formation.component.html">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-      </file>
-      <file name="formation.component.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\formation\formation.component.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.app.components.home.header">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="header.component.html" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\header\header.component.html">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-      </file>
-      <file name="header.component.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\header\header.component.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.app.components.home.header.header-deskop">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="header-deskop.component.html" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\header\header-deskop\header-deskop.component.html">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-      </file>
-      <file name="header-deskop.component.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\header\header-deskop\header-deskop.component.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.app.components.home.header.header-mobile">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="header-mobile.component.html" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\header\header-mobile\header-mobile.component.html">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-      </file>
-      <file name="header-mobile.component.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\header\header-mobile\header-mobile.component.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.app.components.home.header.service">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="header.service.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\header\service\header.service.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.app.components.home.java">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="java.component.html" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\java\java.component.html">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-      </file>
-      <file name="java.component.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\java\java.component.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.app.components.home.location">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="location.component.html" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\location\location.component.html">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-      </file>
-      <file name="location.component.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\location\location.component.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.app.components.home.login">
-      <metrics statements="23" coveredstatements="16" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="2"/>
-      <file name="login.component.html" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\login\login.component.html">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-      </file>
-      <file name="login.component.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\login\login.component.ts">
-        <metrics statements="22" coveredstatements="15" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="2"/>
+      <file name="app.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\app.component.ts">
+        <metrics statements="15" coveredstatements="12" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
-        <line num="21" count="3" type="stmt"/>
-        <line num="22" count="3" type="stmt"/>
-        <line num="23" count="3" type="stmt"/>
-        <line num="24" count="3" type="stmt"/>
-        <line num="27" count="3" type="cond" truecount="0" falsecount="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="40" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.components.curiculum">
+      <metrics statements="9" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="curiculum.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\curiculum\curiculum.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="curiculum.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\curiculum\curiculum.component.ts">
+        <metrics statements="8" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+      </file>
+    </package>
+    <package name="app.components.curiculum.cv-deskop">
+      <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="cv-deskop.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\curiculum\cv-deskop\cv-deskop.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+      <file name="cv-deskop.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\curiculum\cv-deskop\cv-deskop.component.ts">
+        <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.components.curiculum.cv-mobile">
+      <metrics statements="10" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="cv-mobile.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\curiculum\cv-mobile\cv-mobile.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+      <file name="cv-mobile.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\curiculum\cv-mobile\cv-mobile.component.ts">
+        <metrics statements="9" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
-        <line num="33" count="2" type="stmt"/>
-        <line num="39" count="2" type="cond" truecount="2" falsecount="0"/>
+      </file>
+    </package>
+    <package name="app.components.curiculum.cv-mobile.header-cv-mobile">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="header-cv-mobile.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\curiculum\cv-mobile\header-cv-mobile\header-cv-mobile.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+      </file>
+      <file name="header-cv-mobile.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\curiculum\cv-mobile\header-cv-mobile\header-cv-mobile.component.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.components.curiculum.service.curiculum">
+      <metrics statements="9" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="curiculum.service.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\curiculum\service\curiculum\curiculum.service.ts">
+        <metrics statements="9" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.components.curiculum.service.cv-base64">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="cv-base64.service.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\curiculum\service\cv-base64\cv-base64.service.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.components.formation">
+      <metrics statements="15" coveredstatements="8" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="formation.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\formation\formation.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="formation.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\formation\formation.component.ts">
+        <metrics statements="14" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="37" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.components.freelance">
+      <metrics statements="7" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="freelance.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\freelance\freelance.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+      <file name="freelance.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\freelance\freelance.component.ts">
+        <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+      </file>
+    </package>
+    <package name="app.components.home">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="home.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\home\home.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="home.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\home\home.component.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.components.home.content">
+      <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="content.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\home\content\content.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+      <file name="content.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\home\content\content.component.ts">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.components.home.header">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="header.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\home\header\header.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+      </file>
+      <file name="header.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\home\header\header.component.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.components.home.header.header-deskop">
+      <metrics statements="10" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="header-deskop.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\home\header\header-deskop\header-deskop.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+      </file>
+      <file name="header-deskop.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\home\header\header-deskop\header-deskop.component.ts">
+        <metrics statements="9" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.components.home.header.header-mobile">
+      <metrics statements="19" coveredstatements="11" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="header-mobile.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\home\header\header-mobile\header-mobile.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+      </file>
+      <file name="header-mobile.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\home\header\header-mobile\header-mobile.component.ts">
+        <metrics statements="18" coveredstatements="10" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
-        <line num="49" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="50" count="0" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="src.app.components.home.node">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="node.component.html" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\node\node.component.html">
+    <package name="app.components.home.header.service">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="header.service.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\home\header\service\header.service.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.components.home.login">
+      <metrics statements="23" coveredstatements="6" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="login.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\home\login\login.component.html">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="node.component.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\node\node.component.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="login.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\home\login\login.component.ts">
+        <metrics statements="22" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="55" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="src.app.components.home.vente">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="vente.component.html" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\vente\vente.component.html">
+    <package name="app.components.idee">
+      <metrics statements="42" coveredstatements="10" conditionals="3" coveredconditionals="0" methods="14" coveredmethods="0"/>
+      <file name="idee.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\idee\idee.component.html">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="vente.component.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\components\home\vente\vente.component.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="idee.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\idee\idee.component.ts">
+        <metrics statements="41" coveredstatements="9" conditionals="3" coveredconditionals="0" methods="14" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="93" count="0" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="95" count="0" type="stmt"/>
+        <line num="98" count="0" type="stmt"/>
+        <line num="99" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="src.app.shared.errors">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="error.component.html" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\shared\errors\error.component.html">
+    <package name="app.components.parametres">
+      <metrics statements="21" coveredstatements="12" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="parametres.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\parametres\parametres.component.html">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="error.component.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\shared\errors\error.component.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="parametres.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\parametres\parametres.component.ts">
+        <metrics statements="20" coveredstatements="11" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="src.app.shared.services.authentification">
-      <metrics statements="17" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
-      <file name="authentification.service.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\shared\services\authentification\authentification.service.ts">
-        <metrics statements="17" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
+    <package name="app.components.portofolio">
+      <metrics statements="9" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="portofolio.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\portofolio\portofolio.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="portofolio.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\portofolio\portofolio.component.ts">
+        <metrics statements="8" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="28" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.components.portofolio.carousel-style">
+      <metrics statements="30" coveredstatements="10" conditionals="7" coveredconditionals="0" methods="11" coveredmethods="5"/>
+      <file name="carousel-style.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\portofolio\carousel-style\carousel-style.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+      <file name="carousel-style.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\portofolio\carousel-style\carousel-style.component.ts">
+        <metrics statements="29" coveredstatements="9" conditionals="7" coveredconditionals="0" methods="11" coveredmethods="5"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="66" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="88" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.components.portofolio.projet-selector">
+      <metrics statements="9" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="projet-selector.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\portofolio\projet-selector\projet-selector.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+      <file name="projet-selector.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\components\portofolio\projet-selector\projet-selector.component.ts">
+        <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.shared.components.language-selector">
+      <metrics statements="12" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="language-selector.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\shared\components\language-selector\language-selector.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="7" type="stmt"/>
+      </file>
+      <file name="language-selector.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\shared\components\language-selector\language-selector.component.ts">
+        <metrics statements="11" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="2" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.shared.components.theme-selector">
+      <metrics statements="15" coveredstatements="7" conditionals="7" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="theme-selector.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\shared\components\theme-selector\theme-selector.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="7" type="stmt"/>
+      </file>
+      <file name="theme-selector.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\shared\components\theme-selector\theme-selector.component.ts">
+        <metrics statements="14" coveredstatements="6" conditionals="7" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="2" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="27" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.shared.constantes">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="theme.constants.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\shared\constantes\theme.constants.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.shared.directives">
+      <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="date-format.directive.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\shared\directives\date-format.directive.ts">
+        <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.shared.errors">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="error.component.html" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\shared\errors\error.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="error.component.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\shared\errors\error.component.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.shared.services.authentification">
+      <metrics statements="16" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
+      <file name="authentification.service.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\shared\services\authentification\authentification.service.ts">
+        <metrics statements="16" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="4" type="stmt"/>
         <line num="3" count="4" type="stmt"/>
@@ -316,76 +534,93 @@
         <line num="16" count="3" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="25" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
         <line num="33" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
         <line num="41" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="src.app.shared.services.helper">
-      <metrics statements="23" coveredstatements="11" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="2"/>
-      <file name="auth.guard.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\shared\services\helper\auth.guard.ts">
-        <metrics statements="12" coveredstatements="6" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="1"/>
+    <package name="app.shared.services.helper">
+      <metrics statements="22" coveredstatements="11" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="2"/>
+      <file name="auth.guard.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\shared\services\helper\auth.guard.ts">
+        <metrics statements="11" coveredstatements="6" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="9" count="3" type="stmt"/>
         <line num="10" count="3" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
         <line num="17" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="19" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
       </file>
-      <file name="basic-auth.interceptor.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\shared\services\helper\basic-auth.interceptor.ts">
+      <file name="basic-auth.interceptor.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\shared\services\helper\basic-auth.interceptor.ts">
         <metrics statements="8" coveredstatements="3" conditionals="3" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="cond" truecount="0" falsecount="3"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
       </file>
-      <file name="error.interceptor.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\shared\services\helper\error.interceptor.ts">
+      <file name="error.interceptor.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\shared\services\helper\error.interceptor.ts">
         <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="src.app.shared.services.model">
+    <package name="app.shared.services.models">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="user.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\shared\services\model\user.ts">
+      <file name="user.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\shared\services\models\user.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="src.app.shared.services.nest">
-      <metrics statements="8" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="nest.service.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\app\shared\services\nest\nest.service.ts">
-        <metrics statements="8" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
+    <package name="app.shared.services.nest">
+      <metrics statements="13" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="nest.service.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\shared\services\nest\nest.service.ts">
+        <metrics statements="13" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="src.environments">
+    <package name="app.shared.services.theme">
+      <metrics statements="8" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="2"/>
+      <file name="theme.service.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\app\shared\services\theme\theme.service.ts">
+        <metrics statements="8" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="2"/>
+        <line num="1" count="8" type="stmt"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="environments">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="environment.development.ts" path="C:\Users\h.benallel\WebstormProjects\pandoramid\src\environments\environment.development.ts">
+      <file name="environment.ts" path="C:\Users\hamid\WebstormProjects\hybrid-sites\src\environments\environment.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
       </file>
     </package>
   </project>
