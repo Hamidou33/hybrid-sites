@@ -1,0 +1,23 @@
+# Spécification GitLab CI/CD pour le projet Angular
+
+# Définition des étapes de construction et de test
+stages:
+  - build
+  - test
+
+# Configuration des jobs
+build:
+  stage: build
+  script:
+    - npm install            # Installation des dépendances
+    - npm run build --prod  # Construction de l'application Angular en mode production
+  artifacts:
+    paths:
+      - dist/               # Dossier de distribution à conserver pour les étapes suivantes
+
+test:
+  stage: test
+  script:
+    - npm run test          # Exécution des tests unitaires
+  dependencies:
+    - build                 # Dépend de l'étape de construction
