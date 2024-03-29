@@ -48,8 +48,10 @@ yarn-error.log*
 *.bak
 *.backup
 *.save
-*.swp
 
 # Fichiers de dépendances
 .DS_Store
 Thumbs.db
+
+/coverage
+.idea
