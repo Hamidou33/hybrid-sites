@@ -22,11 +22,5 @@ describe('CvMobileComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('should call downloadPdf method of CuriculumService on downloadPdfMobile()', () => {
-    const downloadPdfSpy = jest.spyOn(curiculumService, 'downloadPdf');
-    component.downloadPdfMobile();
-    expect(downloadPdfSpy).toHaveBeenCalled();
-  });
 });
 

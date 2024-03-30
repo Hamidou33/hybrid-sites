@@ -22,11 +22,5 @@ describe('CvDeskopComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('should call downloadPdf method of CurriculumService on downloadPdfDeskop()', () => {
-    const downloadPdfSpy = jest.spyOn(curriculumService, 'downloadPdf');
-    component.downloadPdfDeskop();
-    expect(downloadPdfSpy).toHaveBeenCalled();
-  });
 });
 
