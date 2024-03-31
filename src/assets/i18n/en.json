@@ -117,45 +117,75 @@
       "TITLE": "Professional Experience",
       "E": [
         {
+          "title": "Database Trainer",
+          "company": "Freelance by Eluv",
+          "date": "March 25, 2024 to March 29, 2024",
+          "description": "Database training given to 18 students",
+          "where": "at",
+          "client": "CampusLive"
+        },
+        {
+          "title": "Git Trainer",
+          "company": "Freelance by Eluv",
+          "date": "December 7, 2023 to December 8, 2024",
+          "description": "Git training for 5 professionals (download the resume for details)",
+          "where": "at",
+          "client": "Ociane"
+        },
+        {
+          "title": "Lead Angular Developer",
+          "company": "Cat-amania",
+          "date": "July 2023 to August 2023",
+          "description": "Development of a web application (download the resume for details)",
+          "at": "at",
+          "client": "Internal Mission at Cat-amania"
+        },
+        {
           "title": "Lead Angular Tech",
-          "entreprise": "Cat-amania",
+          "company": "Cat-amania",
           "date": "August 2022 to June 2023",
-          "description": "Development of a web application (download the CV for details).",
+          "description": "Development of a web application (download the resume for details).",
+          "where": "at",
           "client": "Ociane"
         },
         {
           "title": "Fullstack JS Designer Developer (Angular/NodeJS)",
-          "entreprise": "Cat-amania",
+          "company": "Cat-amania",
           "date": "July 2021 to August 2022",
-          "description": "Development of a web application (download the CV for details).",
+          "description": "Development of a web application (download the resume for details).",
+          "where": "at",
           "client": "Groupama"
         },
         {
           "title": "Front-end Angular Designer Developer",
-          "entreprise": "Cat-amania",
+          "company": "Cat-amania",
           "date": "November 2020 to July 2021",
-          "description": "Development of a web application (download the CV for details).",
+          "description": "Development of a web application (download the resume for details).",
+          "where": "at",
           "client": "Bordeaux Métropole Énergie"
         },
         {
           "title": "Full-Stack JAVA - Angular Designer Developer",
-          "entreprise": "Cat-amania",
+          "company": "Cat-amania",
           "date": "September 2019 to November 2020",
-          "description": "Development of a web application (download the CV for details).",
+          "description": "Development of a web application (download the resume for details).",
+          "where": "at",
           "client": "Pôle Emploi"
         },
         {
           "title": "Front-End Designer Developer",
-          "entreprise": "Cat-amania",
+          "company": "Cat-amania",
           "date": "February 2019 to August 2019",
-          "description": "Development of a web application (download the CV for details).",
+          "description": "Development of a web application (download the resume for details).",
+          "where": "at",
           "client": "CGI"
         },
         {
           "title": "Front-End Designer Developer",
-          "entreprise": "Accenture",
+          "company": "Accenture",
           "date": "November 2016 to December 2018",
-          "description": "Development of a web application (download the CV for details).",
+          "description": "Development of a web application (download the resume for details).",
+          "where": "at",
           "client": "La Banque Postale"
         }
       ]

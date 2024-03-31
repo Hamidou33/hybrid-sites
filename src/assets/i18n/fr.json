@@ -117,45 +117,75 @@
       "TITLE": "Expériences professionelles",
       "E": [
         {
+          "title": "Formateur Base de données",
+          "company": "En Freelance par Eluv",
+          "date": "25 mars 2024 au 29 Mars 2024",
+          "description": "Formation en BDD donné à 18 étudiants",
+          "where": "chez",
+          "client": "CampusLive"
+        },
+        {
+          "title": "Formateur Git",
+          "company": "En Freelance par Eluv",
+          "date": "7 décembre 2023 au 8 décembre 2024",
+          "description": "Formation git à 5 professionnels ( télécharger le cv pour le détail )",
+          "where": "chez",
+          "client": "Ociane"
+        },
+        {
           "title": "Lead tech Angular",
-          "entreprise": "Cat-amania",
+          "company": "Cat-amania",
+          "date": "Juillet 2023 à Août 2023",
+          "description": "Développement d'une application web ( télécharger le cv pour le détail )",
+          "where": "chez",
+          "client": "Mission interne Cat-amania"
+        },
+        {
+          "title": "Lead tech Angular",
+          "company": "Cat-amania",
           "date": "Août 2022 à Juin 2023",
           "description": "Développement d'une application web ( télécharger le cv pour le détail )",
+          "where": "chez",
           "client": "Ociane"
         },
         {
           "title": "Concepteur Développeur Fullstack JS ( Angular/ NodeJS )",
-          "entreprise": "Cat-amania",
+          "company": "Cat-amania",
           "date": "Juillet 2021 à Août 2022",
           "description": "Développement d'une application web ( télécharger le cv pour le détail ).",
+          "where": "chez",
           "client": "Groupama"
         },
         {
           "title": "Concepteur Développeur Front-end Angular",
-          "entreprise": "Cat-amania",
+          "company": "Cat-amania",
           "date": "Novembre 2020 à Juillet 2021",
           "description": "Développement d'une application web ( télécharger le cv pour le détail )",
+          "where": "chez",
           "client": "Bordeaux Métropole Énergie"
         },
         {
           "title": "Concepteur Développeur Full-Stack JAVA - Angular",
-          "entreprise": "Cat-amania",
+          "company": "Cat-amania",
           "date": "Septembre 2019 à Novembre 2020",
           "description": "Développement d'une application web ( télécharger le cv pour le détail ).",
+          "where": "chez",
           "client": "Pôle Emploi"
         },
         {
           "title": "Concepteur Développeur Front-End",
-          "entreprise": "Cat-amania",
+          "company": "Cat-amania",
           "date": "Février 2019 à Août 2019",
           "description": "Développement d'une application web ( télécharger le cv pour le détail ).",
+          "where": "chez",
           "client": "CGI"
         },
         {
           "title": "Concepteur Développeur Front-End",
-          "entreprise": "Accenture",
+          "company": "Accenture",
           "date": "Novembre 2016 à Décembre 2018",
           "description": "Développement d'une application web ( télécharger le cv pour le détail )",
+          "where": "chez",
           "client": "La Banque Postale"
         }
       ]

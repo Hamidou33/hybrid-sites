@@ -37,8 +37,8 @@
       <hr class="light">
       <div class="div-mobile">
         <ng-container *ngFor="let experience of ('CURRICULUM.EXPERIENCE.E' | translate);">
-          <p class="text-left"><b>{{ experience.title }} chez</b>
-            <strong> {{ experience.entreprise }}<br></strong>
+          <p class="text-left"><b>{{ experience.title }} {{ experience.where }}</b>
+            <strong> {{ experience.company }}<br></strong>
             {{ experience.date }}<br>
             {{ experience.description }}<br>
             <strong>{{ experience.client }}</strong>.
