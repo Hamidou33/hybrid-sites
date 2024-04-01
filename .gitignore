@@ -1,5 +1,4 @@
 # Dossiers / fichiers générés par Angular CLI
-/dist/
 /node_modules/
 /e2e/*.log
 /src/assets/i18n/*.json

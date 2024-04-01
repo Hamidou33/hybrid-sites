@@ -1,14 +1,12 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from "./components/home/home.component";
-import { LoginComponent } from "./components/home/login/login.component";
 import { ErrorComponent } from "./shared/errors/error.component";
 
 export const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {
     path: 'home', children : [
-        {path: '', component: HomeComponent},
-        {path: 'login', title: 'home | login', component: LoginComponent},
+        {path: '', component: HomeComponent}
     ],
     loadComponent: () => import('./components/home/home.component').then(m => m.HomeComponent)
   },
