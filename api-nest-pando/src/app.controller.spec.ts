@@ -15,4 +15,8 @@ describe('AppController', () => {
     appController = module.get<AppController>(AppController);
     appService = module.get<AppService>(AppService);
   });
+
+  it('should be defined', () => {
+    expect(appController).toBeDefined();
+  });
 });

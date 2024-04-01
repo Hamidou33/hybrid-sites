@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnDestroy, OnInit } from "@angular/core";
+import { ChangeDetectionStrategy, Component, Input, OnChanges, OnDestroy, OnInit } from "@angular/core";
 import { CommonModule, NgOptimizedImage } from "@angular/common";
 
 @Component({
@@ -8,7 +8,8 @@ import { CommonModule, NgOptimizedImage } from "@angular/common";
   imports: [
     NgOptimizedImage, CommonModule
   ],
-  styleUrls: ["./carousel-style.component.css"]
+  styleUrls: ["./carousel-style.component.css"],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CarouselStyleComponent implements OnInit, OnChanges, OnDestroy {
   images: { src: string, alt: string, width: number, height: number }[] = [
@@ -19,9 +20,6 @@ export class CarouselStyleComponent implements OnInit, OnChanges, OnDestroy {
   slideIndex: number = 0;
   autoSlideInterval: string | number | NodeJS.Timeout | undefined;
   @Input() projetId: number;
-
-  constructor() { }
-
   ngOnChanges() {
     if(this.projetId) {
       switch (this.projetId.toString()) {

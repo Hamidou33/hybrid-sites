@@ -1,5 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import { ThemeSelectorComponent } from "./theme-selector.component";
+import { RouterTestingModule } from "@angular/router/testing";
+import { TranslateModule } from "@ngx-translate/core";
 
 
 describe('ThemeSelectorComponent', () => {
@@ -8,7 +10,7 @@ describe('ThemeSelectorComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ThemeSelectorComponent]
+      imports: [ThemeSelectorComponent, RouterTestingModule, TranslateModule.forRoot()]
     });
     fixture = TestBed.createComponent(ThemeSelectorComponent);
     component = fixture.componentInstance;

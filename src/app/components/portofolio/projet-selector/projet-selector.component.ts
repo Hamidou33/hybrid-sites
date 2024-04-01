@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from "@angular/core";
+import { ChangeDetectionStrategy, Component, EventEmitter, Output } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { TranslateModule } from "@ngx-translate/core";
 
@@ -7,7 +7,8 @@ import { TranslateModule } from "@ngx-translate/core";
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './projet-selector.component.html',
-  styleUrl: './projet-selector.component.css'
+  styleUrl: './projet-selector.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjetSelectorComponent {
   @Output() projetSelectionne = new EventEmitter<number>();

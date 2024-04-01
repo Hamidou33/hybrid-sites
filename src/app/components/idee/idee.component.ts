@@ -14,10 +14,10 @@ import { HeaderDeskopComponent } from "../../core/header/header-deskop/header-de
   styleUrls: ["./idee.component.css"],
   imports: [
     CommonModule,
-    HeaderDeskopComponent,
     ReactiveFormsModule,
     TranslateModule,
-    DateFormatDirective
+    DateFormatDirective,
+    HeaderDeskopComponent
   ],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush

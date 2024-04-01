@@ -11,7 +11,6 @@ import { HeaderDeskopComponent } from "../../core/header/header-deskop/header-de
   styleUrls: ["./curiculum.component.css"],
   encapsulation: ViewEncapsulation.None,
   imports: [
-    HeaderDeskopComponent,
     CvDeskopComponent,
     CvMobileComponent,
     HeaderDeskopComponent

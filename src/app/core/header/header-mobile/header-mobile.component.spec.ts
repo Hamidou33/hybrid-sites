@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { HeaderMobileComponent } from "./header-mobile.component";
+import { RouterTestingModule } from "@angular/router/testing";
+import { TranslateModule } from "@ngx-translate/core";
 
 describe('HeaderMobileComponent', () => {
   let component: HeaderMobileComponent;
@@ -7,7 +9,7 @@ describe('HeaderMobileComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HeaderMobileComponent]
+      imports: [HeaderMobileComponent, RouterTestingModule, TranslateModule.forRoot()]
     });
     fixture = TestBed.createComponent(HeaderMobileComponent);
     component = fixture.componentInstance;

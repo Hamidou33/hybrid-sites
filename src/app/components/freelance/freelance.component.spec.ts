@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { FreelanceComponent } from "./freelance.component";
+import { TranslateModule } from "@ngx-translate/core";
+import { RouterTestingModule } from "@angular/router/testing";
 
 describe('FreelanceComponent', () => {
   let component: FreelanceComponent;
@@ -8,7 +10,7 @@ describe('FreelanceComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FreelanceComponent]
+      imports: [FreelanceComponent, TranslateModule.forRoot(), RouterTestingModule]
     });
     fixture = TestBed.createComponent(FreelanceComponent);
     component = fixture.componentInstance;

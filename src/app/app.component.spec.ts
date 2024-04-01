@@ -1,22 +1,27 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {AppComponent} from "./app.component";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AppComponent } from './app.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
+import { TranslateModule } from "@ngx-translate/core";
 
 describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
 
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [AppComponent, TranslateModule.forRoot()],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
+  });
+
   beforeEach(() => {
-
-    TestBed.configureTestingModule({
-      declarations: [AppComponent],
-      providers: [],
-    });
-
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
+    fixture.detectChanges();
   });
 
   it('should create the app', () => {
     expect(component).toBeTruthy();
   });
 });
+

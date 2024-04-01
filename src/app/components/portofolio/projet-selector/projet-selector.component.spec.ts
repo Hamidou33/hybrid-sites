@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProjetSelectorComponent } from './projet-selector.component';
+import { RouterTestingModule } from "@angular/router/testing";
+import { TranslateModule } from "@ngx-translate/core";
 
 describe('ProjetSelectorComponent', () => {
   let component: ProjetSelectorComponent;
@@ -8,10 +10,10 @@ describe('ProjetSelectorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProjetSelectorComponent]
+      imports: [ProjetSelectorComponent, RouterTestingModule, TranslateModule.forRoot()]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(ProjetSelectorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

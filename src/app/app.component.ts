@@ -7,7 +7,6 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { HighchartsChartModule } from "highcharts-angular";
 import { FreelanceComponent } from "./components/freelance/freelance.component";
-import { initFlowbite } from "flowbite";
 import { HeaderComponent } from "./core/header/header.component";
 
 @Component({
@@ -37,6 +36,5 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    initFlowbite();
   }
 }

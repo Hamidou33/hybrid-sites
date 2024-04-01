@@ -2,6 +2,8 @@ import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { CvMobileComponent } from "./cv-mobile.component";
 import { CuriculumService } from "../service/curiculum/curiculum.service";
 import { HttpClient } from "@angular/common/http";
+import { TranslateModule } from "@ngx-translate/core";
+import { RouterTestingModule } from "@angular/router/testing";
 
 describe('CvMobileComponent', () => {
   let component: CvMobileComponent;
@@ -10,7 +12,7 @@ describe('CvMobileComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CvMobileComponent],
+      imports: [CvMobileComponent, TranslateModule.forRoot(), RouterTestingModule],
       providers: [CuriculumService, HttpClient]
     }).compileComponents();
 

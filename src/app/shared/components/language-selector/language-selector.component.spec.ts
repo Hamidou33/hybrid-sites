@@ -1,6 +1,8 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {LanguageSelectorComponent} from './language-selector.component';
+import { RouterTestingModule } from "@angular/router/testing";
+import { TranslateModule } from "@ngx-translate/core";
 
 describe('LanguageSelectorComponent', () => {
   let component: LanguageSelectorComponent;
@@ -8,7 +10,7 @@ describe('LanguageSelectorComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [LanguageSelectorComponent]
+      imports: [LanguageSelectorComponent, RouterTestingModule, TranslateModule.forRoot()]
     });
     fixture = TestBed.createComponent(LanguageSelectorComponent);
     component = fixture.componentInstance;
