@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
-import { HeaderComponent } from "./header/header.component";
 import { ContentComponent } from "./content/content.component";
+import { HeaderComponent } from "../../core/header/header.component";
 
 @Component({
   selector: "app-home",

@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
-import { HeaderComponent } from "../home/header/header.component";
 import { CommonModule } from "@angular/common";
 import { TranslateModule, TranslateService } from "@ngx-translate/core";
-import { HeaderDeskopComponent } from "../home/header/header-deskop/header-deskop.component";
 import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
+import { HeaderComponent } from "../../core/header/header.component";
+import { HeaderDeskopComponent } from "../../core/header/header-deskop/header-deskop.component";
 
 @Component({
   selector: "app-formation",

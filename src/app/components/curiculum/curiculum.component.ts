@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from "@angular/
 import { TranslateService } from "@ngx-translate/core";
 import { CvDeskopComponent } from "./cv-deskop/cv-deskop.component";
 import { CvMobileComponent } from "./cv-mobile/cv-mobile.component";
-import { HeaderDeskopComponent } from "../home/header/header-deskop/header-deskop.component";
+import { HeaderDeskopComponent } from "../../core/header/header-deskop/header-deskop.component";
 
 @Component({
   selector: "app-curiculum",
@@ -13,7 +13,8 @@ import { HeaderDeskopComponent } from "../home/header/header-deskop/header-desko
   imports: [
     HeaderDeskopComponent,
     CvDeskopComponent,
-    CvMobileComponent
+    CvMobileComponent,
+    HeaderDeskopComponent
   ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { TranslateModule, TranslateService } from "@ngx-translate/core";
-import { HeaderDeskopComponent } from "../home/header/header-deskop/header-deskop.component";
 import { ProjetSelectorComponent } from "./projet-selector/projet-selector.component";
 import { CarouselStyleComponent } from "./carousel-style/carousel-style.component";
+import { HeaderDeskopComponent } from "../../core/header/header-deskop/header-deskop.component";
 
 @Component({
   selector: 'app-portofolio',

@@ -5,8 +5,8 @@ import { Comments } from "../../shared/interfaces/comments";
 import { BehaviorSubject, Observable, Subject, switchMap } from "rxjs";
 import { TranslateModule, TranslateService } from "@ngx-translate/core";
 import { CommonModule } from "@angular/common";
-import { HeaderDeskopComponent } from "../home/header/header-deskop/header-deskop.component";
 import { DateFormatDirective } from "../../shared/directives/date-format.directive";
+import { HeaderDeskopComponent } from "../../core/header/header-deskop/header-deskop.component";
 
 @Component({
   selector: "app-idee",

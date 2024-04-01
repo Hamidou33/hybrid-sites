@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { TranslateModule } from "@ngx-translate/core";
+import { NgOptimizedImage } from "@angular/common";
 
 @Component({
   selector: "app-header-cv-mobile",
@@ -7,7 +8,8 @@ import { TranslateModule } from "@ngx-translate/core";
   standalone: true,
   styleUrls: ["./header-cv-mobile.component.css"],
   imports: [
-    TranslateModule
+    TranslateModule,
+    NgOptimizedImage
   ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

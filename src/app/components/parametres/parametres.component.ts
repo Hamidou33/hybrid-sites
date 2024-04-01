@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from "@ngx-translate/core";
 import { CommonModule, NgOptimizedImage } from "@angular/common";
-import { HeaderDeskopComponent } from "../home/header/header-deskop/header-deskop.component";
 import { LanguageSelectorComponent } from "../../shared/components/language-selector/language-selector.component";
 import { ThemeSelectorComponent } from "../../shared/components/theme-selector/theme-selector.component";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { THEMES } from "../../shared/constantes/theme.constants";
 import { ThemeService } from "../../shared/services/theme/theme.service";
 import { RouterLink } from "@angular/router";
+import { HeaderDeskopComponent } from "../../core/header/header-deskop/header-deskop.component";
 
 @Component({
   selector: 'app-parametres',
