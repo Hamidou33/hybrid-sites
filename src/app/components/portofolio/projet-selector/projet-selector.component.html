@@ -1,5 +1,5 @@
 <div class="p-4">
-  <select class="border rounded px-4 py-2 text-black" (change)="selectProjet($event)">
+  <select (change)="selectProjet($event)" class="border rounded px-4 py-2 text-black">
     <option disabled selected>{{ 'PORTOFOLIO.SELECTOR' | translate }}</option>
     <option *ngFor="let projet of projets" [value]="projet.id">{{ projet.nom }}</option>
   </select>

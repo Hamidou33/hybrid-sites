@@ -1,38 +1,42 @@
-<nav class="hidden lg:flex items-center space-x-48 p-6 lg:px-8" aria-label="Global">
+<nav aria-label="Global" class="hidden lg:flex items-center space-x-48 p-6 lg:px-8">
   <div class="flex items-center">
-    <a [routerLink]="['/']" class="-m-1.5 p-1.5 flex items-center justify-center bg-white rounded-full shadow-md overflow-hidden">
+    <a [routerLink]="['/']"
+       class="-m-1.5 p-1.5 flex items-center justify-center bg-white rounded-full shadow-md overflow-hidden">
       <span class="sr-only">Pandoramid</span>
-      <img class="h-12 w-12 object-cover" alt="Pandoramid Logo" ngSrc="/assets/img/pandalogo.png" width="500" height="500">
+      <img alt="Pandoramid Logo" class="h-12 w-12 object-cover" height="500" ngSrc="/assets/img/pandalogo.png"
+           width="500">
     </a>
   </div>
   <div class="flex items-center space-x-4 lg:space-x-12">
-    <a routerLink="/cv" class="nav-link dark:text-white"
-       [class.active-link]="isActive('/cv')"
-       (click)="setActiveLink('/cv')">{{'HEADER-ROUTING.CV' | translate}}</a>
-    <a routerLink="/freelance" class="nav-link dark:text-white"
-       [class.active-link]="isActive('/freelance')"
-       (click)="setActiveLink('/freelance')">{{'HEADER-ROUTING.FREELANCE' | translate }}</a>
-    <a routerLink="/portofolio" class="nav-link dark:text-white"
-       [class.active-link]="isActive('/portofolio')"
-       (click)="setActiveLink('/portofolio')">{{'HEADER-ROUTING.PORTOFOLIO' | translate }}</a>
-    <a routerLink="/idea" class="nav-link dark:text-white"
-       [class.active-link]="isActive('/idea')"
-       (click)="setActiveLink('/idea')">{{'HEADER-ROUTING.IDEA' | translate }}</a>
-    <a routerLink="/params" class="nav-link dark:text-white"
-       [class.active-link]="isActive('/params')"
-       (click)="setActiveLink('/params')">{{'HEADER-ROUTING.PARAMS' | translate }}</a>
+    <a (click)="setActiveLink('/cv')" [class.active-link]="isActive('/cv')"
+       class="nav-link dark:text-white"
+       routerLink="/cv">{{ 'HEADER-ROUTING.CV' | translate }}</a>
+    <a (click)="setActiveLink('/freelance')" [class.active-link]="isActive('/freelance')"
+       class="nav-link dark:text-white"
+       routerLink="/freelance">{{ 'HEADER-ROUTING.FREELANCE' | translate }}</a>
+    <a (click)="setActiveLink('/portofolio')" [class.active-link]="isActive('/portofolio')"
+       class="nav-link dark:text-white"
+       routerLink="/portofolio">{{ 'HEADER-ROUTING.PORTOFOLIO' | translate }}</a>
+    <a (click)="setActiveLink('/idea')" [class.active-link]="isActive('/idea')"
+       class="nav-link dark:text-white"
+       routerLink="/idea">{{ 'HEADER-ROUTING.IDEA' | translate }}</a>
+    <a (click)="setActiveLink('/params')" [class.active-link]="isActive('/params')"
+       class="nav-link dark:text-white"
+       routerLink="/params">{{ 'HEADER-ROUTING.PARAMS' | translate }}</a>
 
-    <a routerLink="/formations" class="nav-link dark:text-white"
-       [class.active-link]="isActive('/formations')"
-       (click)="setActiveLink('/formations')">{{'HEADER-ROUTING.FORMATIONS' | translate }}</a>
+    <a (click)="setActiveLink('/formations')" [class.active-link]="isActive('/formations')"
+       class="nav-link dark:text-white"
+       routerLink="/formations">{{ 'HEADER-ROUTING.FORMATIONS' | translate }}</a>
   </div>
 </nav>
 
-<nav class="flex lg:hidden items-center justify-center p-6 lg:px-8" aria-label="Global">
+<nav aria-label="Global" class="flex lg:hidden items-center justify-center p-6 lg:px-8">
   <div class="flex items-center justify-center">
-    <a [routerLink]="['/']" class="-m-1.5 p-1.5 flex items-center justify-center bg-white rounded-full shadow-md overflow-hidden">
+    <a [routerLink]="['/']"
+       class="-m-1.5 p-1.5 flex items-center justify-center bg-white rounded-full shadow-md overflow-hidden">
       <span class="sr-only">Pandoramid</span>
-      <img class="h-12 w-12 object-cover" alt="Pandoramid Logo" ngSrc="/assets/img/pandalogo.png" width="500" height="500">
+      <img alt="Pandoramid Logo" class="h-12 w-12 object-cover" height="500" ngSrc="/assets/img/pandalogo.png"
+           width="500">
     </a>
   </div>
 </nav>

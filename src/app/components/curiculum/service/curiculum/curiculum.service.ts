@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { CvBase64Service } from "../cv-base64/cv-base64.service";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class CuriculumService {
   constructor(private cv: CvBase64Service) {
@@ -10,7 +10,7 @@ export class CuriculumService {
 
   downloadPdf(): void {
     const source = `data:application/pdf;base64,${this.cv.CV_FRONT}`;
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.href = source;
     link.download = `cv.pdf`;
     link.click();

@@ -3,7 +3,7 @@ import { FormationComponent } from "./formation.component";
 import { RouterTestingModule } from "@angular/router/testing";
 import { TranslateModule } from "@ngx-translate/core";
 
-describe('FormationComponent', () => {
+describe("FormationComponent", () => {
   let component: FormationComponent;
   let fixture: ComponentFixture<FormationComponent>;
 
@@ -16,7 +16,7 @@ describe('FormationComponent', () => {
     component = fixture.componentInstance;
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

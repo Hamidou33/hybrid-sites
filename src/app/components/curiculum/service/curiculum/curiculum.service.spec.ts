@@ -3,7 +3,7 @@ import { CuriculumService } from "./curiculum.service";
 import { CvBase64Service } from "../cv-base64/cv-base64.service";
 import { HttpClient } from "@angular/common/http";
 
-describe('CuriculumService', () => {
+describe("CuriculumService", () => {
   let service: CuriculumService;
   let cvService: CvBase64Service;
 
@@ -15,7 +15,7 @@ describe('CuriculumService', () => {
     cvService = TestBed.inject(CvBase64Service);
   });
 
-  it('should be created', () => {
+  it("should be created", () => {
     expect(service).toBeTruthy();
   });
 });

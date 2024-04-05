@@ -13,35 +13,36 @@ import { CommonModule, NgOptimizedImage } from "@angular/common";
 })
 export class CarouselStyleComponent implements OnInit, OnChanges, OnDestroy {
   images: { src: string, alt: string, width: number, height: number }[] = [
-    { src: '/assets/img/caroussel/myCV1.jpg', alt: 'myCV1', width: 400, height: 225 },
-    { src: '/assets/img/caroussel/myCV2.jpg', alt: 'myCV2', width: 400, height: 225 },
-    { src: '/assets/img/caroussel/myCV3.jpg', alt: 'myCV3', width: 400, height: 225 },
+    { src: "/assets/img/caroussel/myCV1.jpg", alt: "myCV1", width: 400, height: 225 },
+    { src: "/assets/img/caroussel/myCV2.jpg", alt: "myCV2", width: 400, height: 225 },
+    { src: "/assets/img/caroussel/myCV3.jpg", alt: "myCV3", width: 400, height: 225 }
   ];
   slideIndex: number = 0;
   autoSlideInterval: string | number | NodeJS.Timeout | undefined;
   @Input() projetId: number;
+
   ngOnChanges() {
-    if(this.projetId) {
+    if (this.projetId) {
       switch (this.projetId.toString()) {
-        case '1':
+        case "1":
           this.images = [
-            { src: '/assets/img/caroussel/myCV1.jpg', alt: 'myCV1', width: 400, height: 225 },
-            { src: '/assets/img/caroussel/myCV2.jpg', alt: 'myCV2', width: 400, height: 225 },
-            { src: '/assets/img/caroussel/myCV3.jpg', alt: 'myCV3', width: 400, height: 225 },
-          ]
+            { src: "/assets/img/caroussel/myCV1.jpg", alt: "myCV1", width: 400, height: 225 },
+            { src: "/assets/img/caroussel/myCV2.jpg", alt: "myCV2", width: 400, height: 225 },
+            { src: "/assets/img/caroussel/myCV3.jpg", alt: "myCV3", width: 400, height: 225 }
+          ];
           break;
-        case '2':
+        case "2":
           this.images = [
-            { src: '/assets/img/caroussel/reservation.jpg', alt: 'reservation', width: 400, height: 225 },
-            { src: '/assets/img/caroussel/reservation2.jpeg', alt: 'reservation2', width: 400, height: 225 }
-          ]
+            { src: "/assets/img/caroussel/reservation.jpg", alt: "reservation", width: 400, height: 225 },
+            { src: "/assets/img/caroussel/reservation2.jpeg", alt: "reservation2", width: 400, height: 225 }
+          ];
           break;
-        case '3':
+        case "3":
           this.images = [
-            { src: '/assets/img/caroussel/e-commerce.jpeg', alt: 'e-commerce 1', width: 400, height: 225 },
-            { src: '/assets/img/caroussel/e-commerce2.jpeg', alt: 'e-commerce 2', width: 400, height: 225 },
-            { src: '/assets/img/caroussel/e-commerce3.jpeg', alt: 'e-commerce 3', width: 400, height: 225 }
-          ]
+            { src: "/assets/img/caroussel/e-commerce.jpeg", alt: "e-commerce 1", width: 400, height: 225 },
+            { src: "/assets/img/caroussel/e-commerce2.jpeg", alt: "e-commerce 2", width: 400, height: 225 },
+            { src: "/assets/img/caroussel/e-commerce3.jpeg", alt: "e-commerce 3", width: 400, height: 225 }
+          ];
           break;
         default:
           console.log(`Sorry, we are out of`);

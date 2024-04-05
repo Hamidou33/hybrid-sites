@@ -1,22 +1,22 @@
 import { ApplicationConfig, importProvidersFrom } from "@angular/core";
 import { provideRouter, withHashLocation } from "@angular/router";
-import { routes } from './app.routes';
+import { routes } from "./app.routes";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { NestService } from "./shared/services/nest/nest.service";
 
 export function CreateTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
 }
 
 export const provideTranslation = () => ({
-  defaultLanguage: localStorage.getItem('locale') || 'fr',
+  defaultLanguage: localStorage.getItem("locale") || "fr",
   loader: {
     provide: TranslateLoader,
     useFactory: CreateTranslateLoader,
-    deps: [HttpClient],
-  },
+    deps: [HttpClient]
+  }
 });
 
 export const appConfig: ApplicationConfig = {
@@ -25,6 +25,6 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom([
       HttpClientModule,
       TranslateModule.forRoot(provideTranslation())
-    ]),
-  ],
+    ])
+  ]
 };

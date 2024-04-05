@@ -5,7 +5,7 @@ import { HttpClient } from "@angular/common/http";
 import { TranslateModule } from "@ngx-translate/core";
 import { RouterTestingModule } from "@angular/router/testing";
 
-describe('CvMobileComponent', () => {
+describe("CvMobileComponent", () => {
   let component: CvMobileComponent;
   let fixture: ComponentFixture<CvMobileComponent>;
   let curiculumService: CuriculumService;
@@ -21,7 +21,7 @@ describe('CvMobileComponent', () => {
     curiculumService = TestBed.inject(CuriculumService);
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

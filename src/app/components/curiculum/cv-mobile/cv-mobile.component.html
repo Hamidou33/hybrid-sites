@@ -1,8 +1,9 @@
-<div class="lg:hidden text-black" role="dialog" aria-modal="true">
+<div aria-modal="true" class="lg:hidden text-black" role="dialog">
   <div class="flex items-center justify-center">
-    <button (click)="downloadPdfMobile()" class="mt-2 ml-8 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-      <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-        <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/>
+    <button (click)="downloadPdfMobile()"
+            class="mt-2 ml-8 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+      <svg class="fill-current w-4 h-4 mr-2" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
       </svg>
       <span>{{ ('CURRICULUM.BUTTON' | translate) }}</span>
     </button>
@@ -16,7 +17,7 @@
         <div>{{ ('CURRICULUM.ASSET.A1.LABEL' | translate) }}</div>
         <div>{{ ('CURRICULUM.ASSET.A1.DESCRIPTION' | translate) }}<br></div>
         <div>
-          {{ ('CURRICULUM.ASSET.A2.LABEL1' | translate)}}<br> {{ ('CURRICULUM.ASSET.A2.LABEL2' | translate)}}
+          {{ ('CURRICULUM.ASSET.A2.LABEL1' | translate) }}<br> {{ ('CURRICULUM.ASSET.A2.LABEL2' | translate) }}
         </div>
         <div>
           {{ ('CURRICULUM.ASSET.A2.DESCRIPTION' | translate) }}
@@ -55,28 +56,28 @@
         <div class="po">
           <p>html, css, Javascript</p>
           <div class="cool">
-            <div style="width:80%" class="inner"></div>
+            <div class="inner" style="width:80%"></div>
           </div>
         </div>
 
         <div class="po">
           <p>Angular, Node.js</p>
           <div class="cool">
-            <div style="width:75%" class="inner"></div>
+            <div class="inner" style="width:75%"></div>
           </div>
         </div>
 
         <div class="po">
           <p>MongoDB, PostGre, PgAdmin</p>
           <div class="cool">
-            <div style="width:60%" class="inner"></div>
+            <div class="inner" style="width:60%"></div>
           </div>
         </div>
 
         <div class="po">
           <p>Git, Gitlab, GitHub</p>
           <div class="cool">
-            <div style="width:60%" class="inner"></div>
+            <div class="inner" style="width:60%"></div>
           </div>
         </div>
       </div>
@@ -97,8 +98,8 @@
       <hr class="light">
       <div class="container">
         <p>
-          <img alt="" ngSrc="assets/img/l.png" class="info" height="512" width="512">
-          <a href="https://www.linkedin.com/in/hamid-benallel-a18187127" target="_blank" class="linkedin-button">
+          <img alt="" class="info" height="512" ngSrc="assets/img/l.png" width="512">
+          <a class="linkedin-button" href="https://www.linkedin.com/in/hamid-benallel-a18187127" target="_blank">
             {{ ('CURRICULUM.NETWORK.BUTTON' | translate) }}
           </a>
         </p>
@@ -107,7 +108,7 @@
       <hr class="light">
       <div class="interet-mobile">
         <div *ngFor="let interest of ('CURRICULUM.INTEREST.I' | translate);">
-          <b>{{interest}}</b>
+          <b>{{ interest }}</b>
         </div>
       </div>
     </section>

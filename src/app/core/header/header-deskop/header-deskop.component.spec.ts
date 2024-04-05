@@ -4,7 +4,7 @@ import { HeaderDeskopComponent } from "./header-deskop.component";
 import { RouterTestingModule } from "@angular/router/testing";
 import { TranslateModule } from "@ngx-translate/core";
 
-describe('HeaderDeskopComponent', () => {
+describe("HeaderDeskopComponent", () => {
   let component: HeaderDeskopComponent;
   let fixture: ComponentFixture<HeaderDeskopComponent>;
 
@@ -17,7 +17,7 @@ describe('HeaderDeskopComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

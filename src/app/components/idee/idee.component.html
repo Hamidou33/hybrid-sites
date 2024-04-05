@@ -1,48 +1,57 @@
 <app-header-deskop></app-header-deskop>
-  <main class="flex-grow">
-    <div class="relative px-6 py-16 lg:px-8 bg-gradient-to-r from-pink-500 to-purple-500 text-white">
-      <div class="absolute inset-0 -z-10 filter blur-3xl bg-gradient-to-r from-pink-500 to-purple-500"></div>
-      <div class="max-w-2xl mx-auto py-12 px-8 bg-white bg-opacity-80 shadow-lg rounded-lg">
-        <div class="max-w-2xl mx-auto ">
-          <form [formGroup]="commentForm" (ngSubmit)="sendMessage()">
-            <label for="name" class="block mb-2 text-sm font-medium text-black">{{ 'IDEA.NAME' | translate}}</label>
-            <input formControlName="name" id="name" type="text" class="mb-2 block p-2.5 w-full text-sm bg-gray-50
+<main class="flex-grow">
+  <div class="relative px-6 py-16 lg:px-8 bg-gradient-to-r from-pink-500 to-purple-500 text-white">
+    <div class="absolute inset-0 -z-10 filter blur-3xl bg-gradient-to-r from-pink-500 to-purple-500"></div>
+    <div class="max-w-2xl mx-auto py-12 px-8 bg-white bg-opacity-80 shadow-lg rounded-lg">
+      <div class="max-w-2xl mx-auto ">
+        <form (ngSubmit)="sendMessage()" [formGroup]="commentForm">
+          <label class="block mb-2 text-sm font-medium text-black" for="name">{{ 'IDEA.NAME' | translate }}</label>
+          <input class="mb-2 block p-2.5 w-full text-sm bg-gray-50
               rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500
               dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
-              dark:focus:ring-blue-500 dark:focus:border-blue-500 text-black" placeholder="{{ 'IDEA.NAME_PLACEHOLDER' | translate }}" required>
+              dark:focus:ring-blue-500 dark:focus:border-blue-500 text-black" formControlName="name" id="name" placeholder="{{ 'IDEA.NAME_PLACEHOLDER' | translate }}"
+                 required type="text">
 
-            <label for="message" class="block mb-2 text-sm font-medium text-black">{{ 'IDEA.LABEL' | translate}}</label>
-            <textarea formControlName="comment" id="message" rows="4"
-                      class="block p-2.5 w-full text-sm bg-gray-50
+          <label class="block mb-2 text-sm font-medium text-black" for="message">{{ 'IDEA.LABEL' | translate }}</label>
+          <textarea class="block p-2.5 w-full text-sm bg-gray-50
                       rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500
                       dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
-                      dark:focus:ring-blue-500 dark:focus:border-blue-500 text-black" placeholder="{{ 'IDEA.MESSAGE_PLACEHOLDER' | translate }}" required>
+                      dark:focus:ring-blue-500 dark:focus:border-blue-500 text-black" formControlName="comment" id="message"
+                    placeholder="{{ 'IDEA.MESSAGE_PLACEHOLDER' | translate }}"
+                    required rows="4">
             </textarea>
 
-            <ng-container *ngIf="commentForm.valid">
-              <button type="submit" class="inline-block px-4 py-2 mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md transition duration-300 ease-in-out">
-                {{ 'IDEA.BUTTON_ADD' | translate }}
-              </button>
-            </ng-container>
-          </form>
-        </div>
+          <ng-container *ngIf="commentForm.valid">
+            <button class="inline-block px-4 py-2 mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md transition duration-300 ease-in-out"
+                    type="submit">
+              {{ 'IDEA.BUTTON_ADD' | translate }}
+            </button>
+          </ng-container>
+        </form>
+      </div>
 
-        <h2 class="text-sm font-medium text-black mt-2">{{ "IDEA.LISTE_LABEL" | translate }} :</h2>
-        <ul class="text-sm font-medium text-black">
-          <li class="mb-1" *ngFor="let comment of comments$ | async">
-            {{ "IDEA.DATE" | translate }} <span appDateFormat="{{ comment.date }}"></span> {{ "IDEA.BY" | translate }} <strong>{{ comment.name }}</strong> : {{ comment.comment }}
-            @if (comment.id) {
-              <button type="button" class="inline-block px-4 py-2 mt-4 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-md transition duration-300 ease-in-out" (click)="deleteComment(comment.id)">{{ 'IDEA.BUTTON_DELETE' | translate}}</button>
-            }
-          </li>
-        </ul>
-        <div *ngIf="(comments$ | async)?.length === 0" class="text-sm font-medium text-black mt-2">
-          {{ 'IDEA.NO_VALUE' | translate}}
-        </div>
-        <div *ngIf="loading$ | async" class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
-          <div class="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-20 w-20"></div>
-        </div>
+      <h2 class="text-sm font-medium text-black mt-2">{{ "IDEA.LISTE_LABEL" | translate }} :</h2>
+      <ul class="text-sm font-medium text-black">
+        <li *ngFor="let comment of comments$ | async" class="mb-1">
+          {{ "IDEA.DATE" | translate }} <span appDateFormat="{{ comment.date }}"></span> {{ "IDEA.BY" | translate }}
+          <strong>{{ comment.name }}</strong> : {{ comment.comment }}
+          @if (comment.id) {
+            <button type="button"
+                    class="inline-block px-4 py-2 mt-4 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-md transition duration-300 ease-in-out"
+                    (click)="deleteComment(comment.id)">{{ 'IDEA.BUTTON_DELETE' | translate }}
+            </button>
+          }
+        </li>
+      </ul>
+      <div *ngIf="(comments$ | async)?.length === 0" class="text-sm font-medium text-black mt-2">
+        {{ 'IDEA.NO_VALUE' | translate }}
+      </div>
+      <div *ngIf="loading$ | async"
+           class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
+        <div class="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-20 w-20"></div>
       </div>
     </div>
-  </main>
+  </div>
+</main>
+<app-footer></app-footer>
 

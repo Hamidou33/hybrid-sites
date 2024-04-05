@@ -3,7 +3,7 @@ import { HeaderMobileComponent } from "./header-mobile.component";
 import { RouterTestingModule } from "@angular/router/testing";
 import { TranslateModule } from "@ngx-translate/core";
 
-describe('HeaderMobileComponent', () => {
+describe("HeaderMobileComponent", () => {
   let component: HeaderMobileComponent;
   let fixture: ComponentFixture<HeaderMobileComponent>;
 
@@ -16,7 +16,7 @@ describe('HeaderMobileComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

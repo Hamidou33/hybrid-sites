@@ -8,6 +8,8 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { HighchartsChartModule } from "highcharts-angular";
 import { FreelanceComponent } from "./components/freelance/freelance.component";
 import { HeaderComponent } from "./core/header/header.component";
+import { FooterComponent } from "./core/footer/footer.component";
+import { ThemeService } from "./shared/services/theme/theme.service";
 
 @Component({
   imports: [
@@ -21,7 +23,8 @@ import { HeaderComponent } from "./core/header/header.component";
     NgOptimizedImage,
     MatSlideToggleModule,
     HeaderComponent,
-    FreelanceComponent
+    FreelanceComponent,
+    FooterComponent
   ],
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -30,9 +33,10 @@ import { HeaderComponent } from "./core/header/header.component";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
-  constructor(translate: TranslateService) {
-    translate.setDefaultLang(localStorage.getItem('locale') || 'fr');
-    translate.use(localStorage.getItem('locale') || 'fr');
+  constructor(translate: TranslateService, private themeService: ThemeService) {
+    translate.setDefaultLang(localStorage.getItem("locale") || "fr");
+    translate.use(localStorage.getItem("locale") || "fr");
+    this.themeService.getSavedTheme();
   }
 
   ngOnInit(): void {

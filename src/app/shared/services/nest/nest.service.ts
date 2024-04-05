@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
-import { environment } from '../../../../environments/environment';
+import { Injectable } from "@angular/core";
+import { environment } from "../../../../environments/environment";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Comments } from "../../interfaces/comments";
 import { tap } from "rxjs/operators";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class NestService {
   env: string = environment.apiUrlNest;
@@ -28,7 +28,7 @@ export class NestService {
   }
 
   fetchComments(): Observable<Comments[]> {
-    return this.http.get<Comments[]>(`${this.env}/comments`)
+    return this.http.get<Comments[]>(`${this.env}/comments`);
   }
 
 }

@@ -1,4 +1,4 @@
 export const THEMES = [
-  'lumière',
-  'dark-mode'
-]
+  "lumière",
+  "dark-mode"
+];

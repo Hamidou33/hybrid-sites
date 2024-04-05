@@ -4,7 +4,7 @@ import { PortofolioComponent } from "./portofolio.component";
 import { RouterTestingModule } from "@angular/router/testing";
 import { TranslateModule } from "@ngx-translate/core";
 
-describe('PortofolioComponent', () => {
+describe("PortofolioComponent", () => {
   let component: PortofolioComponent;
   let fixture: ComponentFixture<PortofolioComponent>;
 
@@ -12,14 +12,14 @@ describe('PortofolioComponent', () => {
     await TestBed.configureTestingModule({
       imports: [PortofolioComponent, RouterTestingModule, TranslateModule.forRoot()]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(PortofolioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

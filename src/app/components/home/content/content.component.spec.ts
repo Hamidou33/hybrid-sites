@@ -4,7 +4,7 @@ import { ContentComponent } from "./content.component";
 import { TranslateModule } from "@ngx-translate/core";
 import { RouterTestingModule } from "@angular/router/testing";
 
-describe('ContentComponent', () => {
+describe("ContentComponent", () => {
   let component: ContentComponent;
   let fixture: ComponentFixture<ContentComponent>;
 
@@ -17,7 +17,7 @@ describe('ContentComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

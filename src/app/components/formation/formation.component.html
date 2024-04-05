@@ -6,8 +6,9 @@
       <div class="max-w-2xl mx-auto py-12 px-8 bg-white bg-opacity-80 shadow-lg rounded-lg">
         <h2 class="text-3xl font-semibold text-left mb-6 text-black">{{ 'FORMATION.TITLE' | translate }}</h2>
         <div [formGroup]="formationForm" class="mt-4">
-          <select formControlName="formation" class="text-black block w-full bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-            <option value="" disabled selected>{{ 'FORMATION.TITLE' | translate }}</option>
+          <select class="text-black block w-full bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  formControlName="formation">
+            <option disabled selected value="">{{ 'FORMATION.TITLE' | translate }}</option>
             <option *ngFor="let formation of formations" [value]="formation">{{ formation }}</option>
           </select>
         </div>
@@ -17,6 +18,7 @@
       </div>
     </div>
   </main>
+  <app-footer></app-footer>
 </div>
 
 

@@ -4,6 +4,7 @@ import { TranslateModule, TranslateService } from "@ngx-translate/core";
 import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
 import { HeaderComponent } from "../../core/header/header.component";
 import { HeaderDeskopComponent } from "../../core/header/header-deskop/header-deskop.component";
+import { FooterComponent } from "../../core/footer/footer.component";
 
 @Component({
   selector: "app-formation",
@@ -14,7 +15,8 @@ import { HeaderDeskopComponent } from "../../core/header/header-deskop/header-de
     HeaderComponent,
     CommonModule,
     HeaderDeskopComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FooterComponent
   ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -26,7 +28,7 @@ export class FormationComponent {
     "Base de données"
   ];
 
-  formationControl: FormControl = new FormControl('');
+  formationControl: FormControl = new FormControl("");
   formation: string = "";
 
   formationForm: FormGroup = new FormGroup({
@@ -34,7 +36,7 @@ export class FormationComponent {
   });
 
   constructor(translate: TranslateService) {
-    translate.setDefaultLang(localStorage.getItem('locale') || 'fr');
+    translate.setDefaultLang(localStorage.getItem("locale") || "fr");
     this.formationControl.valueChanges.subscribe((v) => {
       this.formation = v;
     });

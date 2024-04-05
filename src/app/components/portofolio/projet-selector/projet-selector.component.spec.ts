@@ -1,10 +1,10 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ProjetSelectorComponent } from './projet-selector.component';
+import { ProjetSelectorComponent } from "./projet-selector.component";
 import { RouterTestingModule } from "@angular/router/testing";
 import { TranslateModule } from "@ngx-translate/core";
 
-describe('ProjetSelectorComponent', () => {
+describe("ProjetSelectorComponent", () => {
   let component: ProjetSelectorComponent;
   let fixture: ComponentFixture<ProjetSelectorComponent>;
 
@@ -12,14 +12,14 @@ describe('ProjetSelectorComponent', () => {
     await TestBed.configureTestingModule({
       imports: [ProjetSelectorComponent, RouterTestingModule, TranslateModule.forRoot()]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ProjetSelectorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

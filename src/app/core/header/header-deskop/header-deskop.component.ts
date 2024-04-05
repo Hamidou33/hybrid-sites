@@ -16,7 +16,8 @@ import { NgOptimizedImage } from "@angular/common";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderDeskopComponent {
-  activeLink: string = '';
+  activeLink: string = "";
+
   constructor(private router: Router) {
   }
 

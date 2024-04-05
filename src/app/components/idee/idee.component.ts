@@ -7,6 +7,7 @@ import { TranslateModule, TranslateService } from "@ngx-translate/core";
 import { CommonModule } from "@angular/common";
 import { DateFormatDirective } from "../../shared/directives/date-format.directive";
 import { HeaderDeskopComponent } from "../../core/header/header-deskop/header-deskop.component";
+import { FooterComponent } from "../../core/footer/footer.component";
 
 @Component({
   selector: "app-idee",
@@ -17,7 +18,8 @@ import { HeaderDeskopComponent } from "../../core/header/header-deskop/header-de
     ReactiveFormsModule,
     TranslateModule,
     DateFormatDirective,
-    HeaderDeskopComponent
+    HeaderDeskopComponent,
+    FooterComponent
   ],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -33,6 +35,10 @@ export class IdeeComponent implements OnInit {
     this.commentForm = this.initForm();
   }
 
+  get commentsUpdated(): Observable<Comments[]> {
+    return this.commentsSubject.asObservable();
+  }
+
   ngOnInit() {
     this.loading$.next(true);
     this.comments$ = this.commentsUpdated;
@@ -46,10 +52,6 @@ export class IdeeComponent implements OnInit {
         }
       }
     );
-  }
-
-  get commentsUpdated(): Observable<Comments[]> {
-    return this.commentsSubject.asObservable();
   }
 
   initForm(): FormGroup {

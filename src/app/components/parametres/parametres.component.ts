@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 import { TranslateModule, TranslateService } from "@ngx-translate/core";
 import { CommonModule, NgOptimizedImage } from "@angular/common";
 import { LanguageSelectorComponent } from "../../shared/components/language-selector/language-selector.component";
@@ -8,9 +8,10 @@ import { THEMES } from "../../shared/constantes/theme.constants";
 import { ThemeService } from "../../shared/services/theme/theme.service";
 import { RouterLink } from "@angular/router";
 import { HeaderDeskopComponent } from "../../core/header/header-deskop/header-deskop.component";
+import { FooterComponent } from "../../core/footer/footer.component";
 
 @Component({
-  selector: 'app-parametres',
+  selector: "app-parametres",
   standalone: true,
   imports: [
     CommonModule,
@@ -19,9 +20,11 @@ import { HeaderDeskopComponent } from "../../core/header/header-deskop/header-de
     ThemeSelectorComponent,
     NgOptimizedImage,
     RouterLink,
-    TranslateModule],
-  templateUrl: './parametres.component.html',
-  styleUrl: './parametres.component.css'
+    TranslateModule,
+    FooterComponent
+  ],
+  templateUrl: "./parametres.component.html",
+  styleUrl: "./parametres.component.css"
 })
 export class ParametresComponent {
   themeForm!: FormGroup;
@@ -31,17 +34,17 @@ export class ParametresComponent {
   }));
 
   constructor(private fb: FormBuilder, private themeService: ThemeService, translate: TranslateService) {
-    translate.setDefaultLang(localStorage.getItem('locale') || 'fr');
+    translate.setDefaultLang(localStorage.getItem("locale") || "fr");
     this.setupThemeForm();
   }
 
   private setupThemeForm(): void {
     this.themeForm = this.fb.group({
-      theme: this.fb.control(this.themeService.getSavedTheme() || 'light'),
+      theme: this.fb.control(this.themeService.getSavedTheme() || "light")
     });
     this.themeService.theme$.subscribe((theme) => {
-      this.themeForm.get('theme')?.setValue(theme);
-      document.body.className = '';
+      this.themeForm.get("theme")?.setValue(theme);
+      document.body.className = "";
       document.body.classList.add(theme);
     });
   }

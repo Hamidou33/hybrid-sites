@@ -5,7 +5,7 @@ import { TranslateModule } from "@ngx-translate/core";
 import { RouterTestingModule } from "@angular/router/testing";
 import { HttpClientModule } from "@angular/common/http";
 
-describe('IdeeComponent', () => {
+describe("IdeeComponent", () => {
   let component: IdeeComponent;
   let fixture: ComponentFixture<IdeeComponent>;
 
@@ -18,7 +18,7 @@ describe('IdeeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

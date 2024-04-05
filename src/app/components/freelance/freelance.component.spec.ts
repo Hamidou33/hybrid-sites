@@ -4,7 +4,7 @@ import { FreelanceComponent } from "./freelance.component";
 import { TranslateModule } from "@ngx-translate/core";
 import { RouterTestingModule } from "@angular/router/testing";
 
-describe('FreelanceComponent', () => {
+describe("FreelanceComponent", () => {
   let component: FreelanceComponent;
   let fixture: ComponentFixture<FreelanceComponent>;
 
@@ -17,7 +17,7 @@ describe('FreelanceComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
