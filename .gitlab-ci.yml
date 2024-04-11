@@ -8,6 +8,9 @@ stages:
   - assemble
   - deploy
 
+variables:
+  NODE_OPTIONS: "--max-old-space-size=4096"
+
 install:
   stage: dependencies
   script:
