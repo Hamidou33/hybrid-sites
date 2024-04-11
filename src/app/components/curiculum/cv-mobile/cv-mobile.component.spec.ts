@@ -8,7 +8,6 @@ import { RouterTestingModule } from "@angular/router/testing";
 describe("CvMobileComponent", () => {
   let component: CvMobileComponent;
   let fixture: ComponentFixture<CvMobileComponent>;
-  let curiculumService: CuriculumService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -18,7 +17,6 @@ describe("CvMobileComponent", () => {
 
     fixture = TestBed.createComponent(CvMobileComponent);
     component = fixture.componentInstance;
-    curiculumService = TestBed.inject(CuriculumService);
   });
 
   it("should create", () => {

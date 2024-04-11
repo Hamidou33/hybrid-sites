@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
+import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
 import { CommonModule, NgOptimizedImage } from "@angular/common";
 import { RouterLink, RouterLinkActive, RouterOutlet } from "@angular/router";
@@ -32,13 +32,10 @@ import { ThemeService } from "./shared/services/theme/theme.service";
   providers: [HttpClient],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   constructor(translate: TranslateService, private themeService: ThemeService) {
     translate.setDefaultLang(localStorage.getItem("locale") || "fr");
     translate.use(localStorage.getItem("locale") || "fr");
     this.themeService.getSavedTheme();
-  }
-
-  ngOnInit(): void {
   }
 }
