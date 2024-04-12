@@ -65,31 +65,45 @@ assemble:
       - api-nest-pando/node_modules
     policy: pull
 
-.deploy:
+#.deploy:
+#  stage: deploy
+#  variables:
+#    NODE_ENV: production
+#  needs: [ "assemble" ]
+#  before_script:
+#    - echo "Deploying to $CI_ENVIRONMENT_NAME"
+#
+#deploy-dev:
+#  extends: .deploy
+#  variables:
+#    NODE_ENV: development
+#  script:
+#    - echo "Deploying to $CI_ENVIRONMENT_NAME"
+#    - echo "Making actions to deploy to dev"
+#    - echo "Deployed to $CI_ENVIRONMENT_NAME"
+#
+#deploy-staging:
+#  extends: .deploy
+#  rules:
+#    - when: manual
+#      allow_failure: true
+#  variables:
+#    NODE_ENV: staging
+#  script:
+#    - echo "Deploying to $CI_ENVIRONMENT_NAME"
+#    - echo "Making actions to deploy to staging"
+#    - echo "Deployed to $CI_ENVIRONMENT_NAME"
+
+deploy_to_local:
   stage: deploy
-  variables:
-    NODE_ENV: production
-  needs: [ "assemble" ]
-  before_script:
-    - echo "Deploying to $CI_ENVIRONMENT_NAME"
-
-deploy-dev:
-  extends: .deploy
-  variables:
-    NODE_ENV: development
   script:
-    - echo "Deploying to $CI_ENVIRONMENT_NAME"
-    - echo "Making actions to deploy to dev"
-    - echo "Deployed to $CI_ENVIRONMENT_NAME"
+    - ./angular-copy-to-livraison.sh
+  only:
+    - master  # Déployer uniquement depuis la branche master (ou toute autre branche que vous spécifiez)
 
-deploy-staging:
-  extends: .deploy
-  rules:
-    - when: manual
-      allow_failure: true
-  variables:
-    NODE_ENV: staging
-  script:
-    - echo "Deploying to $CI_ENVIRONMENT_NAME"
-    - echo "Making actions to deploy to staging"
-    - echo "Deployed to $CI_ENVIRONMENT_NAME"
+#deploy_to_hostinger:
+#  stage: deploy
+#  script:
+#    - ./hostinger-deploy.sh
+#  only:
+#    - master  # Déployer uniquement depuis la branche master (ou toute autre branche que vous spécifiez)
