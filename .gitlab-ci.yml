@@ -94,12 +94,20 @@ assemble:
 #    - echo "Making actions to deploy to staging"
 #    - echo "Deployed to $CI_ENVIRONMENT_NAME"
 
-deploy_to_local:
+deploy_to_hostinger:
   stage: deploy
   script:
-    - ./angular-copy-to-livraison.sh
+    - scp -P 65002 -r front-angular/dist/* u641340594@54.49.245.22:public_html
   only:
-    - master  # Déployer uniquement depuis la branche master (ou toute autre branche que vous spécifiez)
+    - master
+
+
+#deploy_to_local:
+#  stage: deploy
+#  script:
+#    - ./angular-copy-to-livraison.sh
+#  only:
+#    - master  # Déployer uniquement depuis la branche master (ou toute autre branche que vous spécifiez)
 
 #deploy_to_hostinger:
 #  stage: deploy
