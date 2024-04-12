@@ -1,20 +1,20 @@
-import { Injectable } from '@nestjs/common';
-import { Repository } from 'typeorm';
-import { InjectRepository } from '@nestjs/typeorm';
+import { Injectable } from "@nestjs/common";
+import { Repository } from "typeorm";
+import { InjectRepository } from "@nestjs/typeorm";
 import { CommentDto } from "./comment.dto";
-import * as fs from 'fs';
+import * as fs from "fs";
 import { Comments } from "./comments.entity/comments";
 
 @Injectable()
 export class CommentsService {
-  private readonly filePath: string = 'ideas.txt';
+  private readonly filePath: string = "ideas.txt";
 
   constructor(
-    @InjectRepository(Comments) private commmentsRepository: Repository<Comments>,
+    @InjectRepository(Comments) private commmentsRepository: Repository<Comments>
   ) {
-    const fs = require('fs');
+    const fs = require("fs");
     if (!fs.existsSync(this.filePath)) {
-      fs.writeFileSync(this.filePath, '');
+      fs.writeFileSync(this.filePath, "");
     }
   }
 

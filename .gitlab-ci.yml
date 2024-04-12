@@ -69,7 +69,7 @@ assemble:
   stage: deploy
   variables:
     NODE_ENV: production
-  needs: ["assemble"]
+  needs: [ "assemble" ]
   before_script:
     - echo "Deploying to $CI_ENVIRONMENT_NAME"
 

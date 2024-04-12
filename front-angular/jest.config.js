@@ -2,10 +2,10 @@
 module.exports = {
   projects: [
     {
-      preset: 'jest-preset-angular',
-      roots: ['src'],
-      testMatch: ['**/*.spec.ts'],
-      setupFilesAfterEnv: ['<rootDir>/src/setup-jest.ts'],
+      preset: "jest-preset-angular",
+      roots: ["src"],
+      testMatch: ["**/*.spec.ts"],
+      setupFilesAfterEnv: ["<rootDir>/src/setup-jest.ts"]
     }
     // {
     //   preset: 'ts-jest',
@@ -13,5 +13,5 @@ module.exports = {
     //   roots: ['api-nest-pando'],
     //   testMatch: ['**/*.spec.ts'],
     // },
-  ],
+  ]
 };

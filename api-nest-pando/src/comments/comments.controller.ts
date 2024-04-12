@@ -1,18 +1,12 @@
-import {
-  Body,
-  Controller,
-  Delete,
-  Get,
-  Param,
-  Post
-} from "@nestjs/common";
-import { CommentsService } from './comments.service';
+import { Body, Controller, Delete, Get, Param, Post } from "@nestjs/common";
+import { CommentsService } from "./comments.service";
 import { CommentDto } from "./comment.dto";
 import { Comments } from "./comments.entity/comments";
 
-@Controller('comments')
+@Controller("comments")
 export class CommentsController {
-  constructor(private readonly commentsService: CommentsService) {}
+  constructor(private readonly commentsService: CommentsService) {
+  }
 
   @Get()
   async getComments(): Promise<Comments[] | { message: string }> {
@@ -24,11 +18,11 @@ export class CommentsController {
     }
   }
 
-  @Delete(':id')
-  async deleteComment(@Param('id') id: number): Promise<{ message: string }> {
+  @Delete(":id")
+  async deleteComment(@Param("id") id: number): Promise<{ message: string }> {
     try {
       await this.commentsService.deleteComment(id);
-      return { message: 'Commentaire supprimé avec succès'};
+      return { message: "Commentaire supprimé avec succès" };
     } catch (error) {
       console.error(error);
       return error.message;
@@ -36,7 +30,7 @@ export class CommentsController {
   }
 
   @Post()
-  async saveComment(@Body() commentDto: CommentDto): Promise <Comments[] | { message: string }> {
+  async saveComment(@Body() commentDto: CommentDto): Promise<Comments[] | { message: string }> {
     try {
       await this.commentsService.saveIdea(commentDto);
       return this.commentsService.getAllComments();

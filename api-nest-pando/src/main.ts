@@ -1,6 +1,6 @@
-import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
-import { config } from 'dotenv';
+import { NestFactory } from "@nestjs/core";
+import { AppModule } from "./app.module";
+import { config } from "dotenv";
 
 async function bootstrap() {
   config();
@@ -8,4 +8,7 @@ async function bootstrap() {
   app.enableCors();
   await app.listen(3000);
 }
-bootstrap().then(r => {console.log(r)});
+
+bootstrap().then(r => {
+  console.log(r);
+});

@@ -3,6 +3,7 @@
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
   <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
@@ -72,27 +73,27 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 Nest is [MIT licensed](LICENSE).
 
-
 ## HINT: Create a controller with cli
 
 To create a controller using the CLI, simply execute the $ nest g controller [name] command.
 
-## Push image docker 
+## Push image docker
 
 docker push nomDossier(hamid33130)/nom-image-docker
 
 ## How to build dockerimage
+
 docker build -f Dockerfile -t hamid33130/api-nest-pando .
 
 ## Push dockerimage
 
 docker push hamid33130/api-nest-pando
 
-## Run everywhere with docker installed 
+## Run everywhere with docker installed
 
 docker run --rm -d -p 3000:3000 hamid33130/api-nest-pando
 
-## voir tous les docker qui tourne 
+## voir tous les docker qui tourne
 
 docker ps
 

@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "types": ["node", "jest"],
+    "types": [
+      "node",
+      "jest"
+    ],
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
