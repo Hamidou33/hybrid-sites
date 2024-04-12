@@ -12,7 +12,6 @@ export class CommentsService {
   constructor(
     @InjectRepository(Comments) private commmentsRepository: Repository<Comments>
   ) {
-    const fs = require("fs");
     if (!fs.existsSync(this.filePath)) {
       fs.writeFileSync(this.filePath, "");
     }
