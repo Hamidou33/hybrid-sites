@@ -97,7 +97,7 @@ assemble:
 deploy_to_hostinger:
   stage: deploy
   script:
-    - rsync -avz -e "ssh -p 65002" front-angular/dist/* u641340594@54.49.245.22:public_html
+    - echo "put -r front-angular/dist/*" | sftp -P 65002 u641340594@54.49.245.22:public_html
   only:
     - master
 
