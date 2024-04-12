@@ -11,71 +11,58 @@ stages:
 variables:
   NODE_OPTIONS: "--max-old-space-size=4096"
 
-install:
+install_dependencies:
   stage: dependencies
   script:
-    # Install dependencies
-    - npm install --prefer-offline
+    # Install dependencies for both Angular and NestJS
+    - cd front-angular && npm install --prefer-offline
+    - cd ../api-nest-pando && npm install --prefer-offline
   cache:
     key:
       files:
-        - package.json
+        - front-angular/package.json
+        - api-nest-pando/package.json
     paths:
-      - node_modules
+      - front-angular/node_modules
+      - api-nest-pando/node_modules
 
-lint:
+quality:
   stage: quality
-  needs: ["install"]
   script:
+    # Run Angular tests
+    - cd front-angular && npm run test
+    # Run NestJS tests
+    - cd ../api-nest-pando && npm run test
+    # Run linting for both Angular and NestJS
     - npm run lint
   cache:
     key:
       files:
-        - package.json
+        - front-angular/package.json
+        - api-nest-pando/package.json
     paths:
-      - node_modules
-    policy: pull
-
-test:
-  stage: quality
-  needs: ["install"]
-  before_script:
-    # Download Chrome
-    - apk add chromium
-    - export CHROME_BIN=/usr/bin/chromium-browser
-    - export CHROME_PATH=/usr/lib/chromium/
-    # Download Firefox
-    - apk add firefox-esr
-    - export FIREFOX_BIN=/usr/bin/firefox
-    - export FIREFOX_PATH=/usr/lib/firefox/
-    # X Server
-    - apk add xvfb
-    - export DISPLAY=:99
-    - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-  script:
-    - npm run test -- --browsers=Headless_Chrome --no-watch
-  cache:
-    key:
-      files:
-        - package.json
-    paths:
-      - node_modules
+      - front-angular/node_modules
+      - api-nest-pando/node_modules
     policy: pull
 
 assemble:
   stage: assemble
-  needs: ["test", "lint"]
   script:
-    - npm run build
+    # Build Angular and NestJS applications
+    - cd front-angular && npm run build
+    - cd ../api-nest-pando && npm run build
   artifacts:
     paths:
-      - $CI_PROJECT_DIR/dist
+      - front-angular/dist
+      - api-nest-pando/dist
   cache:
     key:
       files:
-        - package.json
+        - front-angular/package.json
+        - api-nest-pando/package.json
     paths:
-      - node_modules
+      - front-angular/node_modules
+      - api-nest-pando/node_modules
     policy: pull
 
 .deploy:
