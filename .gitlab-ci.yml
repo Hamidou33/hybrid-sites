@@ -97,7 +97,26 @@ assemble:
 deploy_to_hostinger:
   stage: deploy
   script:
-    - echo "put -r front-angular/dist/*" | sftp -P 65002 u641340594@54.49.245.22:public_html
+    - |
+      #!/bin/bash
+
+      # Chemin local des fichiers à transférer
+      local_path="front-angular/dist"
+
+      # Nom de l'archive à créer
+      archive_name="files.tar.gz"
+
+      # Chemin distant où extraire les fichiers
+      remote_path="public_html"
+
+      # Créer une archive des fichiers locaux
+      tar -czf "$archive_name" -C "$local_path" .
+
+      # Transférer l'archive via SSH et extraire les fichiers sur le serveur distant
+      ssh -p 65002 u641340594@54.49.245.22 "mkdir -p $remote_path && tar -xzf - -C $remote_path" < "$archive_name"
+
+      # Supprimer l'archive locale
+      rm "$archive_name"
   only:
     - master
 
