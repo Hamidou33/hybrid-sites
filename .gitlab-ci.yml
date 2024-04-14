@@ -10,6 +10,10 @@ stages:
 
 variables:
   NODE_OPTIONS: "--max-old-space-size=4096"
+  SSH_PORT: "65002"
+  HOSTINGER_USER: "u641340594"
+  HOSTINGER_HOST: "54.49.245.22"
+  HOSTINGER_PATH: "public_html"
 
 install_dependencies:
   stage: dependencies
@@ -65,72 +69,10 @@ assemble:
       - api-nest-pando/node_modules
     policy: pull
 
-#.deploy:
-#  stage: deploy
-#  variables:
-#    NODE_ENV: production
-#  needs: [ "assemble" ]
-#  before_script:
-#    - echo "Deploying to $CI_ENVIRONMENT_NAME"
-#
-#deploy-dev:
-#  extends: .deploy
-#  variables:
-#    NODE_ENV: development
-#  script:
-#    - echo "Deploying to $CI_ENVIRONMENT_NAME"
-#    - echo "Making actions to deploy to dev"
-#    - echo "Deployed to $CI_ENVIRONMENT_NAME"
-#
-#deploy-staging:
-#  extends: .deploy
-#  rules:
-#    - when: manual
-#      allow_failure: true
-#  variables:
-#    NODE_ENV: staging
-#  script:
-#    - echo "Deploying to $CI_ENVIRONMENT_NAME"
-#    - echo "Making actions to deploy to staging"
-#    - echo "Deployed to $CI_ENVIRONMENT_NAME"
-
 deploy_to_hostinger:
   stage: deploy
   script:
-    - |
-      #!/bin/bash
-
-      # Chemin local des fichiers à transférer
-      local_path="front-angular/dist"
-
-      # Nom de l'archive à créer
-      archive_name="files.tar.gz"
-
-      # Chemin distant où extraire les fichiers
-      remote_path="public_html"
-
-      # Créer une archive des fichiers locaux
-      tar -czf "$archive_name" -C "$local_path" .
-
-      # Transférer l'archive via SSH et extraire les fichiers sur le serveur distant
-      ssh -p 65002 u641340594@54.49.245.22 "mkdir -p $remote_path && tar -xzf - -C $remote_path" < "$archive_name"
-
-      # Supprimer l'archive locale
-      rm "$archive_name"
+    - apk update && apk add openssh-client
+    - sshpass -p "$HOSTINGER_PASSWORD" scp -P $SSH_PORT -r front-angular/dist/* $HOSTINGER_USER@$HOSTINGER_HOST:$HOSTINGER_PATH
   only:
     - master
-
-
-#deploy_to_local:
-#  stage: deploy
-#  script:
-#    - ./angular-copy-to-livraison.sh
-#  only:
-#    - master  # Déployer uniquement depuis la branche master (ou toute autre branche que vous spécifiez)
-
-#deploy_to_hostinger:
-#  stage: deploy
-#  script:
-#    - ./hostinger-deploy.sh
-#  only:
-#    - master  # Déployer uniquement depuis la branche master (ou toute autre branche que vous spécifiez)
