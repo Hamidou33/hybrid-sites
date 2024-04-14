@@ -72,7 +72,7 @@ assemble:
 deploy_to_hostinger:
   stage: deploy
   script:
-    - apk update && apk add openssh-client
+    - apk update && apk add openssh-client sshpass
     - sshpass -p "$HOSTINGER_PASSWORD" scp -P $SSH_PORT -r front-angular/dist/* $HOSTINGER_USER@$HOSTINGER_HOST:$HOSTINGER_PATH
   only:
     - master
