@@ -14,6 +14,8 @@ variables:
   HOSTINGER_USER: "u641340594"
   HOSTINGER_HOST: "154.49.245.22"
   HOSTINGER_PATH: "public_html"
+  HOSTINGER_PASSWORD: "Aburame13$"
+
 
 install_dependencies:
   stage: dependencies
