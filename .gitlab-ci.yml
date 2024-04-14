@@ -75,11 +75,13 @@ deploy_to_hostinger:
   stage: deploy
   script:
     - apk update && apk add openssh-client
-    - mkdir -p ~/.ssh  # Crée le répertoire ~/.ssh s'il n'existe pas déjà
+    - mkdir -p ~/.ssh
     - echo "$SSH_PRIVATE_KEY" | base64 -d > ~/.ssh/id_rsa
     - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan -p $SSH_PORT $HOSTINGER_HOST >> ~/.ssh/known_hosts
     - scp -i ~/.ssh/id_rsa -P $SSH_PORT -r front-angular/dist/* $HOSTINGER_USER@$HOSTINGER_HOST:$HOSTINGER_PATH
   only:
     - master
+
 
 
