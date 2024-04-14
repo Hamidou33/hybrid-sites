@@ -15,8 +15,6 @@ variables:
   HOSTINGER_HOST: "154.49.245.22"
   HOSTINGER_PATH: "public_html"
 
-
-
 install_dependencies:
   stage: dependencies
   script:
@@ -82,6 +80,3 @@ deploy_to_hostinger:
     - scp -i ~/.ssh/id_rsa -P $SSH_PORT -r front-angular/dist/* $HOSTINGER_USER@$HOSTINGER_HOST:$HOSTINGER_PATH
   only:
     - master
-
-
-
