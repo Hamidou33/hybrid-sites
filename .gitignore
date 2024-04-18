@@ -54,3 +54,4 @@ Thumbs.db
 
 /coverage
 .idea
+/front-angular/dist/*
