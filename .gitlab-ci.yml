@@ -8,12 +8,11 @@ stages:
   - assemble
   - deploy
 
+before_script:
+  - apt-get update && apt-get install -y openssh-client
+
 variables:
   NODE_OPTIONS: "--max-old-space-size=4096"
-  SSH_PORT: "65002"
-  HOSTINGER_USER: "u641340594"
-  HOSTINGER_HOST: "154.49.245.22"
-  HOSTINGER_PATH: "public_html"
 
 install_dependencies:
   stage: dependencies
@@ -69,13 +68,11 @@ assemble:
       - api-nest-pando/node_modules
     policy: pull
 
-deploy_to_hostinger:
+deploy:
   stage: deploy
   script:
-    - apk update && apk add --no-cache lftp
-    # Déploiement via FTP
-    - lftp -e "open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R front-angular/dist /public_html; exit"
-  variables:
-    FTP_USERNAME: "u641340594"
+    - scp -P $SSH_PORT -r C:/Users/hamid/WebstormProjects/hybrid-sites/dist/* $SSH_USER@$SSH_HOST:/home/$SSH_USER/public_html
+  environment:
+    name: production
   only:
     - master
