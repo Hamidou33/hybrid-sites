@@ -14,6 +14,7 @@ before_script:
 variables:
   NODE_OPTIONS: "--max-old-space-size=4096"
   SSH_PRIVATE_KEY: $SSH_PRIVATE_KEY
+  CI_DEBUG_TRACE: "true"
 
 install_dependencies:
   stage: dependencies
