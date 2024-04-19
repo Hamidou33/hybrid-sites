@@ -13,6 +13,7 @@ before_script:
 
 variables:
   NODE_OPTIONS: "--max-old-space-size=4096"
+  SSH_PRIVATE_KEY: $SSH_PRIVATE_KEY
 
 install_dependencies:
   stage: dependencies
@@ -71,6 +72,7 @@ assemble:
 deploy:
   stage: deploy
   script:
+    - chmod 600 $SSH_PRIVATE_KEY
     - scp -o StrictHostKeyChecking=no -P 65002 -r C:/Users/hamid/WebstormProjects/hybrid-sites/front-angular/dist/pandoramid/* u641340594@154.49.245.22:/home/u641340594/public_html
   environment:
     name: production
