@@ -13,13 +13,12 @@ before_script:
 
 variables:
   NODE_OPTIONS: "--max-old-space-size=4096"
-  SSH_PRIVATE_KEY: SSH_PRIVATE_KEY
+  SSH_PRIVATE_KEY: $SSH_PRIVATE_KEY
   CI_DEBUG_TRACE: "true"
 
 install_dependencies:
   stage: dependencies
   script:
-    # Install dependencies for both Angular and NestJS
     - cd front-angular && npm install --prefer-offline
     - cd ../api-nest-pando && npm install --prefer-offline
   cache:
@@ -34,11 +33,8 @@ install_dependencies:
 quality:
   stage: quality
   script:
-    # Run Angular tests
     - cd front-angular && npm run test
-    # Run NestJS tests
     - cd ../api-nest-pando && npm run test
-    # Run linting for both Angular and NestJS
     - npm run lint
   cache:
     key:
@@ -53,7 +49,6 @@ quality:
 assemble:
   stage: assemble
   script:
-    # Build Angular and NestJS applications
     - cd front-angular && npm run build
     - cd ../api-nest-pando && npm run build
   artifacts:
@@ -73,7 +68,7 @@ assemble:
 deploy:
   stage: deploy
   script:
-    - scp -o StrictHostKeyChecking=no -i SSH_PRIVATE_KEY -P 65002 -r C:/Users/hamid/WebstormProjects/hybrid-sites/front-angular/dist/pandoramid/* u641340594@154.49.245.22:/home/u641340594/public_html
+    - 'echo "$SSH_PRIVATE_KEY" > ssh_key && chmod 600 ssh_key && scp -o StrictHostKeyChecking=no -i ssh_key -P 65002 -r front-angular/dist/pandoramid/* u641340594@154.49.245.22:/home/u641340594/public_html'
   environment:
     name: production
   only:
