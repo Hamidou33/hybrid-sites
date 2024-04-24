@@ -21,6 +21,12 @@ before_script:
   - eval $(ssh-agent -s)
 
   ##
+  ## Create the SSH directory and give it the right permissions
+  ##
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+
+  ##
   ## Give the right permissions, otherwise ssh-add will refuse to add files
   ## Add the SSH key stored in SSH_PRIVATE_KEY file type CI/CD variable to the agent store
   ##
@@ -28,11 +34,6 @@ before_script:
   - chmod 400 ~/.ssh/id_rsa
   - ssh-add ~/.ssh/id_rsa
 
-  ##
-  ## Create the SSH directory and give it the right permissions
-  ##
-  - mkdir -p ~/.ssh
-  - chmod 700 ~/.ssh
 
 
 
