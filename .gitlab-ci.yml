@@ -1,6 +1,6 @@
 default:
   interruptible: true
-  image: node:12.22-alpine
+  image: node:lts-alpine
 
 stages:
   - dependencies
@@ -9,36 +9,11 @@ stages:
   - deploy
 
 before_script:
-  ##
-  ## Install ssh-agent if not already installed, it is required by Docker.
-  ## (change apk to yum if you use an RPM-based image)
-  ##
-  - 'command -v ssh-agent >/dev/null || ( apk update && apk add --no-cache openssh-client )'
-
-  ##
-  ## Run ssh-agent (inside the build environment)
-  ##
-  - eval $(ssh-agent -s)
-
-  ##
-  ## Create the SSH directory and give it the right permissions
-  ##
-  - mkdir -p ~/.ssh
-  - chmod 700 ~/.ssh
-
-  ##
-  ## Give the right permissions, otherwise ssh-add will refuse to add files
-  ## Add the SSH key stored in SSH_PRIVATE_KEY file type CI/CD variable to the agent store
-  ##
-  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
-  - chmod 400 ~/.ssh/id_rsa
-  - ssh-add ~/.ssh/id_rsa
-
-
-
+  - apk update && apk add --no-cache openssh-client
 
 variables:
   NODE_OPTIONS: "--max-old-space-size=4096"
+  SSH_PRIVATE_KEY: $SSH_PRIVATE_KEY
   CI_DEBUG_TRACE: "true"
 
 install_dependencies:
@@ -93,7 +68,7 @@ assemble:
 deploy:
   stage: deploy
   script:
-    - scp -o StrictHostKeyChecking=no -i "$SSH_PRIVATE_KEY" -P "$SSH_PORT" -r front-angular/dist/pandoramid/* "$SSH_USER@$SSH_HOST:$HOSTINGER_PATH"
+    - scp -P 65002 -r C:/Users/hamid/WebstormProjects/hybrid-sites/front-angular/dist/pandoramid/* u641340594@154.49.245.22:/home/u641340594/public_html
   environment:
     name: production
   only:
