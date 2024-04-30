@@ -13,7 +13,7 @@ before_script:
 
 variables:
   NODE_OPTIONS: "--max-old-space-size=4096"
-  SSH_PRIVATE_KEY: $SSH_PRIVATE_KEY
+  FTP_USERNAME: $FTP_USERNAME
   CI_DEBUG_TRACE: "true"
 
 install_dependencies:
@@ -68,10 +68,11 @@ assemble:
 deploy:
   stage: deploy
   script:
+    - echo "$FTP_USERNAME"
     - ls
     - cd front-angular/dist/
     - ls
-    - scp -o StrictHostKeyChecking=no -P 65002 -r pandoramid/* u641340594@154.49.245.22:/home/u641340594/public_html
+    - lftp -e "mirror -R pandoramid /home/u641340594/public_html" -u $FTP_USERNAME,$FTP_PASSWORD ftp://154.49.245.22:65002
   environment:
     name: production
   only:
