@@ -74,7 +74,7 @@ deploy:
     - echo "FTP Password:" $FTP_PASSWORD
     - ls
     - cd front-angular/dist/
-    - lftp -e "set ssl:verify-certificate no; mirror -R pandoramid /home/u641340594/domains/pandoramid.com/public_html" -u $FTP_USERNAME,$FTP_PASSWORD ftp://ftp.pandoramid.com
+    - lftp -e "set ssl:verify-certificate no; mirror -R pandoramid /home/u641340594/domains/pandoramid.com/public_html" -u $FTP_USERNAME,$FTP_PASSWORD, 21 ftp://ftp.pandoramid.com
   environment:
     name: production
   only:
