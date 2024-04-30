@@ -14,8 +14,8 @@ before_script:
 
 variables:
   NODE_OPTIONS: "--max-old-space-size=4096"
-  FTP_USERNAME: $FTP_USERNAME
-  FTP_PASSWORD: $FTP_PASSWORD
+  FTP_USERNAME: u641340594
+  FTP_PASSWORD: Aburame13$2023
   CI_DEBUG_TRACE: "true"
 
 install_dependencies:
@@ -71,9 +71,10 @@ deploy:
   stage: deploy
   script:
     - echo "$FTP_USERNAME"
+    - echo "FTP Password:" $FTP_PASSWORD
     - ls
     - cd front-angular/dist/
-    - lftp -e "set ssl:verify-certificate no; mirror -R pandoramid /home/u641340594/domains/pandoramid.com/public_html" -u u641340594, 'Aburame13$2023' ftp://ftp.pandoramid.com
+    - lftp -e "set ssl:verify-certificate no; mirror -R pandoramid /home/u641340594/domains/pandoramid.com/public_html" -u $FTP_USERNAME,$FTP_PASSWORD ftp://ftp.pandoramid.com
   environment:
     name: production
   only:
