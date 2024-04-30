@@ -68,8 +68,9 @@ assemble:
 deploy:
   stage: deploy
   script:
-    - ssh -p 65002 u641340594@154.49.245.22
-    - scp -o StrictHostKeyChecking=no -P 65002 -r C:/Users/hamid/WebstormProjects/hybrid-sites/front-angular/dist/pandoramid/* u641340594@154.49.245.22:/home/u641340594/public_html
+    - apt-get update -qq && apt-get install -y -qq openssh-client  # Installer openssh-client pour SSH
+    - ssh -p 65002 u641340594@154.49.245.22 "mkdir -p /home/u641340594/public_html"  # Créer le répertoire s'il n'existe pas
+    - scp -P 65002 -r dist/* u641340594@154.49.245.22:/home/u641340594/public_html
   environment:
     name: production
   only:
