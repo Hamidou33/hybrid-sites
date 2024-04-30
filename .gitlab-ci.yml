@@ -14,6 +14,7 @@ before_script:
 variables:
   NODE_OPTIONS: "--max-old-space-size=4096"
   FTP_USERNAME: $FTP_USERNAME
+  FTP_PASSWORD: $FTP_PASSWORD
   CI_DEBUG_TRACE: "true"
 
 install_dependencies:
@@ -72,7 +73,7 @@ deploy:
     - ls
     - cd front-angular/dist/
     - ls
-    - lftp -e "mirror -R pandoramid /home/u641340594/public_html" -u $FTP_USERNAME,$FTP_PASSWORD ftp://154.49.245.22:65002
+    - lftp -e "mirror -R pandoramid /home/u641340594/domains/pandoramid.com/public_html" -u $FTP_USERNAME,$FTP_PASSWORD ftp://ftp.pandoramid.com
   environment:
     name: production
   only:
