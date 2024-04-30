@@ -68,6 +68,7 @@ assemble:
 deploy:
   stage: deploy
   script:
+    - ls
     - cd ../front-angular/dist/
     - scp -o StrictHostKeyChecking=no -P 65002 -r pandoramid/* u641340594@154.49.245.22:/home/u641340594/public_html
   environment:
