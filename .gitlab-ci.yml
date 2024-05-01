@@ -77,7 +77,6 @@ deploy:
     - ls
     - cd dist
     - ls
-#    - lftp -e "set ssl:verify-certificate no; mirror -R pandoramid /home/u641340594/domains/pandoramid.com/public_html" -u $FTP_USERNAME,$FTP_PASSWORD, 21 ftp://ftp.pandoramid.com
     - lftp -c "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R pandoramid/ /domains/pandoramid.com/public_html"
   environment:
     name: production
