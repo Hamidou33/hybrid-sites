@@ -1,16 +1,12 @@
 default:
   interruptible: true
-  image: node:lts-alpine
+  image: hamid33130/pandoramid:latest
 
 stages:
   - dependencies
   - quality
   - assemble
   - deploy
-
-before_script:
-  - apk update && apk add --no-cache openssh-client
-  - apk add --no-cache lftp
 
 variables:
   NODE_OPTIONS: "--max-old-space-size=4096"
