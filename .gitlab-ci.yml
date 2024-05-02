@@ -14,8 +14,10 @@ before_script:
 
 variables:
   NODE_OPTIONS: "--max-old-space-size=4096"
-  FTP_USERNAME: u641340594
-  FTP_PASSWORD: Aburame13$2023
+#  FTP_USERNAME: u641340594
+#  FTP_PASSWORD: Aburame13$2023
+  FTP_USERNAME: $FTP_USERNAME
+  FTP_PASSWORD: $FTP_PASSWORD
   CI_DEBUG_TRACE: "true"
 
 install_dependencies:
@@ -70,8 +72,7 @@ assemble:
 deploy:
   stage: deploy
   script:
-    - echo "$FTP_USERNAME"
-    - echo "FTP Password:" $FTP_PASSWORD
+    - echo "username $FTP_USERNAME"
     - ls
     - cd front-angular
     - ls
