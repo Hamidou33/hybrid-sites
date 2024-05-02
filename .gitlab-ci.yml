@@ -14,17 +14,13 @@ before_script:
 
 variables:
   NODE_OPTIONS: "--max-old-space-size=4096"
-#  FTP_USERNAME: u641340594
-#  FTP_PASSWORD: Aburame13$2023
-#  FTP_USERNAME: $FTP_USERNAME
-#  FTP_PASSWORD: $FTP_PASSWORD
   CI_DEBUG_TRACE: "true"
 
 install_dependencies:
   stage: dependencies
   script:
-    - cd front-angular && npm install --prefer-offline
-    - cd ../api-nest-pando && npm install --prefer-offline
+    - cd front-angular && npm install --prefer-offline || { echo "Failed to install front-end dependencies"; exit 1; }
+    - cd ../api-nest-pando && npm install --prefer-offline || { echo "Failed to install backend dependencies"; exit 1; }
   cache:
     key:
       files:
@@ -37,9 +33,9 @@ install_dependencies:
 quality:
   stage: quality
   script:
-    - cd front-angular && npm run test
-    - cd ../api-nest-pando && npm run test
-    - npm run lint
+    - cd front-angular && npm run test || { echo "Front-end tests failed"; exit 1; }
+    - cd ../api-nest-pando && npm run test || { echo "Backend tests failed"; exit 1; }
+    - npm run lint || { echo "Linting failed"; exit 1; }
   cache:
     key:
       files:
@@ -53,8 +49,8 @@ quality:
 assemble:
   stage: assemble
   script:
-    - cd front-angular && npm run build
-    - cd ../api-nest-pando && npm run build
+    - cd front-angular && npm run build || { echo "Front-end build failed"; exit 1; }
+    - cd ../api-nest-pando && npm run build || { echo "Backend build failed"; exit 1; }
   artifacts:
     paths:
       - front-angular/dist
@@ -72,14 +68,9 @@ assemble:
 deploy:
   stage: deploy
   script:
-    - echo "username $FTP_USERNAME"
-    - ls
-    - cd front-angular
-    - ls
-    - cd dist
-    - ls
-    - lftp -c "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R pandoramid/ /domains/pandoramid.com/public_html"
+    - lftp -c "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R front-angular/dist/pandoramid/ /domains/pandoramid.com/public_html" || { echo "Deployment failed"; exit 1; }
   environment:
     name: production
   only:
     - master
+
