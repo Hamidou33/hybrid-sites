@@ -4,7 +4,7 @@ import { CommonModule, NgOptimizedImage } from "@angular/common";
 import { RouterLink, RouterLinkActive, RouterOutlet } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
-import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { HighchartsChartModule } from "highcharts-angular";
 import { FreelanceComponent } from "./components/freelance/freelance.component";
 import { HeaderComponent } from "./core/header/header.component";
@@ -18,7 +18,11 @@ import { ThemeService } from "./shared/services/theme/theme.service";
     RouterLink,
     RouterLinkActive,
     ReactiveFormsModule,
-    HttpClientModule,
+    
+// TODO: `HttpClientModule` should not be imported into a component directly.
+// Please refactor the code to add `provideHttpClient()` call to the provider list in the
+// application bootstrap logic and remove the `HttpClientModule` import from this component.
+HttpClientModule,
     HighchartsChartModule,
     NgOptimizedImage,
     MatSlideToggleModule,

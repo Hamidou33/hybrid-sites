@@ -2,7 +2,7 @@ import { ApplicationConfig, importProvidersFrom } from "@angular/core";
 import { provideRouter, withHashLocation } from "@angular/router";
 import { routes } from "./app.routes";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
-import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { NestService } from "./shared/services/nest/nest.service";
 

@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { IdeeComponent } from "./idee.component";
 import { TranslateModule } from "@ngx-translate/core";
 import { RouterTestingModule } from "@angular/router/testing";
-import { HttpClientModule } from "@angular/common/http";
+import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 
 describe("IdeeComponent", () => {
   let component: IdeeComponent;
@@ -11,8 +11,9 @@ describe("IdeeComponent", () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [IdeeComponent, RouterTestingModule, TranslateModule.forRoot(), HttpClientModule]
-    });
+    imports: [IdeeComponent, RouterTestingModule, TranslateModule.forRoot()],
+    providers: [provideHttpClient(withInterceptorsFromDi())]
+});
     fixture = TestBed.createComponent(IdeeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
