@@ -55,3 +55,5 @@ Thumbs.db
 /coverage
 .idea
 /front-angular/dist/*
+/front-angular/.nx/
+/front-angular/node_modules/
