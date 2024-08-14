@@ -118,6 +118,22 @@
       "TITLE": "Professional Experience",
       "E": [
         {
+          "title": "Fullstack Developer",
+          "company": "Hamworld",
+          "date": "October 23, 2023 to present",
+          "description": "Created a portfolio website and a mobile application called myCv",
+          "where": "at",
+          "client": "Hamworld"
+        },
+        {
+          "title": "Node Trainer",
+          "company": "Freelance for Eluv",
+          "date": "September 23, 2024 to September 27, 2024",
+          "description": "Training students on Node.js",
+          "where": "at",
+          "client": "The Organization"
+        },
+        {
           "title": "Database Trainer",
           "company": "Freelance by Eluv",
           "date": "March 25, 2024 to March 29, 2024",

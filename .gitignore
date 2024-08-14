@@ -57,3 +57,4 @@ Thumbs.db
 /front-angular/dist/*
 /front-angular/.nx/
 /front-angular/node_modules/
+/front-angular/.angular/cache/

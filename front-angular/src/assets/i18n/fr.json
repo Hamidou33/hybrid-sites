@@ -118,9 +118,25 @@
       "TITLE": "Expériences professionelles",
       "E": [
         {
+          "title": "Développeur Fullstack",
+          "company": "Hamworld",
+          "date": "23 octobre 2023 à aujourd'hui",
+          "description": "Création d'un site portofolio et d'une application mobile myCv",
+          "where": "chez",
+          "client": "Hamworld"
+        },
+        {
+          "title": "Formateur Node",
+          "company": "En Freelance par Eluv",
+          "date": "23 septembre 2024 au 27 septembre 2024",
+          "description": "Formation sur node.js à des étudiants",
+          "where": "chez",
+          "client": "La Structure"
+        },
+        {
           "title": "Formateur Base de données",
           "company": "En Freelance par Eluv",
-          "date": "25 mars 2024 au 29 Mars 2024",
+          "date": "25 mars 2024 au 29 mars 2024",
           "description": "Formation en BDD donné à 18 étudiants",
           "where": "chez",
           "client": "CampusLive"
