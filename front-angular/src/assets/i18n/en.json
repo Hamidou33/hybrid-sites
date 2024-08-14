@@ -1,6 +1,6 @@
 {
   "HOME": {
-    "TITLE": "Welcome to my website",
+    "TITLE": "Welcome to my portofolio website",
     "SELECT": "Change language",
     "LIBELLE": "made by Hamid Benallel"
   },
@@ -36,9 +36,10 @@
   "FREELANCE": {
     "TITLE": "Interest in Missions",
     "M1": "Front-end Angular",
-    "M2": "Fullstack Angular/Node.js",
-    "TJM": "450",
-    "DATE": "Availability: starting from October 16, 2023"
+    "M2": "Fullstack (Angular | VueJS | ReactJS) / (Node.js | Java)",
+    "M3": "Formation",
+    "TJM": "400 - 450",
+    "DATE": "Availability: ASAP"
   },
   "PORTOFOLIO": {
     "TITLE": "My portofolio",

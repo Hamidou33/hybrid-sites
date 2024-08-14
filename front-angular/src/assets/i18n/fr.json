@@ -1,6 +1,6 @@
 {
   "HOME": {
-    "TITLE": "Bienvenue sur mon site web",
+    "TITLE": "Je vous souhaite le bienvenue dans mon site portofolio !",
     "SELECT": "Changer la langue",
     "LIBELLE": "Réalisé par Hamid Benallel"
   },
@@ -36,9 +36,10 @@
   "FREELANCE": {
     "TITLE": "Intérêt pour des missions",
     "M1": "Front-end Angular",
-    "M2": "Fullstack Angular/Node.js",
-    "TJM": "450",
-    "DATE": "Disponibilité: à partir du 1 er avril 2024"
+    "M2": "Fullstack (Angular | VueJS | ReactJS) / (Node.js | Java)",
+    "M3": "Formation",
+    "TJM": "400 - 450",
+    "DATE": "Disponibilité: ASAP"
   },
   "PORTOFOLIO": {
     "TITLE": "Mon portofolio",

@@ -40,7 +40,7 @@ export class ParametresComponent {
 
   private setupThemeForm(): void {
     this.themeForm = this.fb.group({
-      theme: this.fb.control(this.themeService.getSavedTheme() || "light")
+      theme: this.fb.control(this.themeService.getSavedTheme() || "light-mode")
     });
     this.themeService.theme$.subscribe((theme) => {
       this.themeForm.get("theme")?.setValue(theme);

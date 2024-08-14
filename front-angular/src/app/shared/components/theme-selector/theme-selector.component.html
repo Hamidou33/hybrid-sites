@@ -4,6 +4,6 @@
         name="theme">
   <option disabled selected>{{ label }}</option>
   <option *ngFor="let option of themeOptions"
-          [value]="option.value">{{ option.label === 'Lumière' ? 'Light' : 'Dark' }}
+          [value]="option.value">{{ option.label === 'Light-mode' ? 'Light-mode' : 'Dark-mode' }}
   </option>
 </select>

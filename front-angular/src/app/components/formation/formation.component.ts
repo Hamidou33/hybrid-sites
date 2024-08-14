@@ -25,7 +25,8 @@ export class FormationComponent {
     "HTML/CSS",
     "Angular",
     "Git",
-    "Base de données"
+    "Base de données",
+    "Node"
   ];
 
   formationControl: FormControl = new FormControl("");

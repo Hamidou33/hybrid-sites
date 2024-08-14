@@ -14,19 +14,21 @@ import { ThemeService } from "../../services/theme/theme.service";
 export class ThemeSelectorComponent {
   @Input() themeOptions: { value: string; label: string }[] = [];
   themeForm: FormGroup;
-  themeControl = this.fb.control(this.themeService.getSavedTheme() || "light");
+  themeControl = this.fb.control(this.themeService.getSavedTheme() || "light-mode");
   label: string = "Choisir un thème";
 
   constructor(private fb: FormBuilder, private themeService: ThemeService, public translate: TranslateService) {
     this.themeForm = this.fb.group({
-      theme: this.themeService.getSavedTheme() || "light"
+      theme: this.themeService.getSavedTheme() || "dark-mode"
     });
     translate.addLangs(["en", "fr"]);
   }
 
-  changeTheme() {
+  changeTheme(): void {
     if (this.themeControl && this.themeControl.value) {
-      this.themeService.setTheme(this.themeControl.value);
+      this.themeService.setTheme(this.themeControl.value || 'dark-mode');
+    } else {
+      this.themeService.setTheme('dark-mode');
     }
   }
 }

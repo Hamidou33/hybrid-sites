@@ -8,13 +8,12 @@ export class ThemeService {
   private themeSubject: BehaviorSubject<string> = new BehaviorSubject<string>(this.getSavedTheme() || "light");
   theme$: Observable<string> = this.themeSubject.asObservable();
 
-  setTheme(theme: string) {
+  setTheme(theme: string): void {
     this.themeSubject.next(theme);
     localStorage.setItem("selectedTheme", theme); // Save theme in local storage
   }
 
   getSavedTheme(): string | null {
-    // todo : this.themeSubject
     return localStorage.getItem("selectedTheme");
   }
 }

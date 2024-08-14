@@ -1,4 +1,4 @@
-export const THEMES = [
-  "lumière",
+export const THEMES: string[] = [
+  "light-mode",
   "dark-mode"
 ];
