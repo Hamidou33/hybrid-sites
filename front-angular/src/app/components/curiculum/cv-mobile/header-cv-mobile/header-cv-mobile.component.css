@@ -70,3 +70,9 @@
 .item4 {
   grid-area: d;
 }
+
+.info-bloc {
+  padding-bottom: 5px;
+  font-size: 11px;
+  align-content: end;
+}

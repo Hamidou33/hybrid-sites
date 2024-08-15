@@ -23,12 +23,6 @@ h4 {
   margin-top: 3%;
 }
 
-.right {
-  padding: 0;
-  width: 100%;
-  margin: -8% -13% 0;
-}
-
 .des {
   margin-left: 20%;
   margin-top: -13%;
@@ -52,4 +46,17 @@ main {
   max-width: 900px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 10% auto auto;
+}
+
+/* todo: traduire en class tailwind */
+
+.right {
+  padding: 0;
+  margin: -10% 5px 5px;
+}
+
+.right p {
+  font-weight: bold;
+  justify-content: right;
+  margin-top: 20px;
 }

@@ -16,6 +16,7 @@ import { CommonModule, NgOptimizedImage } from "@angular/common";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CvDeskopComponent {
+
   constructor(private curiculumService: CuriculumService) {
   }
 
